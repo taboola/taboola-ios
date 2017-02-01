@@ -1,0 +1,5 @@
+target 'TaboolaDemoSwiftApp' do
+use_frameworks!
+pod 'TaboolaSDK'
+
+end
