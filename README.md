@@ -182,7 +182,7 @@ TaboolaViewDelegate includes the method:
 - (BOOL)taboolaViewItemClickHandler:(NSString *)pURLString:(BOOL)isOrganic;
 ```
 
-##### 1.4.1 taboolaViewItemClickHandler
+#### 1.4.1 taboolaViewItemClickHandler
 
 This method will be called every time a user clicks a recommendation, right before triggering the default behavior. The app can intercept the click there, and should return a boolean value:
 * Returns NO - abort the default behavior (in which case the app should display the recommendation content on its own - e.g. using a custom in-app browser). 
@@ -191,7 +191,7 @@ This method will be called every time a user clicks a recommendation, right befo
 `isOrganic` indicates whether the item clicked was an organic content recommendation or not.
 **Best practice would be to suppress the default behavior for organic items, and instead open the relevant screen in your app which shows that piece of content.**
 
-##### 1.4.2 Example:
+#### 1.4.2 Example:
 ```objc
 - (BOOL)taboolaViewItemClickHandler:(NSString *)pURLString:(BOOL)isOrganic{
 NSLog(@"Start load request on first screen: %@ isOrganic? %@", pURLString, isOrganic ? @"YES":@"NO");
@@ -218,7 +218,7 @@ The file TaboolaViewResources.bundle includes the default icons for the TaboolaV
 ### 1.7 IDFA Reporting
 If the user chose to allow IDFA sharing with the host app, the IDFA is sent to the Taboola server as a page command with the key “device”
 
-### 1.9 NSNotificationCenter notifications
+### 1.8 NSNotificationCenter notifications
 
 The taboolaView widget also reports his status to the host app via `NSNotificationCenter` notifications (in addition to calling the TaboolaViewDelegate methods). This allows the host app to be more loosely coupled with the taboolaView. All notifications include a reference to the taboolaView itself. Here’s the list of notifications sent: 
 * taboolaDidReceiveAd - When the widget successfully loads its content.
