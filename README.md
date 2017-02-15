@@ -14,7 +14,8 @@
 
 ### 1.1 Minimum requirements
 
-* Minimum iOS version: `6.0`
+* Build against Base SDK `7.0` or later. Deployment target: iOS `6.0` or later.
+* Use `Xcode 5` or later.
 
 ### 1.2 Incorporating the SDK
 
@@ -48,7 +49,9 @@ Then, run the following command:
 $ pod install
 ``` 
 
-### 1.3 Adding TaboolaView (Interface Builder)
+### 1.3 Including Taboola recommendations in your app
+
+#### 1.3.1 Adding TaboolaView in Interface Builder
 
 To include Taboola in your app using Interface Builder: 
 1. Add `UIView` to your ViewController.
@@ -60,7 +63,7 @@ To include Taboola in your app using Interface Builder:
 [inspector]: https://cloud.githubusercontent.com/assets/3852658/22969202/3d9d5fd2-f376-11e6-96de-f20f6e555839.png "Xcode: Identity Inspector"
 
 
-#### 1.3.1 Adding TaboolaView in code
+#### 1.3.2 Adding TaboolaView in code
 
 Import TaboolaView into your source files (or into your bridging header if you're using with Swift and not using frameworks with Cocoapods):
 
@@ -72,7 +75,7 @@ If you are using Swift and frameworks, then you can just import Taboola into you
 import TaboolaSDK
 ```
 
-#### 1.3.2 Using TaboolaView
+#### 1.3.3 Using TaboolaView
 
 ```objc
 TaboolaView* taboolaView = [[TaboolaView alloc] initWithFrame:<CGRect>];
@@ -80,119 +83,148 @@ taboolaView.delegate = self;
 taboolaView.ownerViewController = self;
 ```
 
-#### 1.3.3 Setting the TaboolaView properties
+#### 1.3.4 Setting the TaboolaView properties
 
-Optionally, you can set the TaboolaView attributes directly in code:
+Get the following parameters from your Taboola account manager: 
 
- ```objc
-// Sets the widget UI mode (template)
+```objc
+// An identification of a Taboola recommendation unit UI template (you might use different UI templates in different parts of the app, in which case you will need to get the applicable mode for each UI template) 
 taboolaView.mode = @"my-mode";
-// Sets the publisher id
+```
+```objc
+// An identification of your publisher account on the Taboola system 
 taboolaView.publisher = @"my-publisher";
+```
+```objc
 // Sets the page type of the page on which the widget is displayed (one of article, photo, video, home, category, search)
 taboolaView.pageType = @"article";
+```
+```objc
 // Sets the canonical URL for the page on which the widget is displayed
 taboolaView.pageUrl = @"http://www.example.com";
-// Sets the widget placement code (for reporting /configuration purposes)
+```
+```objc
+// An identification of a specific placement in the app (you might place Taboola recommendation units in multiple placements in the app, in which case you should get applicable placement ids for each such placement) 
 taboolaView.placement = @"Mobile";
-// When enabled, TaboolaView automatically resizes its height after rendering the widget. Default YES.
-taboolaView.autoResizeHeight = YES;
-// Controls whether the widget content is scrollable or not (enabled by default)
-taboolaView.scrollEnable = NO;
-// Controls whether item clicks sent to the delegate clickHandler or not. if not they will be opened in Safari (default YES);
-taboolaView.enableClickHandler = YES;
-// Controls the ammount (level) of the console log messages by TaboolaSDK. LogLevel enum defines importance levels. Default: LogLevelError
-taboolaView.logLevel = LogLevelDebug;
+```
+```objc
 // After initializing the TaboolaView, this method should be called to actually fetch the recommendations
 [taboolaView fetchContent];
 ```
 
-#### 1.3.4 TaboolaViewDelegate
-```
+#### 1.3.5 TaboolaViewDelegate
+
+Optionally set a TaboolaViewDelegate `TaboolaView.delegate = self` to intercept recommendation clicks. If recommendation clicks are not intercepted, they will be presented by a Taboola powered in-app browser. Also important to note that TaboolaView also fires notifications that can be caught by any object inside the app, in case you want to react to these notifications elsewhere in your code. 
+
+```objc
 - (BOOL)taboolaViewItemClickHandler:(NSString *)pURLString :(BOOL)isOrganic;
 ```
-Attaches a delegate to the TaboolaView. Allows intercepting clicks.
-
 **Return**: `YES` if the view should begin loading content; otherwise, `NO`. Default value is `YES`.
 
-```
+```objc
+// Triggered when the TaboolaView resizes after content render
 - (void)taboolaViewResizeHandler;
-```
-Triggered when the TaboolaView resizes after content render
 
-```
+// Triggered after the TaboolaView is succesfully rendered
 - (void)taboolaDidReceiveAd:(UIView *)view;
-```
-Triggered after the TaboolaView is succesfully rendered
 
-```
+// Triggered after the TaboolaView fails to render
 - (void)taboolaDidFailAd:(NSError *)error;
-```
-Triggered after the TaboolaView fails to render
+``` 
 
+#### 1.3.6 Code example 
+A code similar to this should be added to your ViewController viewDidLoad method: 
+```objc
+- (void)viewDidLoad{
+[super viewDidLoad];
 
-### 1.4 Catching global notifications from TaboolaView (NSNotification)
-TaboolaView sends notifications to notify all registered observers within the app about certain event. Catching those events might be useful for implementing custom event mediation adapters for ad platforms not natively supported by Taboola SDK.
+// Load taboolaView
+taboolaView.delegate = self;
+taboolaView.ownerViewController = self;
+taboolaView.mode = @"my-mode";
+taboolaView.publisher = @"my-publisher";
+taboolaView.pageType = @"article";
+taboolaView.pageUrl = @"http://www.example.com";
+taboolaView.placement = @"Mobile";
+taboolaView.autoResizeHeight = YES;
+taboolaView.scrollEnable = NO;
+taboolaView.enableClickHandler = YES;
+taboolaView.logLevel = LogLevelDebug;
 
-Sending a click notification:
-```
-"taboolaItemDidClick"
-```
-Also sending a general notification in case the user wasn't able to add a delegate:
-```
-"taboolaViewResized"
-```
-```
-"taboolaDidReceiveAd"
-```
-Sending a notification with NSError object:
-```
-"taboolaDidFailAd"
+// Optional - add extra styling rules to the widget, CSS format.
+taboolaView.optionalWidgetStyle = @"background:linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,linear-gradient(315deg, #ECEDDC 25%, transparent 25%),linear-gradient(45deg, #ECEDDC 25%, transparent 25%);background-size: 100px 100px;background-color: #EC173A;";
+
+// Optional - control the color of the browser title text
+taboolaView.browserTitleTextColor = [UIColor yellowColor];
+
+// Optional - add more page commands if needed 
+NSDictionary *lPageDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"http://www.example.com/ref", @"referrer", nil];
+[taboolaView setOptionalPageCommands:lPageDictionary];
+
+NSDictionary *lModeDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"mix", @"target_type", nil];
+[taboolaView setOptionalModeCommands:lModeDictionary];
+
+// Fill taboolaView with recommendations 
+[mTaboolaView fetchContent];
+}
 ```
 
-### 1.5 Intercepting recommendation clicks
+### 1.4 Intercepting recommendation clicks
 
-The default click behavior of TaboolaView is as follows:
+TaboolaView allows app developers to intercept recommendation clicks in order to create a click-through or to override the default way of opening the recommended article in the device built-in browser outside of the app.
+Please note that TaboolaView also fires notifications that can be caught by any object inside the app, in case you want to react to these notifications elsewhere in your code
 
-Depending on the iOS version TaboolaView opens the recommendation in one of the following browsers:
-* In-App browser
-* SafariViewController
-* System browser - Safari
+In order to intercept clicks, you should implement the `protocol TaboolaViewDelegate` and connect TaboolaView to your delegate. The ViewController in which TaboolaView is displayed might be a good candidate to implement TaboolaViewDelegate.
 
-`TaboolaView` allows app developers to intercept recommendation clicks in order to create a click-through or to override the default way of opening the recommended article.
+TaboolaViewDelegate includes the method:
 
-In order to intercept clicks, this protocol should be implemented by the host app. TaboolaView sends various lifecycle events to the delegate, to allow more flexibility for the host app. `@protocol TaboolaViewDelegate` includes the following delegate method:
-
- ```objc
+```objc
 - (BOOL)taboolaViewItemClickHandler:(NSString *)pURLString:(BOOL)isOrganic;
- ```
+```
 
-##### 1.5.1 taboolaViewItemClickHandler
+##### 1.4.1 taboolaViewItemClickHandler
 
-This method will be called every time user clicks a recommendation, right before triggering the default behavior. The app can intercept the click there, and should return a `BOOL` value.
-
-* Return **`false`** - abort the default behavior, the app should display the recommendation content on its own (for example, using an in-app browser).
-* Return **`true`** - this will allow the app to implement a click-through and continue to the default behaviour.
+This method will be called every time a user clicks a recommendation, right before triggering the default behavior. The app can intercept the click there, and should return a boolean value:
+* Returns NO - abort the default behavior (in which case the app should display the recommendation content on its own - e.g. using a custom in-app browser). 
+* Returns YES - this will allow the app to implement a click-through and continue with the default click handling behavior (which will display the clicked content with an in-app browser). 
 
 `isOrganic` indicates whether the item clicked was an organic content recommendation or not.
 **Best practice would be to suppress the default behavior for organic items, and instead open the relevant screen in your app which shows that piece of content.**
 
-##### 1.5.1.1 Example:
- ```objc
+##### 1.4.2 Example:
+```objc
 - (BOOL)taboolaViewItemClickHandler:(NSString *)pURLString:(BOOL)isOrganic{
-	NSLog(@"Start load request on first screen: %@ isOrganic? %@", pURLString, isOrganic ? @"YES":@"NO");
-    if (isOrganic){
-        NSLog(@"organic items should open as native app pages.");
-    }
-	return YES;
+NSLog(@"Start load request on first screen: %@ isOrganic? %@", pURLString, isOrganic ? @"YES":@"NO");
+if (isOrganic){
+NSLog(@"organic items should open as native app pages.");
 }
- ```
+return YES;
+}
+```
 
-### 1.6. Handling Taboola widget resize
+### 1.5 Automatic height resize 
+
+By default, TaboolaView automatically adjusts its own height in run time to show the entire widget. 
 
 `TaboolaView` may resize its height after loading recommendations, to make sure that the full content is displayed (based on the actual widget `mode` loaded).
 
 After resize, `TaboolaView` will call `taboolaViewResizeHandler` method of the `@protocol TaboolaViewDelegate`, to allow the host app to adjust its layout to the changes. (This behavior may be disabled by setting the property `autoResizeHeight` to `false`.)
+
+### 1.6 Replacing the default in-app browser icons
+The file TaboolaViewResources.bundle includes the default icons for the TaboolaView in-app browser. These icons can be replaced by providing an alternative TaboolaViewResources.bundle file which contains the following files: 
+* back_icon.png
+* forward_icon.png
+
+### 1.7 IDFA Reporting
+If the user chose to allow IDFA sharing with the host app, the IDFA is sent to the Taboola server as a page command with the key “device”
+
+### 1.9 NSNotificationCenter notifications
+
+The taboolaView widget also reports his status to the host app via `NSNotificationCenter` notifications (in addition to calling the TaboolaViewDelegate methods). This allows the host app to be more loosely coupled with the taboolaView. All notifications include a reference to the taboolaView itself. Here’s the list of notifications sent: 
+* taboolaDidReceiveAd - When the widget successfully loads its content.
+* taboolaViewResized - When the taboolaView changes its height to adapt to its content. The notification data includes the new height. 
+* taboolaItemDidClick - When the user clicks an item on the taboolaView.
+* taboolaDidFailAd - When the taboolaView fails to load its content. The error is included in the notification data. 
 
 ## 2. Example App
 This repository includes an example iOS app which uses the Taboola SDK. To use it, just clone this repository and open the project wih Xcode.
@@ -202,61 +234,96 @@ In case you encounter some issues when integrating the SDK into your app, try re
 ## 3. SDK Reference 
 ### 3.1. Public Properties
 
-##### publisher
+```objc
+// Mandatory. Sets the publisher id
+@property(nonatomic, strong) NSString *publisher 
+```
 
-Mandatory. Sets the publisher id
+```objc
+// Mandatory. Sets the widget UI mode (template) 
+@property(nonatomic, strong) NSString *mode  
+```
 
-##### mode
+```objc
+// Mandatory. Sets the widget placement code (for reporting /; configuration purposes)  
+@property(nonatomic, strong) NSString *placement   
+```
 
-Mandatory. Sets the widget UI mode (template)
+```objc
+// Mandatory. Sets the canonical URL for the page on which the widget is displayed  
+@property(nonatomic, strong) NSString *pageUrl    
+```
 
-##### placement
+```objc
+// Optional. Sets the page id of the page on which the widget is displayed (default to auto generate from the URL)  
+@property(nonatomic, strong) NSString *pageId     
+```
 
-Mandatory. Sets the page type of the page on which the widget is displayed (one of
-article, photo, video, home, category, search)
+```objc
+// Optional. Attaches a TaboolaViewDelegate to the TaboolaView. Allows intercepting clicks.  
+@property(nonatomic, weak) id<TaboolaViewDelegate> delegate      
+```
 
-##### pageType
+```objc
+// Optional. Taboola in-app web-browser will be used to present selected content if this viewController is provided. If not provided, clicks will be opened in Safari.   
+@property(nonatomic, weak) UIViewController *ownerViewController     
+```
 
-Mandatory. Sets the canonical URL for the page on which the widget is displayed
+```objc
+// Optional. controls whether to show or hide the action buttons on the in-app browser. Default YES 
+@property(nonatomic, readwrite) BOOL showBrowserIcons 
+```
 
-##### pageUrl
+```objc
+// Optional. sets the background color for the in-app browser. Default #f5f6f4  
+@property (nonatomic, strong) UIColor *browserBackColor  
+```
 
-Optional. the in-app browser will be pushed to thiw UIViewController
+```objc
+// Optional. Sets the color for the in-app browser title text. Default #007cff   
+@property (nonatomic, strong) UIColor *browserTitleTextColor   
+```
 
-##### ownerViewController
-
-Optional. Attaches a TaboolaViewDelegate to the TaboolaView. Allows intercepting clicks.
-
-##### delegate
-
-Optional. When enabled, TaboolaView automatically resizes its height after rendering the widget.Default YES.
-
-##### autoResizeHeight
-
-Default: true. Determines whether `TaboolaView` may resize when the loaded content requires
+```objc
+// Optional. when enabled, TaboolaView automatically resizes its height after rendering the widget, Default YES    
+@property(nonatomic, readwrite) BOOL autoResizeHeight    
+```
 
 ### 3.2. Public methods
 
 Optional. Allows setting additional page commands to the Taboola widget, as used in the Taboola JavaScript API. @param pCommands list of commands.
 
-##### -(void)setOptionalPageCommands:(NSDictionary *)pCommands;
+```objc
+- (void)setOptionalPageCommands:(NSDictionary *)pCommands;
+```
 
 Optional. Allows setting additional mode commands to the Taboola widget, as used in the Taboola JavaScript API. @param pCommands list of commands.
 
-##### -(void)setOptionalModeCommands:(NSDictionary *)pCommands;
+```objc
+- (void)setOptionalModeCommands:(NSDictionary *)pCommands;
+```
 
 After initializing the TaboolaView, this method should be called to actually fetch the recommendations
 
-##### - (void)fetchContent;
+```objc
+- (void)fetchContent;
+```
 
 Resets the TaboolaView - All conents and pushed commands are cleared. new commands must be pushed before fetching data again.
 
-##### - (void)reset;
+```objc
+- (void)reset;
+```
 
 Refreshes the recommendations displayed on the TaboolaView.
 
-##### - (void)refresh;
+```objc
+- (void)refresh;
+```
 
 Version of the SDK
 
-##### + (NSString*)version;
+```objc
++ (NSString*)version;
+```
+
