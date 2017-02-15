@@ -7,8 +7,7 @@
 ## Table Of Contents
 1. [Getting Started](#1-getting-started)
 2. [Example App](#2-example-app)
-3. [Mediation](#3-mediation)
-4. [SDK Reference](#4-sdk-reference)
+3. [SDK Reference](#3-sdk-reference)
 
 
 ## 1. Getting Started
