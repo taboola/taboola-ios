@@ -1,6 +1,6 @@
 # Taboola iOS SDK
 ![Platform](https://img.shields.io/badge/Platform-iOS-green.svg)
-[![Download](https://img.shields.io/badge/Download-1.4.0-blue.svg)](https://github.com/taboola/taboola-ios)
+[![Version](https://img.shields.io/badge/Version-1.4.0-blue.svg)](https://github.com/taboola/taboola-ios)
 [![License](https://img.shields.io/badge/License%20-Taboola%20SDK%20License-blue.svg)](https://www.taboola.com/)
 
 
