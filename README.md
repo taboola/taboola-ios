@@ -1,6 +1,6 @@
 # Taboola iOS SDK
 ![Platform](https://img.shields.io/badge/Platform-iOS-green.svg)
-[ ![Download](https://img.shields.io/badge/Download-1.4.0-blue.svg) ](https://github.com/taboola/taboola-ios)
+[![Download](https://img.shields.io/badge/Download-1.4.0-blue.svg)](https://github.com/taboola/taboola-ios)
 [![License](https://img.shields.io/badge/License%20-Taboola%20SDK%20License-blue.svg)](https://www.taboola.com/)
 
 
@@ -227,7 +227,7 @@ The taboolaView widget also reports his status to the host app via `NSNotificati
 * taboolaDidFailAd - When the taboolaView fails to load its content. The error is included in the notification data. 
 
 ## 2. Example App
-This repository includes an example iOS app which uses the Taboola SDK. To use it, just clone this repository and open the project wih Xcode.
+This repository includes an example iOS app which uses the Taboola SDK, [here](https://github.com/taboola/taboola-ios/tree/master/Examples) . To use it, just clone this repository and open the project wih Xcode.
 
 In case you encounter some issues when integrating the SDK into your app, try recreating the scenario within the example app. This might help isolate the problem, and in case you weren't able to solve it, you'll be able to send the example app with your recreated issue to Taboola's support for more help.
 
