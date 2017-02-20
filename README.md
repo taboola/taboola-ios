@@ -148,15 +148,8 @@ taboolaView.pageType = @"article";
 taboolaView.pageUrl = @"http://www.example.com";
 taboolaView.placement = @"Mobile";
 taboolaView.autoResizeHeight = YES;
-taboolaView.scrollEnable = NO;
 taboolaView.enableClickHandler = YES;
 taboolaView.logLevel = LogLevelDebug;
-
-// Optional - add extra styling rules to the widget, CSS format.
-taboolaView.optionalWidgetStyle = @"background:linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,linear-gradient(315deg, #ECEDDC 25%, transparent 25%),linear-gradient(45deg, #ECEDDC 25%, transparent 25%);background-size: 100px 100px;background-color: #EC173A;";
-
-// Optional - control the color of the browser title text
-taboolaView.browserTitleTextColor = [UIColor yellowColor];
 
 // Optional - add more page commands if needed 
 NSDictionary *lPageDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"http://www.example.com/ref", @"referrer", nil];
