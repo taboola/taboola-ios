@@ -314,12 +314,6 @@ Refreshes the recommendations displayed on the TaboolaView.
 - (void)refresh;
 ```
 
-Version of the SDK
-
-```objc
-+ (NSString*)version;
-```
-
 
 ## 4. License
 
