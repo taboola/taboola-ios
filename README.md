@@ -98,16 +98,14 @@ taboolaView.publisher = @"my-publisher";
 ```
 ```objc
 // Sets the page type of the page on which the widget is displayed (one of article, photo, video, home, category, search)
-taboolaView.pageType = @"article";
-```
-```objc
-// Sets the canonical URL for the page on which the widget is displayed
-taboolaView.pageUrl = @"http://www.example.com";
+taboolaView.pageType = @"my-page-type";
 ```
 ```objc
 // An identification of a specific placement in the app (you might place Taboola recommendation units in multiple placements in the app, in which case you should get applicable placement ids for each such placement) 
-taboolaView.placement = @"Mobile";
+taboolaView.placement = @"my-placement";
 ```
+
+After setting all properties, call `fetchContent` to load the Taboola Widget:
 ```objc
 // After initializing the TaboolaView, this method should be called to actually fetch the recommendations
 [taboolaView fetchContent];
