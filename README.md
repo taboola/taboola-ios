@@ -69,7 +69,7 @@ To include Taboola in your app using Interface Builder:
 Import TaboolaView into your source files (or into your bridging header if you're using with Swift and not using frameworks with Cocoapods):
 
 ```objc
-#import <TaboolaSDK/TaboolaView.h"
+#import <TaboolaSDK/TaboolaView.h>
 ```
 If you are using Swift and frameworks, then you can just import Taboola into your Swift source file:
 ```
@@ -105,7 +105,7 @@ taboolaView.pageType = @"my-page-type";
 taboolaView.placement = @"my-placement";
 ```
 
-After setting all properties, call `fetchContent` to load the Taboola Widget:
+After setting all properties, call `fetchContent` to load the TaboolaView content:
 ```objc
 // After initializing the TaboolaView, this method should be called to actually fetch the recommendations
 [taboolaView fetchContent];
@@ -153,6 +153,7 @@ taboolaView.logLevel = LogLevelDebug;
 NSDictionary *lPageDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"http://www.example.com/ref", @"referrer", nil];
 [taboolaView setOptionalPageCommands:lPageDictionary];
 
+// target_type should be "mix", unless specified otherwise by your Taboola account manager
 NSDictionary *lModeDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"mix", @"target_type", nil];
 [taboolaView setOptionalModeCommands:lModeDictionary];
 
