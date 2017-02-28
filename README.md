@@ -7,8 +7,9 @@
 ## Table Of Contents
 1. [Getting Started](#1-getting-started)
 2. [Example App](#2-example-app)
-3. [SDK Reference](#3-sdk-reference)
-4. [License](#4-license)
+3. [Mediation](#3-mediation)
+4. [SDK Reference](#4-sdk-reference)
+5. [License](#5-license)
 
 
 ## 1. Getting Started
@@ -224,8 +225,55 @@ This repository includes an example iOS app which uses the Taboola SDK, [here](h
 
 In case you encounter some issues when integrating the SDK into your app, try recreating the scenario within the example app. This might help isolate the problem, and in case you weren't able to solve it, you'll be able to send the example app with your recreated issue to Taboola's support for more help.
 
-## 3. SDK Reference 
-### 3.1. Public Properties
+## 3. Mediation
+
+### 3.1 Supported Ad Platforms
+
+Taboola iOS SDK supports mediation via these platforms:
+
+* [DFP](https://developers.google.com/mobile-ads-sdk/docs/dfp/ios/custom-events)
+* [MoPub](http://www.mopub.com/resources/docs/ios-sdk-integration/ios-getting-started/)
+
+### 3.2 Required Setup
+In order to configure mediation of Taboola SDK via DFP platform, follow the steps listed below:
+##### 3.2.1 Add DFP Framework to your project 
+[Get Started with DFP](https://developers.google.com/mobile-ads-sdk/docs/dfp/ios/quick-start)
+##### 3.2.2 Follow the sample code to create a GADBannerView in `viewDidLoad`:
+```objc
+GADAdSize customAdSize = GADAdSizeFromCGSize(CGSizeMake(480, 320));
+CGPoint point = CGPointMake(0, 40);
+GADBannerView* dfpBannerView = [[GADBannerView alloc] initWithAdSize:customAdSize origin:point];
+[self.view addSubview:dfpBannerView];
+dfpBannerView.delegate = self;
+dfpBannerView.adUnitID = @"<your_unit_id>";
+dfpBannerView.rootViewController = self;
+```
+```objc
+- (void)viewDidAppear:(BOOL)animated {
+[dfpBannerView loadRequest:[GADRequest request]];
+}
+```
+##### 3.2.3. Add Adapter files into your project (available on [GitHub](https://github.com/taboola/taboola-ios)):
+
+* `DfpTaboolaEventBanner.h`
+* `DfpTaboolaEventBanner.m`
+##### 3.2.4 Configure DFP
+* **Class name**: `DfpTaboolaEventBanner`
+* **Parameters**: Parameters for the Taboola SDK can be configured from the DFP web interface.
+* 	**Configuring from DFP web interface**: The "parameter" field in the DFP custom event configuration screen, should contain a JSON string with the required properties. Notice that strings should be enclosed within ***escaped double quotes***.
+
+```javascript
+{
+\"publisher\":\"<publisher code>\",
+\"mode\":\"<mode>\",
+\"url\":\"<url>\",
+\"placement\":\"<placement>\",
+\"article\":\"auto\",
+\"referrer\":\"<ref url>"
+}
+```
+## 4. SDK Reference 
+### 4.1. Public Properties
 
 ```objc
 // Mandatory. Sets the publisher id
@@ -282,7 +330,7 @@ In case you encounter some issues when integrating the SDK into your app, try re
 @property(nonatomic, readwrite) BOOL autoResizeHeight    
 ```
 
-### 3.2. Public methods
+### 4.2. Public methods
 
 Optional. Allows setting additional page commands to the Taboola widget, as used in the Taboola JavaScript API. @param pCommands list of commands.
 
@@ -315,7 +363,7 @@ Refreshes the recommendations displayed on the TaboolaView.
 ```
 
 
-## 4. License
+## 5. License
 
 This program is licensed under the Taboola, Inc. SDK License Agreement (the “License Agreement”).  By copying, using or redistributing this program, you agree to the terms of the License Agreement.  The full text of the license agreement can be found at https://github.com/taboola/taboola-ios/blob/master/LICENSE.
 Copyright 2017 Taboola, Inc.  All rights reserved.
