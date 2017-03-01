@@ -2,9 +2,6 @@
 //  DfpTaboolaEventBanner.m
 //  TaboolaView
 //
-//  Created by Vasyl Human on 2/22/17.
-//  Copyright © 2017 Taboola. All rights reserved.
-//
 
 #import "DfpTaboolaEventBanner.h"
 #import "TaboolaView.h"

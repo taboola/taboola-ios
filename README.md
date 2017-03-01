@@ -238,8 +238,9 @@ Taboola iOS SDK supports mediation via these platforms:
 In order to configure mediation of Taboola SDK via DFP platform, follow the steps listed below:
 ##### 3.2.1 Add DFP Framework to your project 
 [Get Started with DFP](https://developers.google.com/mobile-ads-sdk/docs/dfp/ios/quick-start)
-##### 3.2.2 Follow the sample code to create a GADBannerView in `viewDidLoad`:
+##### 3.2.2 Follow the sample code to create a GADBannerView in `viewDidLoad` using `Objective-C`:
 ```objc
+// Define custom GADAdSize of 480x320 for GADBannerView.
 GADAdSize customAdSize = GADAdSizeFromCGSize(CGSizeMake(480, 320));
 CGPoint point = CGPointMake(0, 40);
 GADBannerView* dfpBannerView = [[GADBannerView alloc] initWithAdSize:customAdSize origin:point];
@@ -253,11 +254,25 @@ dfpBannerView.rootViewController = self;
 [dfpBannerView loadRequest:[GADRequest request]];
 }
 ```
-##### 3.2.3. Add Adapter files into your project (available on [GitHub](https://github.com/taboola/taboola-ios)):
+##### 3.2.3 Follow the sample code to create a GADBannerView in `viewDidLoad` using `Swift`:
+
+```objc
+// Define custom GADAdSize of 480x320 for GADBannerView.
+let customAdSize = GADAdSizeFromCGSize(CGSize(width: 480, height: 320))
+let point = CGPoint(x: 0, y: 40)
+let dfpBannerView = GADBannerView(adSize: customAdSize, origin: point)
+view.addSubview(dfpBannerView)
+dfpBannerView.delegate = self
+dfpBannerView.adUnitID = "your_unit_id"
+dfpBannerView.rootViewController = self
+dfpBannerView.load(GADRequest())
+```
+
+##### 3.2.4 Add Adapter files into your project (available on [GitHub](https://github.com/taboola/taboola-ios)):
 
 * `DfpTaboolaEventBanner.h`
 * `DfpTaboolaEventBanner.m`
-##### 3.2.4 Configure DFP
+##### 3.2.5 Configure DFP
 * **Class name**: `DfpTaboolaEventBanner`
 * **Parameters**: Parameters for the Taboola SDK can be configured from the DFP web interface.
 * 	**Configuring from DFP web interface**: The "parameter" field in the DFP custom event configuration screen, should contain a JSON string with the required properties. Notice that strings should be enclosed within ***escaped double quotes***.
