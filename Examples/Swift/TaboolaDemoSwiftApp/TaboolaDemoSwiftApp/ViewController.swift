@@ -18,8 +18,8 @@ class ViewController: UIViewController {
         
         mTaboolaView.delegate = self
         mTaboolaView.ownerViewController = self
-        mTaboolaView.mode = "thumbnails-h"
-        mTaboolaView.publisher = "cbsinteractive-cbssportsmobileapp"
+        mTaboolaView.mode = "thumbnails-a"
+        mTaboolaView.publisher = "betterbytheminute"
         mTaboolaView.pageType = "article"
         mTaboolaView.pageUrl = "http://www.example.com"
         mTaboolaView.placement = "Mobile"
