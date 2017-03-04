@@ -232,7 +232,6 @@ In case you encounter some issues when integrating the SDK into your app, try re
 Taboola iOS SDK supports mediation via these platforms:
 
 * [DFP](https://developers.google.com/mobile-ads-sdk/docs/dfp/ios/custom-events)
-* [MoPub](http://www.mopub.com/resources/docs/ios-sdk-integration/ios-getting-started/)
 
 ### 3.2 Required Setup
 In order to configure mediation of Taboola SDK via DFP platform, follow the steps listed below:
