@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		4EB34076BBBA07FB1C95FFA6 /* libPods-TaboolaDemoApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F50285FC0C6E90E466A306 /* libPods-TaboolaDemoApp.a */; };
 		BC4C1EC8186D8A0300308460 /* TBFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4C1EC7186D8A0300308460 /* TBFirstViewController.m */; };
-		BC4C1ECA186D8A1D00308460 /* TBFirstViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4C1EC9186D8A1D00308460 /* TBFirstViewController~iphone.xib */; };
+		BC4C1ECA186D8A1D00308460 /* TBFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4C1EC9186D8A1D00308460 /* TBFirstViewController.xib */; };
 		BC4C1ED0186D8C8800308460 /* TBSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4C1ECF186D8C8800308460 /* TBSecondViewController.m */; };
-		BC4C1ED4186D8CA400308460 /* TBSecondViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4C1ED3186D8CA400308460 /* TBSecondViewController~iphone.xib */; };
+		BC4C1ED4186D8CA400308460 /* TBSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4C1ED3186D8CA400308460 /* TBSecondViewController.xib */; };
 		BC9158B9186C7C0600141537 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9158B8186C7C0600141537 /* Foundation.framework */; };
 		BC9158BB186C7C0600141537 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9158BA186C7C0600141537 /* CoreGraphics.framework */; };
 		BC9158BD186C7C0600141537 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9158BC186C7C0600141537 /* UIKit.framework */; };
@@ -58,10 +58,10 @@
 		BA12290580686AD6DB0E2DF7 /* libPods-TaboolaDemoAppUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaboolaDemoAppUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4C1EC6186D8A0300308460 /* TBFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBFirstViewController.h; sourceTree = "<group>"; };
 		BC4C1EC7186D8A0300308460 /* TBFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBFirstViewController.m; sourceTree = "<group>"; };
-		BC4C1EC9186D8A1D00308460 /* TBFirstViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "TBFirstViewController~iphone.xib"; sourceTree = "<group>"; };
+		BC4C1EC9186D8A1D00308460 /* TBFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBFirstViewController.xib; sourceTree = "<group>"; };
 		BC4C1ECE186D8C8800308460 /* TBSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBSecondViewController.h; sourceTree = "<group>"; };
 		BC4C1ECF186D8C8800308460 /* TBSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBSecondViewController.m; sourceTree = "<group>"; };
-		BC4C1ED3186D8CA400308460 /* TBSecondViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "TBSecondViewController~iphone.xib"; sourceTree = "<group>"; };
+		BC4C1ED3186D8CA400308460 /* TBSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBSecondViewController.xib; sourceTree = "<group>"; };
 		BC9158B5186C7C0600141537 /* TaboolaDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaboolaDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9158B8186C7C0600141537 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BC9158BA186C7C0600141537 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -136,7 +136,7 @@
 			children = (
 				BC4C1EC6186D8A0300308460 /* TBFirstViewController.h */,
 				BC4C1EC7186D8A0300308460 /* TBFirstViewController.m */,
-				BC4C1EC9186D8A1D00308460 /* TBFirstViewController~iphone.xib */,
+				BC4C1EC9186D8A1D00308460 /* TBFirstViewController.xib */,
 			);
 			name = TBFirstViewController;
 			sourceTree = "<group>";
@@ -146,7 +146,7 @@
 			children = (
 				BC4C1ECE186D8C8800308460 /* TBSecondViewController.h */,
 				BC4C1ECF186D8C8800308460 /* TBSecondViewController.m */,
-				BC4C1ED3186D8CA400308460 /* TBSecondViewController~iphone.xib */,
+				BC4C1ED3186D8CA400308460 /* TBSecondViewController.xib */,
 			);
 			name = TBSecondViewController;
 			sourceTree = "<group>";
@@ -349,9 +349,9 @@
 				BCF891FA186DC363003F45C4 /* ic_launcher_152.png in Resources */,
 				BCF891F8186DC363003F45C4 /* ic_launcher_120.png in Resources */,
 				BCF891F9186DC363003F45C4 /* ic_launcher_144.png in Resources */,
-				BC4C1ED4186D8CA400308460 /* TBSecondViewController~iphone.xib in Resources */,
+				BC4C1ED4186D8CA400308460 /* TBSecondViewController.xib in Resources */,
 				BC9158C3186C7C0600141537 /* InfoPlist.strings in Resources */,
-				BC4C1ECA186D8A1D00308460 /* TBFirstViewController~iphone.xib in Resources */,
+				BC4C1ECA186D8A1D00308460 /* TBFirstViewController.xib in Resources */,
 				BC9158CB186C7C0600141537 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,7 +415,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -580,7 +580,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s x86_64 arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -621,7 +621,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s x86_64 arm64";
 				WRAPPER_EXTENSION = app;
 			};
