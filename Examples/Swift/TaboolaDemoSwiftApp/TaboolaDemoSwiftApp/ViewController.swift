@@ -42,12 +42,6 @@ class ViewController: UIViewController {
         mTaboolaView.fetchContent()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        mScrollView.center = CGPoint.init(x: mScrollView.frame.size.width/2, y: mScrollView.contentSize.height - mTaboolaView.frame.size.height/2)
-    }
-    
     // MARK: Buttons
     @IBAction func refreshButtonPressed(_ sender: Any) {
         mTaboolaView.refresh()
