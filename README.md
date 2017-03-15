@@ -1,6 +1,6 @@
 # Taboola iOS SDK
 ![Platform](https://img.shields.io/badge/Platform-iOS-green.svg)
-[![Version](https://img.shields.io/badge/Version-1.4.1-blue.svg)](https://github.com/taboola/taboola-ios)
+[![Version](https://img.shields.io/badge/Version-1.4.4-blue.svg)](https://github.com/taboola/taboola-ios)
 [![License](https://img.shields.io/badge/License%20-Taboola%20SDK%20License-blue.svg)](https://github.com/taboola/taboola-ios/blob/master/LICENSE)
 
 
@@ -100,6 +100,10 @@ taboolaView.publisher = @"my-publisher";
 ```objc
 // Sets the page type of the page on which the widget is displayed (one of article, photo, video, home, category, search)
 taboolaView.pageType = @"my-page-type";
+```
+```objc
+// Sets the canonical URL for the page on which the widget is displayed
+taboolaView.pageUrl = @"my-page-url";
 ```
 ```objc
 // An identification of a specific placement in the app (you might place Taboola recommendation units in multiple placements in the app, in which case you should get applicable placement ids for each such placement) 
@@ -232,20 +236,28 @@ In case you encounter some issues when integrating the SDK into your app, try re
 Taboola iOS SDK supports mediation via these platforms:
 
 * [DFP](https://developers.google.com/mobile-ads-sdk/docs/dfp/ios/custom-events)
-
-### 3.2 Required Setup
-In order to configure mediation of Taboola SDK via DFP platform, follow the steps listed below:
+* [MoPub](http://www.mopub.com/resources/docs/ios-sdk-integration/ios-getting-started)
+### 3.2 Setup of DFP mediation
+In order to configure mediation of Taboola SDK, via DFP follow the steps listed below:
 ##### 3.2.1 Add DFP Framework to your project 
 [Get Started with DFP](https://developers.google.com/mobile-ads-sdk/docs/dfp/ios/quick-start)
-##### 3.2.2 Follow the sample code to create a GADBannerView in `viewDidLoad` using `Objective-C`:
+
+##### 3.2.2 Add protocol `<GADBannerViewDelegate>` in your ViewController
+```objc
+@interface TBViewControllerDfp () <GADBannerViewDelegate> {
+GADBannerView *dfpBannerView;
+}
+```
+
+##### 3.2.3 Follow the sample code to create a GADBannerView in `viewDidLoad` using `Objective-C`:
 ```objc
 // Define custom GADAdSize of 480x320 for GADBannerView.
 GADAdSize customAdSize = GADAdSizeFromCGSize(CGSizeMake(480, 320));
 CGPoint point = CGPointMake(0, 40);
-GADBannerView* dfpBannerView = [[GADBannerView alloc] initWithAdSize:customAdSize origin:point];
+dfpBannerView = [[GADBannerView alloc] initWithAdSize:customAdSize origin:point];
 [self.view addSubview:dfpBannerView];
 dfpBannerView.delegate = self;
-dfpBannerView.adUnitID = @"<your_unit_id>";
+dfpBannerView.adUnitID = @"your-unit-id";
 dfpBannerView.rootViewController = self;
 ```
 ```objc
@@ -253,7 +265,7 @@ dfpBannerView.rootViewController = self;
 [dfpBannerView loadRequest:[GADRequest request]];
 }
 ```
-##### 3.2.3 Follow the sample code to create a GADBannerView in `viewDidLoad` using `Swift`:
+##### 3.2.4 Follow the sample code to create a GADBannerView in `viewDidLoad` using `Swift`:
 
 ```objc
 // Define custom GADAdSize of 480x320 for GADBannerView.
@@ -267,11 +279,11 @@ dfpBannerView.rootViewController = self
 dfpBannerView.load(GADRequest())
 ```
 
-##### 3.2.4 Add Adapter files into your project (available on [GitHub](https://github.com/taboola/taboola-ios)):
+##### 3.2.5 Add Adapter files into your project (available on [GitHub](https://github.com/taboola/taboola-ios)):
 
 * `DfpTaboolaEventBanner.h`
 * `DfpTaboolaEventBanner.m`
-##### 3.2.5 Configure DFP
+##### 3.2.6 Configure DFP
 * **Class name**: `DfpTaboolaEventBanner`
 * **Parameters**: Parameters for the Taboola SDK can be configured from the DFP web interface.
 * 	**Configuring from DFP web interface**: The "parameter" field in the DFP custom event configuration screen, should contain a JSON string with the required properties. Notice that strings should be enclosed within ***escaped double quotes***.
@@ -282,10 +294,67 @@ dfpBannerView.load(GADRequest())
 \"mode\":\"<mode>\",
 \"url\":\"<url>\",
 \"placement\":\"<placement>\",
-\"article\":\"auto\",
+\"article\":\"<article>\",
 \"referrer\":\"<ref url>"
 }
 ```
+### 3.3 Setup of MoPub mediation
+In order to configure mediation of Taboola SDK, via MoPub follow the steps listed below:
+##### 3.3.1 Add MoPub Framework to your project 
+[Get Started with MoPub](http://www.mopub.com/resources/docs/ios-sdk-integration/ios-getting-started/)
+
+##### 3.3.2 Add protocol `<MPAdViewDelegate>` in your ViewController
+```objc
+@interface TBViewControllerMopub () <MPAdViewDelegate> {
+MPAdView *moPubView;
+}
+```
+##### 3.3.3 Follow the sample code to create a MPAdView in `viewDidLoad` using `Objective-C`:
+```objc
+moPubView = [[MPAdView alloc]initWithAdUnitId:@"your-unit-id" size:MOPUB_MEDIUM_RECT_SIZE];
+moPubView.delegate = self;
+CGPoint framePosition = CGPointMake(CGRectGetMidX(self.view.bounds) - (MOPUB_MEDIUM_RECT_SIZE.width/2), 40);
+moPubView.frame = CGRectMake(framePosition.x, framePosition.y, MOPUB_MEDIUM_RECT_SIZE.width, MOPUB_MEDIUM_RECT_SIZE.height);
+[self.view addSubview:moPubView];
+[moPubView loadAd];
+[super viewDidLoad];
+```
+```objc
+- (UIViewController *)viewControllerForPresentingModalView {
+return self;
+}
+```
+##### 3.3.4 Follow the sample code to create a MPAdView in `viewDidLoad` using `Swift`:
+
+```objc
+moPubView = MPAdView(adUnitId: "your-unit-id", size: MOPUB_MEDIUM_RECT_SIZE)
+moPubView.delegate = self
+var framePosition = CGPoint(x: CGFloat(self.view.bounds.midX - (MOPUB_MEDIUM_RECT_SIZE.width / 2)), y: CGFloat(40))
+moPubView.frame = CGRect(x: CGFloat(framePosition.x), y: CGFloat(framePosition.y), width: CGFloat(MOPUB_MEDIUM_RECT_SIZE.width), height: CGFloat(MOPUB_MEDIUM_RECT_SIZE.height))
+self.view.addSubview(moPubView)
+moPubView.loadAd()
+super.viewDidLoad()
+```
+
+##### 3.3.5 Add Adapter files into your project (available on [GitHub](https://github.com/taboola/taboola-ios)):
+* `MoPubCustomEventBanner.h`
+* `MoPubCustomEventBanner.m`
+##### 3.3.6 Configure MoPub
+* **Class name**: `MoPubCustomEventBanner`
+* **Parameters**: Parameters for the Taboola SDK can be configured from the MoPub web interface.
+* 	**Configuring from DFP web interface**: The "parameter" field in the MoPub custom event configuration screen, should contain a JSON string with the required properties. Notice that strings should be enclosed within ***escaped double quotes***.
+
+```javascript
+{
+"publisher":"<publisher code>",
+"mode":"<mode>",
+"url":"<url>",
+"article":"<article>",
+"placement":"<placement>",
+"referrer":"<http://www.example.com/ref>"
+}
+```
+
 ## 4. SDK Reference 
 ### 4.1. Public Properties
 
@@ -342,6 +411,10 @@ dfpBannerView.load(GADRequest())
 ```objc
 // Optional. when enabled, TaboolaView automatically resizes its height after rendering the widget, Default YES    
 @property(nonatomic, readwrite) BOOL autoResizeHeight    
+```
+```objc
+// Optional. Mediation provider.    
+@property (nonatomic) NSString* mediation    
 ```
 
 ### 4.2. Public methods

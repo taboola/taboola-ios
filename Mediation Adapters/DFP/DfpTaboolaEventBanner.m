@@ -6,7 +6,6 @@
  Copyright 2017 Taboola, Inc.  All rights reserved.
  */
 
-
 #import "DfpTaboolaEventBanner.h"
 #import "TaboolaView.h"
 
@@ -26,15 +25,17 @@
     self.taboolaView.delegate = self;
     self.taboolaView.autoResizeHeight = YES;
     self.taboolaView.enableClickHandler = YES;
+    self.taboolaView.mediation = @"DFP";
     
     NSData *jsonData = [serverParameter dataUsingEncoding:NSUTF8StringEncoding];
     if (jsonData != nil){
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
-        self.taboolaView.publisher = dictionary[@"publisher"];
-        self.taboolaView.mode = dictionary[@"mode"];
-        self.taboolaView.pageUrl = dictionary[@"url"];
-        self.taboolaView.pageType = dictionary[@"article"];
-        self.taboolaView.placement = dictionary[@"referrer"];
+        self.taboolaView.publisher  = dictionary[@"publisher"];
+        self.taboolaView.mode       = dictionary[@"mode"];
+        self.taboolaView.pageUrl    = dictionary[@"url"];
+        self.taboolaView.pageType   = dictionary[@"article"];
+        self.taboolaView.placement  = dictionary[@"placement"];
+        self.taboolaView.targetType = dictionary[@"target_type"];
         
         [self.delegate customEventBanner:self didReceiveAd:self.taboolaView];
     }
@@ -55,3 +56,4 @@
 }
 
 @end
+
