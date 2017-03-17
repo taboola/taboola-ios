@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,88 +11,104 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TBSecondViewController">
             <connections>
-                <outlet property="mScrollView" destination="jWW-kq-cfv" id="G4v-Ux-OUw"/>
-                <outlet property="mTaboolaView" destination="Bqn-fj-3tv" id="QtU-xp-C1U"/>
-                <outlet property="mTextLabel" destination="ghG-mg-9sP" id="XDV-4T-xaN"/>
-                <outlet property="view" destination="1" id="Ntt-9O-ahQ"/>
+                <outlet property="mScrollView" destination="Vfz-62-mlC" id="SXB-il-FrO"/>
+                <outlet property="mTaboolaView" destination="ZRZ-3l-SUb" id="6U1-Fp-ygf"/>
+                <outlet property="mTextLabel" destination="x6W-Ww-hCQ" id="KKR-A4-nAZ"/>
+                <outlet property="view" destination="G8F-mz-iSw" id="U0U-13-sRM"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="1">
+        <view contentMode="scaleToFill" id="G8F-mz-iSw">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="jWW-kq-cfv">
-                    <rect key="frame" x="0.0" y="50" width="375" height="607"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ghG-mg-9sP">
-                            <rect key="frame" x="10" y="6" width="355" height="508"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <view contentMode="scaleToFill" id="Bqn-fj-3tv" customClass="TaboolaView">
-                            <rect key="frame" x="0.0" y="365" width="375" height="242"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <inset key="insetFor6xAndEarlier" minX="0.0" minY="-50" maxX="0.0" maxY="50"/>
-                        </view>
-                    </subviews>
-                </scrollView>
-                <view contentMode="scaleToFill" id="3Tu-wC-MlP">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOL-aD-zJx">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigationBar_iPhone@2x.png.png" id="E2g-Jz-G2R">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uny-is-P6V">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAU-k7-D7Q">
                             <rect key="frame" x="20" y="10" width="58" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Refresh">
                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
-                            <connections>
-                                <action selector="refreshButtonPressed:" destination="-1" eventType="touchUpInside" id="rFl-7b-EB1"/>
-                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="V2f-kP-EXm">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Si-Gz-MMD">
                             <rect key="frame" x="158" y="10" width="58" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Reset">
                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
-                            <connections>
-                                <action selector="resetButtonPressed:" destination="-1" eventType="touchUpInside" id="gQg-4e-jkw"/>
-                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Eo9-CI-9ab">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9Y-jQ-oLW">
                             <rect key="frame" x="297" y="10" width="58" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Fetch">
                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
-                            <connections>
-                                <action selector="loadAgainButtonPressed:" destination="-1" eventType="touchUpInside" id="sif-Tz-JX0"/>
-                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="NAx-cw-fss"/>
+                    </constraints>
                 </view>
+                <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vfz-62-mlC">
+                    <rect key="frame" x="0.0" y="50" width="375" height="567"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qf1-4o-Ii8">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="747"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6W-Ww-hCQ">
+                                    <rect key="frame" x="8" y="0.0" width="359" height="467"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <mutableString key="text">Pellentesque habitant morbi tristique \n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla hendrerit magna, eget dignissim tortor condimentum in. Nulla ac est eu nisl ultrices sagittis non quis dui. Nam laoreet tortor id turpis consectetur, vel tristique diam lacinia. Etiam euismod velit eu tortor scelerisque tempus. Morbi viverra tortor eu hendrerit vestibulum. Donec mauris mauris, lobortis ac consequat et, venenatis sit amet arcu. Sed ut sapien ornare, iaculis mi quis, rutrum lorem. Aliquam vel adipiscing nunc. Etiam elementum vitae ante et luctus. Proin tempor arcu urna, vitae dapibus diam tempus vitae. Sed lacinia dignissim neque, a faucibus lacus malesuada quis. Cras tortor risus, egestas vel metus a, pharetra dapibus nunc. \n\nInterdum et malesuada fames ac ante ipsum primis in faucibus. Ut non venenatis ipsum, sit amet vestibulum sem. Curabitur sit amet quam rutrum, condimentum turpis sit amet, pharetra magna. Nullam sodales lectus ut semper imperdiet.</mutableString>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="242" translatesAutoresizingMaskIntoConstraints="NO" id="ZRZ-3l-SUb" customClass="TaboolaView">
+                                    <rect key="frame" x="8" y="497" width="359" height="242"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <inset key="insetFor6xAndEarlier" minX="0.0" minY="-50" maxX="0.0" maxY="50"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="ZRZ-3l-SUb" firstAttribute="leading" secondItem="qf1-4o-Ii8" secondAttribute="leading" constant="8" id="1dX-xi-pDq"/>
+                                <constraint firstAttribute="bottom" secondItem="ZRZ-3l-SUb" secondAttribute="bottom" constant="8" id="7kz-ee-ZCX"/>
+                                <constraint firstItem="x6W-Ww-hCQ" firstAttribute="top" secondItem="qf1-4o-Ii8" secondAttribute="top" id="Dr5-V4-IOF"/>
+                                <constraint firstAttribute="trailing" secondItem="x6W-Ww-hCQ" secondAttribute="trailing" constant="8" id="ISZ-hz-CZl"/>
+                                <constraint firstAttribute="trailing" secondItem="ZRZ-3l-SUb" secondAttribute="trailing" constant="8" id="InT-DM-Yls"/>
+                                <constraint firstItem="x6W-Ww-hCQ" firstAttribute="leading" secondItem="qf1-4o-Ii8" secondAttribute="leading" constant="8" id="LvM-M6-1Yw"/>
+                                <constraint firstItem="ZRZ-3l-SUb" firstAttribute="top" secondItem="x6W-Ww-hCQ" secondAttribute="bottom" constant="30" id="RuM-ow-jdF"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="qf1-4o-Ii8" secondAttribute="trailing" id="73y-zS-0dh"/>
+                        <constraint firstItem="qf1-4o-Ii8" firstAttribute="leading" secondItem="Vfz-62-mlC" secondAttribute="leading" id="GJL-HL-lND"/>
+                        <constraint firstAttribute="bottom" secondItem="qf1-4o-Ii8" secondAttribute="bottom" id="Pey-dJ-Fh0"/>
+                        <constraint firstItem="qf1-4o-Ii8" firstAttribute="top" secondItem="Vfz-62-mlC" secondAttribute="top" id="VIw-Ek-C10"/>
+                        <constraint firstItem="qf1-4o-Ii8" firstAttribute="width" secondItem="Vfz-62-mlC" secondAttribute="width" id="nrK-Au-VJf"/>
+                    </constraints>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Vfz-62-mlC" secondAttribute="trailing" id="07i-HT-pek"/>
+                <constraint firstAttribute="trailing" secondItem="rOL-aD-zJx" secondAttribute="trailing" id="8ED-RV-7jC"/>
+                <constraint firstItem="Vfz-62-mlC" firstAttribute="top" secondItem="rOL-aD-zJx" secondAttribute="bottom" id="Dzh-3i-fTM"/>
+                <constraint firstItem="rOL-aD-zJx" firstAttribute="leading" secondItem="G8F-mz-iSw" secondAttribute="leading" id="iIx-JM-G47"/>
+                <constraint firstItem="rOL-aD-zJx" firstAttribute="top" secondItem="G8F-mz-iSw" secondAttribute="top" id="lKw-Ye-uOV"/>
+                <constraint firstItem="Vfz-62-mlC" firstAttribute="leading" secondItem="G8F-mz-iSw" secondAttribute="leading" id="zhd-Lx-jLh"/>
+                <constraint firstAttribute="bottom" secondItem="Vfz-62-mlC" secondAttribute="bottom" constant="50" id="zk0-jb-qOD"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+            <point key="canvasLocation" x="-98.5" y="1.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="navigationBar_iPhone@2x.png.png" width="640" height="89"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
