@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4EB34076BBBA07FB1C95FFA6 /* libPods-TaboolaDemoApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F50285FC0C6E90E466A306 /* libPods-TaboolaDemoApp.a */; };
+		86ABDEDA1E8010FB00A92819 /* TBTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86ABDED81E8010FB00A92819 /* TBTestViewController.m */; };
+		86ABDEDB1E8010FB00A92819 /* TBTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86ABDED91E8010FB00A92819 /* TBTestViewController.xib */; };
+		86B2B0101E801FF00012A964 /* TBChangeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B2B00E1E801FF00012A964 /* TBChangeInfoViewController.m */; };
+		86B2B0111E801FF00012A964 /* TBChangeInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B2B00F1E801FF00012A964 /* TBChangeInfoViewController.xib */; };
 		BC4C1EC8186D8A0300308460 /* TBFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4C1EC7186D8A0300308460 /* TBFirstViewController.m */; };
 		BC4C1ECA186D8A1D00308460 /* TBFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4C1EC9186D8A1D00308460 /* TBFirstViewController.xib */; };
 		BC4C1ED0186D8C8800308460 /* TBSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4C1ECF186D8C8800308460 /* TBSecondViewController.m */; };
@@ -29,7 +33,7 @@
 		BCF891F8186DC363003F45C4 /* ic_launcher_120.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF891F1186DC363003F45C4 /* ic_launcher_120.png */; };
 		BCF891F9186DC363003F45C4 /* ic_launcher_144.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF891F2186DC363003F45C4 /* ic_launcher_144.png */; };
 		BCF891FA186DC363003F45C4 /* ic_launcher_152.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF891F3186DC363003F45C4 /* ic_launcher_152.png */; };
-		BCF891FE186DC47C003F45C4 /* navigationBar_iPhone@2x.png.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF891FC186DC47C003F45C4 /* navigationBar_iPhone@2x.png.png */; };
+		BCF891FE186DC47C003F45C4 /* navigationBar_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF891FC186DC47C003F45C4 /* navigationBar_iPhone@2x.png */; };
 		DC1F26E51DCB3FED007328B0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1F26E41DCB3FED007328B0 /* WebKit.framework */; };
 		DCF042ED1DCCADFA00198A08 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF042EC1DCCADFA00198A08 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
@@ -55,6 +59,12 @@
 		39B0BC8FA40B27EFF8279810 /* Pods-TaboolaDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaboolaDemoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaboolaDemoApp/Pods-TaboolaDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		42966A7478D73CB3E501E4CC /* Pods-TaboolaDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaboolaDemoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaboolaDemoApp/Pods-TaboolaDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		62F50285FC0C6E90E466A306 /* libPods-TaboolaDemoApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaboolaDemoApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86ABDED71E8010FB00A92819 /* TBTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBTestViewController.h; sourceTree = "<group>"; };
+		86ABDED81E8010FB00A92819 /* TBTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBTestViewController.m; sourceTree = "<group>"; };
+		86ABDED91E8010FB00A92819 /* TBTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBTestViewController.xib; sourceTree = "<group>"; };
+		86B2B00D1E801FF00012A964 /* TBChangeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBChangeInfoViewController.h; sourceTree = "<group>"; };
+		86B2B00E1E801FF00012A964 /* TBChangeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBChangeInfoViewController.m; sourceTree = "<group>"; };
+		86B2B00F1E801FF00012A964 /* TBChangeInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBChangeInfoViewController.xib; sourceTree = "<group>"; };
 		BA12290580686AD6DB0E2DF7 /* libPods-TaboolaDemoAppUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaboolaDemoAppUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4C1EC6186D8A0300308460 /* TBFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBFirstViewController.h; sourceTree = "<group>"; };
 		BC4C1EC7186D8A0300308460 /* TBFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBFirstViewController.m; sourceTree = "<group>"; };
@@ -82,7 +92,7 @@
 		BCF891F1186DC363003F45C4 /* ic_launcher_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher_120.png; sourceTree = "<group>"; };
 		BCF891F2186DC363003F45C4 /* ic_launcher_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher_144.png; sourceTree = "<group>"; };
 		BCF891F3186DC363003F45C4 /* ic_launcher_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher_152.png; sourceTree = "<group>"; };
-		BCF891FC186DC47C003F45C4 /* navigationBar_iPhone@2x.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationBar_iPhone@2x.png.png"; sourceTree = "<group>"; };
+		BCF891FC186DC47C003F45C4 /* navigationBar_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationBar_iPhone@2x.png"; sourceTree = "<group>"; };
 		DC1F26E41DCB3FED007328B0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		DC481AD91D01C032000426FD /* TaboolaDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaboolaDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF042EC1DCCADFA00198A08 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -122,6 +132,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86ABDED61E8010AC00A92819 /* TBTestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				86ABDED71E8010FB00A92819 /* TBTestViewController.h */,
+				86ABDED81E8010FB00A92819 /* TBTestViewController.m */,
+				86ABDED91E8010FB00A92819 /* TBTestViewController.xib */,
+				86B2B00C1E801FC30012A964 /* TBChangeInfoViewController */,
+			);
+			name = TBTestViewController;
+			sourceTree = "<group>";
+		};
+		86B2B00C1E801FC30012A964 /* TBChangeInfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				86B2B00D1E801FF00012A964 /* TBChangeInfoViewController.h */,
+				86B2B00E1E801FF00012A964 /* TBChangeInfoViewController.m */,
+				86B2B00F1E801FF00012A964 /* TBChangeInfoViewController.xib */,
+			);
+			name = TBChangeInfoViewController;
+			sourceTree = "<group>";
+		};
 		97AAE3EC87C656A1ABFB1B56 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,7 +233,7 @@
 		BC9158BF186C7C0600141537 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BCF891FC186DC47C003F45C4 /* navigationBar_iPhone@2x.png.png */,
+				BCF891FC186DC47C003F45C4 /* navigationBar_iPhone@2x.png */,
 				BCF891EC186DC357003F45C4 /* icons */,
 				BC9158C0186C7C0600141537 /* TaboolaDemoApp-Info.plist */,
 				BC9158C1186C7C0600141537 /* InfoPlist.strings */,
@@ -217,6 +248,7 @@
 			children = (
 				BC4C1EC5186D89E400308460 /* TBFirstViewController */,
 				BC4C1ECD186D8C6A00308460 /* TBSecondViewController */,
+				86ABDED61E8010AC00A92819 /* TBTestViewController */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -305,7 +337,7 @@
 				ORGANIZATIONNAME = Taboola;
 				TargetAttributes = {
 					BC9158B4186C7C0600141537 = {
-						DevelopmentTeam = P4YBSJEM3U;
+						DevelopmentTeam = QMJ5T4LTHY;
 					};
 					BC9158CF186C7C0600141537 = {
 						TestTargetID = BC9158B4186C7C0600141537;
@@ -345,13 +377,15 @@
 				BCF891F5186DC363003F45C4 /* ic_launcher_72.png in Resources */,
 				DCF042ED1DCCADFA00198A08 /* Launch Screen.storyboard in Resources */,
 				BCF891F6186DC363003F45C4 /* ic_launcher_76.png in Resources */,
-				BCF891FE186DC47C003F45C4 /* navigationBar_iPhone@2x.png.png in Resources */,
+				BCF891FE186DC47C003F45C4 /* navigationBar_iPhone@2x.png in Resources */,
 				BCF891FA186DC363003F45C4 /* ic_launcher_152.png in Resources */,
 				BCF891F8186DC363003F45C4 /* ic_launcher_120.png in Resources */,
 				BCF891F9186DC363003F45C4 /* ic_launcher_144.png in Resources */,
 				BC4C1ED4186D8CA400308460 /* TBSecondViewController.xib in Resources */,
+				86ABDEDB1E8010FB00A92819 /* TBTestViewController.xib in Resources */,
 				BC9158C3186C7C0600141537 /* InfoPlist.strings in Resources */,
 				BC4C1ECA186D8A1D00308460 /* TBFirstViewController.xib in Resources */,
+				86B2B0111E801FF00012A964 /* TBChangeInfoViewController.xib in Resources */,
 				BC9158CB186C7C0600141537 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,8 +459,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86B2B0101E801FF00012A964 /* TBChangeInfoViewController.m in Sources */,
 				BC9158C9186C7C0600141537 /* TBAppDelegate.m in Sources */,
 				BC9158C5186C7C0600141537 /* main.m in Sources */,
+				86ABDEDA1E8010FB00A92819 /* TBTestViewController.m in Sources */,
 				BC4C1EC8186D8A0300308460 /* TBFirstViewController.m in Sources */,
 				BC4C1ED0186D8C8800308460 /* TBSecondViewController.m in Sources */,
 			);
@@ -557,7 +593,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = P4YBSJEM3U;
+				DEVELOPMENT_TEAM = QMJ5T4LTHY;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TaboolaDemoApp/TaboolaDemoApp-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -598,7 +634,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = P4YBSJEM3U;
+				DEVELOPMENT_TEAM = QMJ5T4LTHY;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TaboolaDemoApp/TaboolaDemoApp-Prefix.pch";
 				HEADER_SEARCH_PATHS = (

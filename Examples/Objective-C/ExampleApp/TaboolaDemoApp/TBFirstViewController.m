@@ -5,9 +5,6 @@
 
 #import "TBFirstViewController.h"
 
-#define BOTTOM_MARGIN 20
-#define HEADER_LENGTH 37
-
 @implementation TBFirstViewController
 
 #pragma mark - Life cycle
@@ -73,11 +70,11 @@
 }
 
 - (IBAction)loadAgainButtonPressed:(id)sender{
-    mTaboolaView.scrollEnable = YES;
     mTaboolaView.pageType = @"article";
-    mTaboolaView.pageUrl = @"http://www.example.com";
-    mTaboolaView.placement = @"mobile";
-    NSDictionary *lCommandsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"http://www.example.com/ref", @"referrer", nil];
+    mTaboolaView.pageUrl = @"www.lexpress.fr";
+    mTaboolaView.placement = @"iOS Below Article Thumbnails";
+    mTaboolaView.scrollEnable = NO;
+    NSDictionary *lCommandsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"http://www.example.com/2/ref", @"referrer", nil];
     [mTaboolaView setOptionalPageCommands:lCommandsDictionary];
     [mTaboolaView fetchContent];
 }

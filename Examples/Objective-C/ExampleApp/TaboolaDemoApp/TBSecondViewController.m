@@ -5,9 +5,6 @@
 
 #import "TBSecondViewController.h"
 
-#define BOTTOM_MARGIN 5.f
-#define HEADER_LENGTH 42.0f
-
 @implementation TBSecondViewController
 
 #pragma mark - Life cycle
@@ -40,8 +37,6 @@
 #pragma mark - Rotation
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
 	[super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
-	[mScrollView setContentSize:CGSizeMake(mScrollView.frame.size.width, mTextLabel.frame.size.height + mTaboolaView.frame.size.height + BOTTOM_MARGIN)];
-	[mTaboolaView setCenter:CGPointMake(mScrollView.frame.size.width/2, mScrollView.contentSize.height - mTaboolaView.frame.size.height/2)];
 }
 
 #pragma mark - TaboolaView delegate
@@ -68,8 +63,6 @@
 }
 
 - (IBAction)loadAgainButtonPressed:(id)sender{
-
-
     mTaboolaView.pageType = @"article";
     mTaboolaView.pageUrl = @"http://www.example.com";
     mTaboolaView.placement = @"Mobile second";
