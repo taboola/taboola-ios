@@ -52,14 +52,14 @@
     
     TBChangeInfoViewController *infoViewController = [[TBChangeInfoViewController alloc] initWithNibName:@"TBChangeInfoViewController" bundle:nil];
     infoViewController.callback = ^(NSMutableDictionary *widgetAttributes) {
-        self.taboolaView.mode       = widgetAttributes[@"publisher"];
-        self.taboolaView.publisher  = widgetAttributes[@"mode"];
-        self.taboolaView.pageType   = widgetAttributes[@"placement"];
+        self.taboolaView.mode       = widgetAttributes[@"mode"];
+        self.taboolaView.publisher  = widgetAttributes[@"publisher"];
+        self.taboolaView.pageType   = widgetAttributes[@"pageType"];
         self.taboolaView.pageUrl    = widgetAttributes[@"pageURL"];
-        self.taboolaView.placement  = widgetAttributes[@"pageType"];
+        self.taboolaView.placement  = widgetAttributes[@"placement"];
         [self.taboolaView fetchContent];
         
-        NSLog(@"publisher = %@, mode = %@, placement = %@, pageURL = %@, pageType = %@", widgetAttributes[@"publisher"], widgetAttributes[@"mode"], widgetAttributes[@"placement"], widgetAttributes[@"pageURL"], widgetAttributes[@"pageType"]);
+        NSLog(@"mode = %@, publisher = %@, pageType = %@, pageURL = %@, placement = %@", widgetAttributes[@"mode"], widgetAttributes[@"publisher"], widgetAttributes[@"pageType"], widgetAttributes[@"pageURL"], widgetAttributes[@"placement"]);
     };
     UINavigationController *navigationViewController = [[UINavigationController alloc]initWithRootViewController:infoViewController];
     navigationViewController.navigationBar.hidden = YES;

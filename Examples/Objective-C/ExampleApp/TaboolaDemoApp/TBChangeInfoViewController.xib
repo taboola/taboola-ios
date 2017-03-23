@@ -11,18 +11,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TBChangeInfoViewController">
             <connections>
-                <outlet property="modeTextField" destination="Q5p-xt-4SG" id="d4c-EB-o87"/>
-                <outlet property="pageTypeTextField" destination="KTZ-hp-pQ2" id="kNg-hk-H2z"/>
-                <outlet property="pageURLTextField" destination="591-ie-7PV" id="v7k-9H-aFX"/>
-                <outlet property="placementTextField" destination="ked-jJ-Mt8" id="hsr-hk-n2S"/>
-                <outlet property="publisherTextField" destination="bEQ-bk-2Mr" id="eYh-sF-ufc"/>
+                <outlet property="modeTextField" destination="bEQ-bk-2Mr" id="e47-oT-82R"/>
+                <outlet property="pageTypeTextField" destination="ked-jJ-Mt8" id="9aw-WI-4HJ"/>
+                <outlet property="pageURLTextField" destination="591-ie-7PV" id="2ab-ub-uqu"/>
+                <outlet property="placementTextField" destination="KTZ-hp-pQ2" id="Fu4-5e-7LK"/>
+                <outlet property="publisherTextField" destination="Q5p-xt-4SG" id="4qM-7Z-rRk"/>
                 <outlet property="saveButton" destination="r07-Jv-rKo" id="viX-yi-zx7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outletCollection property="textFields" destination="bEQ-bk-2Mr" id="pp0-k9-cnv"/>
-                <outletCollection property="textFields" destination="Q5p-xt-4SG" id="HFx-E6-0j0"/>
-                <outletCollection property="textFields" destination="ked-jJ-Mt8" id="JtH-it-3VP"/>
-                <outletCollection property="textFields" destination="591-ie-7PV" id="m8u-SN-eOw"/>
-                <outletCollection property="textFields" destination="KTZ-hp-pQ2" id="lhT-ab-8dD"/>
+                <outletCollection property="textFields" destination="bEQ-bk-2Mr" id="BQA-hm-JDK"/>
+                <outletCollection property="textFields" destination="Q5p-xt-4SG" id="3ng-BL-QOL"/>
+                <outletCollection property="textFields" destination="ked-jJ-Mt8" id="sBd-bs-dwL"/>
+                <outletCollection property="textFields" destination="591-ie-7PV" id="PI5-9Q-FS0"/>
+                <outletCollection property="textFields" destination="KTZ-hp-pQ2" id="n59-zx-tHF"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -38,7 +38,7 @@
                         <action selector="actionDismissViewController:" destination="-1" eventType="touchUpInside" id="2VC-0e-BVC"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mode" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Q5p-xt-4SG">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="publisher" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Q5p-xt-4SG">
                     <rect key="frame" x="16" y="131" width="288" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -48,7 +48,7 @@
                         <outlet property="delegate" destination="-1" id="T9j-7L-PYX"/>
                     </connections>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="placement" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ked-jJ-Mt8">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="page type" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ked-jJ-Mt8">
                     <rect key="frame" x="16" y="181" width="288" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -68,7 +68,7 @@
                         <outlet property="delegate" destination="-1" id="r3X-Xi-A6r"/>
                     </connections>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="page type" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="KTZ-hp-pQ2">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="placement" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="KTZ-hp-pQ2">
                     <rect key="frame" x="16" y="281" width="288" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -84,7 +84,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="publisher" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="bEQ-bk-2Mr">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mode" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="bEQ-bk-2Mr">
                     <rect key="frame" x="16" y="81" width="288" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
