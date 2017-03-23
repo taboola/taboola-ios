@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *placementTextField;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property (strong, nonatomic) NSArray *arrayOfKeys;
+@property (nonatomic) NSArray *defaultValues;
 
 @end
 
@@ -30,20 +31,46 @@
     [self.view addGestureRecognizer:tapGesture];
     
     self.arrayOfKeys = @[@"mode", @"publisher", @"pageType", @"pageURL", @"placement"];
-
-    self.modeTextField.text = @"thumbnails-sdk3";
-    self.publisherTextField.text = @"betterbytheminute-app";
-    self.pageTypeTextField.text = @"article";
-    self.pageURLTextField.text = @"http://www.example.com";
-    self.placementTextField.text = @"Mobile second";
+    self.defaultValues = @[@"thumbnails-sdk3", @"betterbytheminute-app", @"article", @"http://www.example.com", @"Mobile"];
     
-    [self actionChangeTextField:nil];
+    [self getDataFromTextFileds];
+    [self updateButtonEnabled];
 }
 
 #pragma mark - Private Method
 
 - (void)dismissKeyboard {
     [self.view endEditing:true];
+}
+
+- (void)getDataFromTextFileds {
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self.textFields enumerateObjectsUsingBlock:^(UITextField *textField, NSUInteger index, BOOL * _Nonnull stop) {
+        NSString *value = [[NSUserDefaults standardUserDefaults] objectForKey:self.arrayOfKeys[index]];
+        if (value == nil) {
+            value = self.defaultValues[index];
+        }
+        textField.text = value;
+    }];
+}
+
+- (void)saveDataFromTextFields {
+    [self.textFields enumerateObjectsUsingBlock:^(UITextField *textField, NSUInteger index, BOOL * _Nonnull stop) {
+        [[NSUserDefaults standardUserDefaults] setObject: textField.text forKey:self.arrayOfKeys[index]];
+    }];
+}
+
+- (void)updateButtonEnabled {
+    BOOL isEnabled = true;
+    
+    for (UITextField* textField in self.textFields) {
+        if ([textField.text length] == 0) {
+            isEnabled = false;
+            break;
+        }
+    }
+    
+    [self.saveButton setEnabled:isEnabled];
 }
 
 #pragma mark - Actions
@@ -59,21 +86,11 @@
         }
         self.callback(widgetAttributes);
     }
-    
+    [self saveDataFromTextFields];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)actionChangeTextField:(UITextField *)sender {
-    
-    BOOL isEnabled = true;
-    
-    for (UITextField* textField in self.textFields) {
-        if ([textField.text length] == 0) {
-            isEnabled = false;
-            break;
-        }
-    }
-
-    [self.saveButton setEnabled:isEnabled];
+    [self updateButtonEnabled];
 }
 
 #pragma mark - UITextFieldDelegate
