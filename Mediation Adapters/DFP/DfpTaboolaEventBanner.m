@@ -37,6 +37,12 @@
         self.taboolaView.placement  = dictionary[@"placement"];
         self.taboolaView.targetType = dictionary[@"target_type"];
         
+        NSMutableDictionary *lPageDictionary = [NSMutableDictionary new];
+        lPageDictionary[@"category"] = dictionary[@"category"];
+        lPageDictionary[@"widget_type"] = dictionary[@"widget_type"];
+        lPageDictionary[@"firstName"] = dictionary[@"firstName"];
+        [self.taboolaView setOptionalPageCommands:lPageDictionary];
+        
         [self.delegate customEventBanner:self didReceiveAd:self.taboolaView];
     }
     
@@ -56,4 +62,7 @@
 }
 
 @end
+
+@end
+
 
