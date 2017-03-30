@@ -30,6 +30,12 @@
     self.taboolaView.targetType         = info[@"target_type"];
     self.taboolaView.mediation          = @"MoPub";
     
+    NSMutableDictionary *lPageDictionary = [NSMutableDictionary new];
+    lPageDictionary[@"category"]    = info[@"category"];
+    lPageDictionary[@"widget_type"] = info[@"widget_type"];
+    lPageDictionary[@"firstName"]   = info[@"firstName"];
+    [self.taboolaView setOptionalPageCommands:lPageDictionary];
+    
     [self.delegate bannerCustomEvent:self didLoadAd:self.taboolaView];
     [self.taboolaView fetchContent];
 }
