@@ -35,19 +35,30 @@ static NSString const *kPlacementKey = @"placement";
     self.taboolaView.placement          = info[kPlacementKey];
     self.taboolaView.mediation          = @"MoPub";
     
-    NSArray* arrayOfKeys = @[kPublisherKey, kModeKey, kUrlKey, kArticleKey, kPlacementKey];
-    NSMutableDictionary *pageDictionary = [NSMutableDictionary new];
+    NSDictionary *additionalParams = [self additionalParametersFrom:info];
     
-    for (NSString *key in info.allKeys) {
-        if (![arrayOfKeys containsObject:key]) {
-            pageDictionary[key] = info[key];
-        }
+    if (additionalParams.count > 0) {
+        [self.taboolaView setOptionalPageCommands:additionalParams];
     }
-    [self.taboolaView setOptionalPageCommands:pageDictionary];
+    
     [self.taboolaView fetchContent];
 }
 
-#pragma mark TaboolaViewDelegate implementation
+#pragma mark - Privare functions
+
+- (NSDictionary *)additionalParametersFrom:(NSDictionary *)dictionary {
+    NSArray* arrayOfKeys = @[kPublisherKey, kModeKey, kUrlKey, kArticleKey, kPlacementKey];
+    NSMutableDictionary *pageDictionary = [NSMutableDictionary new];
+    
+    for (NSString *key in dictionary.allKeys) {
+        if (![arrayOfKeys containsObject:key]) {
+            pageDictionary[key] = dictionary[key];
+        }
+    }
+    return pageDictionary;
+}
+
+#pragma mark - TaboolaViewDelegate implementation
 
 - (void)taboolaDidReceiveAd:(UIView *)view {
     [self.delegate bannerCustomEvent:self didLoadAd:self.taboolaView];
