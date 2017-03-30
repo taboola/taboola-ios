@@ -9,6 +9,12 @@
 #import "MoPubCustomEventBanner.h"
 #import "TaboolaView.h"
 
+static NSString const *kPublisherKey = @"publisher";
+static NSString const *kModeKey = @"mode";
+static NSString const *kUrlKey = @"url";
+static NSString const *kArticleKey = @"article";
+static NSString const *kPlacementKey = @"placement";
+
 @interface MoPubCustomEventBanner() <TaboolaViewDelegate>
 @property (nonatomic, strong) TaboolaView *taboolaView;
 @end
@@ -22,19 +28,22 @@
     self.taboolaView.delegate           = self;
     self.taboolaView.autoResizeHeight   = YES;
     self.taboolaView.enableClickHandler = YES;
-    self.taboolaView.publisher          = info[@"publisher"];
-    self.taboolaView.mode               = info[@"mode"];
-    self.taboolaView.pageUrl            = info[@"url"];
-    self.taboolaView.pageType           = info[@"article"];
-    self.taboolaView.placement          = info[@"placement"];
-    self.taboolaView.targetType         = info[@"target_type"];
+    self.taboolaView.publisher          = info[kPublisherKey];
+    self.taboolaView.mode               = info[kModeKey];
+    self.taboolaView.pageUrl            = info[kUrlKey];
+    self.taboolaView.pageType           = info[kArticleKey];
+    self.taboolaView.placement          = info[kPlacementKey];
     self.taboolaView.mediation          = @"MoPub";
     
-    NSMutableDictionary *lPageDictionary = [NSMutableDictionary new];
-    lPageDictionary[@"category"]    = info[@"category"];
-    lPageDictionary[@"widget_type"] = info[@"widget_type"];
-    lPageDictionary[@"firstName"]   = info[@"firstName"];
-    [self.taboolaView setOptionalPageCommands:lPageDictionary];
+    NSArray* arrayOfKeys = @[kPublisherKey, kModeKey, kUrlKey, kArticleKey, kPlacementKey];
+    NSMutableDictionary *pageDictionary = [NSMutableDictionary new];
+    
+    for (NSString *key in info.allKeys) {
+        if (![arrayOfKeys containsObject:key]) {
+            pageDictionary[key] = info[key];
+            [self.taboolaView setOptionalPageCommands:pageDictionary];
+        }
+    }
     
     [self.delegate bannerCustomEvent:self didLoadAd:self.taboolaView];
     [self.taboolaView fetchContent];

@@ -9,6 +9,12 @@
 #import "DfpTaboolaEventBanner.h"
 #import "TaboolaView.h"
 
+static NSString const *kPublisherKey = @"publisher";
+static NSString const *kModeKey = @"mode";
+static NSString const *kUrlKey = @"url";
+static NSString const *kArticleKey = @"article";
+static NSString const *kPlacementKey = @"placement";
+
 @interface DfpTaboolaEventBanner() <TaboolaViewDelegate>
 @property (nonatomic, strong) TaboolaView *taboolaView;
 @end
@@ -30,18 +36,21 @@
     NSData *jsonData = [serverParameter dataUsingEncoding:NSUTF8StringEncoding];
     if (jsonData != nil){
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
-        self.taboolaView.publisher  = dictionary[@"publisher"];
-        self.taboolaView.mode       = dictionary[@"mode"];
-        self.taboolaView.pageUrl    = dictionary[@"url"];
-        self.taboolaView.pageType   = dictionary[@"article"];
-        self.taboolaView.placement  = dictionary[@"placement"];
-        self.taboolaView.targetType = dictionary[@"target_type"];
+        self.taboolaView.publisher  = dictionary[kPublisherKey];
+        self.taboolaView.mode       = dictionary[kModeKey];
+        self.taboolaView.pageUrl    = dictionary[kUrlKey];
+        self.taboolaView.pageType   = dictionary[kArticleKey];
+        self.taboolaView.placement  = dictionary[kPlacementKey];
         
-        NSMutableDictionary *lPageDictionary = [NSMutableDictionary new];
-        lPageDictionary[@"category"] = dictionary[@"category"];
-        lPageDictionary[@"widget_type"] = dictionary[@"widget_type"];
-        lPageDictionary[@"firstName"] = dictionary[@"firstName"];
-        [self.taboolaView setOptionalPageCommands:lPageDictionary];
+        NSArray* arrayOfKeys = @[kPublisherKey, kModeKey, kUrlKey, kArticleKey, kPlacementKey];
+        NSMutableDictionary *pageDictionary = [NSMutableDictionary new];
+        
+        for (NSString *key in dictionary.allKeys) {
+            if (![arrayOfKeys containsObject:key]) {
+                pageDictionary[key] = dictionary[key];
+                [self.taboolaView setOptionalPageCommands:pageDictionary];
+            }
+        }
         
         [self.delegate customEventBanner:self didReceiveAd:self.taboolaView];
     }
@@ -60,8 +69,6 @@
     [self.delegate customEventBannerWillLeaveApplication:self];
     return YES;
 }
-
-@end
 
 @end
 
