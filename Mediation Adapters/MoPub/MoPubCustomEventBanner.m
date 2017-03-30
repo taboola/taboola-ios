@@ -41,15 +41,17 @@ static NSString const *kPlacementKey = @"placement";
     for (NSString *key in info.allKeys) {
         if (![arrayOfKeys containsObject:key]) {
             pageDictionary[key] = info[key];
-            [self.taboolaView setOptionalPageCommands:pageDictionary];
         }
     }
-    
-    [self.delegate bannerCustomEvent:self didLoadAd:self.taboolaView];
+    [self.taboolaView setOptionalPageCommands:pageDictionary];
     [self.taboolaView fetchContent];
 }
 
 #pragma mark TaboolaViewDelegate implementation
+
+- (void)taboolaDidReceiveAd:(UIView *)view {
+    [self.delegate bannerCustomEvent:self didLoadAd:self.taboolaView];
+}
 
 - (void)taboolaDidFailAd:(NSError *)error {
     [self.delegate bannerCustomEvent:self didFailToLoadAdWithError:error];
