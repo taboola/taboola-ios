@@ -81,5 +81,6 @@ static NSString const *kPlacementKey = @"placement";
     [self.delegate customEventBannerWillLeaveApplication:self];
     return YES;
 }
+@end
 
 
