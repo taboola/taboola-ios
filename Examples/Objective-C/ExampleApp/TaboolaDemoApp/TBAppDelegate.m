@@ -6,6 +6,7 @@
 #import "TBAppDelegate.h"
 #import "TBFirstViewController.h"
 #import "TBSecondViewController.h"
+#import "TBTestViewController.h"
 
 
 @implementation TBAppDelegate
@@ -24,6 +25,12 @@
     TBSecondViewController *lSecondViewController = [[TBSecondViewController alloc] initWithNibName:@"TBSecondViewController" bundle:nil];
     UITabBarItem *lSecondTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Second" image:nil tag:1];
     
+    TBTestViewController *testViewController = [[TBTestViewController alloc]initWithNibName:@"TBTestViewController" bundle:nil];
+    UITabBarItem *testTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Test" image:nil tag:2];
+    UINavigationController *testNavController = [[UINavigationController alloc] initWithRootViewController:testViewController];
+    testNavController.navigationBarHidden = YES;
+    testNavController.tabBarItem = testTabBarItem;
+    
     // Setting Tab bar font, color and v-alignnment
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"AmericanTypewriter" size:20.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];
     
@@ -37,7 +44,7 @@
     
     
     UITabBarController *lTabBarController = [[UITabBarController alloc] init];
-    lTabBarController.viewControllers = [NSArray arrayWithObjects:lFirstNavController, lSecondNavController,nil];
+    lTabBarController.viewControllers = [NSArray arrayWithObjects:lFirstNavController, lSecondNavController, testNavController, nil];
     lTabBarController.selectedIndex = 0;
     self.window.rootViewController = lTabBarController;
     

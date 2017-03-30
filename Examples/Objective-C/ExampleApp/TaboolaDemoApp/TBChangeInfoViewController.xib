@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TBChangeInfoViewController">
+            <connections>
+                <outlet property="modeTextField" destination="bEQ-bk-2Mr" id="e47-oT-82R"/>
+                <outlet property="pageTypeTextField" destination="ked-jJ-Mt8" id="9aw-WI-4HJ"/>
+                <outlet property="pageURLTextField" destination="591-ie-7PV" id="2ab-ub-uqu"/>
+                <outlet property="placementTextField" destination="KTZ-hp-pQ2" id="Fu4-5e-7LK"/>
+                <outlet property="publisherTextField" destination="Q5p-xt-4SG" id="4qM-7Z-rRk"/>
+                <outlet property="saveButton" destination="r07-Jv-rKo" id="viX-yi-zx7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="textFields" destination="bEQ-bk-2Mr" id="BQA-hm-JDK"/>
+                <outletCollection property="textFields" destination="Q5p-xt-4SG" id="3ng-BL-QOL"/>
+                <outletCollection property="textFields" destination="ked-jJ-Mt8" id="sBd-bs-dwL"/>
+                <outletCollection property="textFields" destination="591-ie-7PV" id="PI5-9Q-FS0"/>
+                <outletCollection property="textFields" destination="KTZ-hp-pQ2" id="n59-zx-tHF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r07-Jv-rKo">
+                    <rect key="frame" x="138" y="512" width="44" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Save"/>
+                    <connections>
+                        <action selector="actionDismissViewController:" destination="-1" eventType="touchUpInside" id="2VC-0e-BVC"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="publisher" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Q5p-xt-4SG">
+                    <rect key="frame" x="16" y="131" width="288" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                    <connections>
+                        <action selector="actionChangeTextField:" destination="-1" eventType="editingChanged" id="5vE-QN-d92"/>
+                        <outlet property="delegate" destination="-1" id="T9j-7L-PYX"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="page type" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ked-jJ-Mt8">
+                    <rect key="frame" x="16" y="181" width="288" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                    <connections>
+                        <action selector="actionChangeTextField:" destination="-1" eventType="editingChanged" id="Ljo-H1-19a"/>
+                        <outlet property="delegate" destination="-1" id="FEl-Q4-X2G"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="page url" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="591-ie-7PV">
+                    <rect key="frame" x="16" y="231" width="288" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                    <connections>
+                        <action selector="actionChangeTextField:" destination="-1" eventType="editingChanged" id="Y7L-Nu-6g9"/>
+                        <outlet property="delegate" destination="-1" id="r3X-Xi-A6r"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="placement" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="KTZ-hp-pQ2">
+                    <rect key="frame" x="16" y="281" width="288" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <connections>
+                        <action selector="actionChangeTextField:" destination="-1" eventType="editingChanged" id="KDh-Io-qOf"/>
+                        <outlet property="delegate" destination="-1" id="UhH-XH-ng8"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Widget Attributes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xx-Zf-WLB">
+                    <rect key="frame" x="16" y="40" width="139.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mode" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="bEQ-bk-2Mr">
+                    <rect key="frame" x="16" y="81" width="288" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                    <connections>
+                        <action selector="actionChangeTextField:" destination="-1" eventType="editingChanged" id="Z8H-d8-aEE"/>
+                        <outlet property="delegate" destination="-1" id="Cm6-jh-Yxi"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9xx-Zf-WLB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="2V1-dO-jaV"/>
+                <constraint firstItem="ked-jJ-Mt8" firstAttribute="top" secondItem="Q5p-xt-4SG" secondAttribute="bottom" constant="20" id="4FV-zo-p3Q"/>
+                <constraint firstItem="KTZ-hp-pQ2" firstAttribute="top" secondItem="591-ie-7PV" secondAttribute="bottom" constant="20" id="9Li-uy-XoA"/>
+                <constraint firstAttribute="trailing" secondItem="bEQ-bk-2Mr" secondAttribute="trailing" constant="16" id="Cz9-hw-scC"/>
+                <constraint firstAttribute="trailing" secondItem="ked-jJ-Mt8" secondAttribute="trailing" constant="16" id="GCD-Tf-DfF"/>
+                <constraint firstItem="9xx-Zf-WLB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="IaW-pr-kNe"/>
+                <constraint firstItem="Q5p-xt-4SG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="JZA-xN-22m"/>
+                <constraint firstAttribute="bottom" secondItem="r07-Jv-rKo" secondAttribute="bottom" constant="20" id="RdL-HH-Vaz"/>
+                <constraint firstItem="591-ie-7PV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Sel-oa-nEo"/>
+                <constraint firstAttribute="trailing" secondItem="KTZ-hp-pQ2" secondAttribute="trailing" constant="16" id="Y7Z-dR-Hhr"/>
+                <constraint firstAttribute="trailing" secondItem="591-ie-7PV" secondAttribute="trailing" constant="16" id="ZTx-Ns-MaK"/>
+                <constraint firstItem="bEQ-bk-2Mr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="b8B-4w-yfb"/>
+                <constraint firstItem="Q5p-xt-4SG" firstAttribute="top" secondItem="bEQ-bk-2Mr" secondAttribute="bottom" constant="20" id="b9P-Qt-PKf"/>
+                <constraint firstAttribute="trailing" secondItem="Q5p-xt-4SG" secondAttribute="trailing" constant="16" id="hfO-NM-Muz"/>
+                <constraint firstItem="bEQ-bk-2Mr" firstAttribute="top" secondItem="9xx-Zf-WLB" secondAttribute="bottom" constant="20" id="hvY-HR-0t0"/>
+                <constraint firstItem="ked-jJ-Mt8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="lSu-Sy-QsU"/>
+                <constraint firstItem="591-ie-7PV" firstAttribute="top" secondItem="ked-jJ-Mt8" secondAttribute="bottom" constant="20" id="tPI-69-V35"/>
+                <constraint firstItem="r07-Jv-rKo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wL1-33-gbq"/>
+                <constraint firstItem="KTZ-hp-pQ2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="zV9-QD-ab5"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

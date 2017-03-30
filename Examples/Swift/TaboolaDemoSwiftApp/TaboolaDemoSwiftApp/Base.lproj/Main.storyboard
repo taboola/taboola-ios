@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,96 +22,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqn-IU-DC3">
-                                <rect key="frame" x="0.0" y="49" width="375" height="618"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIg-gF-Hn0">
-                                        <rect key="frame" x="11" y="8" width="356" height="281"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <attributedString key="attributedText">
-                                            <fragment>
-                                                <mutableString key="content">Pellentesque habitant morbi tristique 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla hendrerit magna, eget dignissim tortor condimentum in. Nulla ac est eu nisl ultrices sagittis non quis dui. Nam laoreet tortor id turpis consectetur, vel tristique diam lacinia. Etiam euismod velit eu tortor scelerisque tempus. Morbi viverra tortor eu hendrerit vestibulum. Donec mauris mauris, lobortis ac consequat et, venenatis sit amet arcu. Sed ut sapien ornare, iaculis mi quis, rutrum lorem. Aliquam vel adipiscing nunc. Etiam elementum vitae ante et luctus. Proin tempor arcu urna, vitae dapibus diam tempus vitae. Sed lacinia dignissim neque, a faucibus lacus malesuada quis. Cras tortor risus, egestas vel metus a, pharetra dapibus nunc. \n\nInterdum et malesuada fames ac ante ipsum primis in faucibus. Ut non venenatis ipsum, sit amet vestibulum sem. Curabitur sit amet quam rutrum, condimentum turpis sit amet, pharetra magna. Nullam sodales lectus ut semper imperdiet. Donec vehicula justo non mauris ullamcorper, eu sodales purus tempus. Praesent pharetra felis nec neque volutpat pellentesque. Duis mollis urna dui, a malesuada orci laoreet eu. Fusce diam nisl, consequat adipiscing mi viverra, eleifend tempus est. In risus risus, imperdiet ut metus eu, malesuada tincidunt mi.</mutableString>
-                                                <attributes>
-                                                    <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <font key="NSFont" metaFont="system" size="22"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gk7-ge-SAw" customClass="TaboolaView">
-                                        <rect key="frame" x="0.0" y="366" width="375" height="242"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="242" id="ar2-qa-pJX"/>
-                                        </constraints>
-                                        <inset key="insetFor6xAndEarlier" minX="0.0" minY="-50" maxX="0.0" maxY="50"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="EIg-gF-Hn0" secondAttribute="trailing" constant="8" id="EeZ-uK-hyM"/>
-                                    <constraint firstAttribute="trailing" secondItem="gk7-ge-SAw" secondAttribute="trailing" id="J6z-RX-OX5"/>
-                                    <constraint firstItem="EIg-gF-Hn0" firstAttribute="top" secondItem="zqn-IU-DC3" secondAttribute="top" constant="8" id="NUS-tL-iSO"/>
-                                    <constraint firstItem="gk7-ge-SAw" firstAttribute="centerX" secondItem="zqn-IU-DC3" secondAttribute="centerX" id="VeY-Sb-9YE"/>
-                                    <constraint firstItem="EIg-gF-Hn0" firstAttribute="leading" secondItem="zqn-IU-DC3" secondAttribute="leading" constant="11" id="bSv-nD-VYu"/>
-                                    <constraint firstAttribute="bottom" secondItem="gk7-ge-SAw" secondAttribute="bottom" constant="10" id="iDK-JN-qee"/>
-                                    <constraint firstItem="gk7-ge-SAw" firstAttribute="top" secondItem="EIg-gF-Hn0" secondAttribute="bottom" constant="50" id="iZU-o1-u9Z"/>
-                                    <constraint firstAttribute="height" constant="618" id="lqE-yz-JmF"/>
-                                    <constraint firstItem="gk7-ge-SAw" firstAttribute="leading" secondItem="zqn-IU-DC3" secondAttribute="leading" id="xuM-8v-xuA"/>
-                                </constraints>
-                            </scrollView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f1G-1v-7ct">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ip9-x5-iPo">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hu-4h-91f">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xd-vD-0oL">
                                         <rect key="frame" x="20" y="10" width="58" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Refresh">
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="refreshButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IJA-7Q-rbu"/>
-                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oph-NT-ewD">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnc-1C-OJg">
                                         <rect key="frame" x="158" y="10" width="58" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Reset">
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sIN-iL-0gI"/>
-                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLw-rJ-n5F">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1y-IP-nQi">
                                         <rect key="frame" x="297" y="10" width="58" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Fetch">
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="fetchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R6Y-5g-wTf"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Vvp-o3-NSO"/>
+                                </constraints>
                             </view>
+                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLK-Ou-PeV">
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YK4-GF-kcS">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="747"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lB-LN-j9A">
+                                                <rect key="frame" x="8" y="0.0" width="359" height="467"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <string key="text">Pellentesque habitant morbi tristique \n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla hendrerit magna, eget dignissim tortor condimentum in. Nulla ac est eu nisl ultrices sagittis non quis dui. Nam laoreet tortor id turpis consectetur, vel tristique diam lacinia. Etiam euismod velit eu tortor scelerisque tempus. Morbi viverra tortor eu hendrerit vestibulum. Donec mauris mauris, lobortis ac consequat et, venenatis sit amet arcu. Sed ut sapien ornare, iaculis mi quis, rutrum lorem. Aliquam vel adipiscing nunc. Etiam elementum vitae ante et luctus. Proin tempor arcu urna, vitae dapibus diam tempus vitae. Sed lacinia dignissim neque, a faucibus lacus malesuada quis. Cras tortor risus, egestas vel metus a, pharetra dapibus nunc. \n\nInterdum et malesuada fames ac ante ipsum primis in faucibus. Ut non venenatis ipsum, sit amet vestibulum sem. Curabitur sit amet quam rutrum, condimentum turpis sit amet, pharetra magna. Nullam sodales lectus ut semper imperdiet.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="242" translatesAutoresizingMaskIntoConstraints="NO" id="aTR-MN-tyV" customClass="TaboolaView">
+                                                <rect key="frame" x="8" y="497" width="359" height="242"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="-50" maxX="0.0" maxY="50"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="8lB-LN-j9A" secondAttribute="trailing" constant="8" id="8X3-YO-IK3"/>
+                                            <constraint firstAttribute="trailing" secondItem="aTR-MN-tyV" secondAttribute="trailing" constant="8" id="9Gc-XC-YLF"/>
+                                            <constraint firstItem="8lB-LN-j9A" firstAttribute="top" secondItem="YK4-GF-kcS" secondAttribute="top" id="DgB-yW-qND"/>
+                                            <constraint firstItem="aTR-MN-tyV" firstAttribute="top" secondItem="8lB-LN-j9A" secondAttribute="bottom" constant="30" id="IJw-uL-AN4"/>
+                                            <constraint firstItem="aTR-MN-tyV" firstAttribute="leading" secondItem="YK4-GF-kcS" secondAttribute="leading" constant="8" id="SYJ-1I-TPW"/>
+                                            <constraint firstAttribute="bottom" secondItem="aTR-MN-tyV" secondAttribute="bottom" constant="8" id="dpZ-cn-xFL"/>
+                                            <constraint firstItem="8lB-LN-j9A" firstAttribute="leading" secondItem="YK4-GF-kcS" secondAttribute="leading" constant="8" id="kNI-Ps-xy6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="YK4-GF-kcS" firstAttribute="width" secondItem="aLK-Ou-PeV" secondAttribute="width" id="B1T-D3-me5"/>
+                                    <constraint firstItem="YK4-GF-kcS" firstAttribute="top" secondItem="aLK-Ou-PeV" secondAttribute="top" id="LbC-A4-pMM"/>
+                                    <constraint firstAttribute="bottom" secondItem="YK4-GF-kcS" secondAttribute="bottom" id="Sju-Na-lAJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="YK4-GF-kcS" secondAttribute="trailing" id="c8Q-Vo-u7R"/>
+                                    <constraint firstItem="YK4-GF-kcS" firstAttribute="leading" secondItem="aLK-Ou-PeV" secondAttribute="leading" id="h5x-vJ-JS3"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zqn-IU-DC3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="71M-10-Mra"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zqn-IU-DC3" secondAttribute="bottom" id="qNf-FG-bHn"/>
-                            <constraint firstAttribute="trailing" secondItem="zqn-IU-DC3" secondAttribute="trailing" id="xvq-Cz-ibC"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="aLK-Ou-PeV" secondAttribute="bottom" id="Acm-5Q-gZ8"/>
+                            <constraint firstItem="ip9-x5-iPo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FBI-VA-ecL"/>
+                            <constraint firstAttribute="trailing" secondItem="ip9-x5-iPo" secondAttribute="trailing" id="NTD-W7-uPa"/>
+                            <constraint firstItem="ip9-x5-iPo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Tna-SB-J5H"/>
+                            <constraint firstAttribute="trailing" secondItem="aLK-Ou-PeV" secondAttribute="trailing" id="cpZ-wu-9zt"/>
+                            <constraint firstItem="aLK-Ou-PeV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tYp-ka-bFt"/>
+                            <constraint firstItem="aLK-Ou-PeV" firstAttribute="top" secondItem="ip9-x5-iPo" secondAttribute="bottom" id="w0Q-yg-xd4"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mScrollView" destination="zqn-IU-DC3" id="o82-ki-iJG"/>
-                        <outlet property="mTaboolaView" destination="gk7-ge-SAw" id="GQE-Yw-Ehi"/>
-                        <outlet property="mTextLabel" destination="EIg-gF-Hn0" id="uEc-Sb-qmc"/>
+                        <outlet property="mScrollView" destination="aLK-Ou-PeV" id="ACp-jP-Qk6"/>
+                        <outlet property="mTaboolaView" destination="aTR-MN-tyV" id="yNh-fS-3eZ"/>
+                        <outlet property="mTextLabel" destination="8lB-LN-j9A" id="Y1V-Sd-rfl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

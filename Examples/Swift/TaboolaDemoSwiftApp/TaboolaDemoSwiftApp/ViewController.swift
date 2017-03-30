@@ -18,8 +18,8 @@ class ViewController: UIViewController {
         
         mTaboolaView.delegate = self
         mTaboolaView.ownerViewController = self
-        mTaboolaView.mode = "thumbnails-h"
-        mTaboolaView.publisher = "cbsinteractive-cbssportsmobileapp"
+        mTaboolaView.mode = "thumbnails-a"
+        mTaboolaView.publisher = "betterbytheminute"
         mTaboolaView.pageType = "article"
         mTaboolaView.pageUrl = "http://www.example.com"
         mTaboolaView.placement = "Mobile"
@@ -40,12 +40,6 @@ class ViewController: UIViewController {
         mTaboolaView.setOptionalModeCommands(lModeDictionary)
         
         mTaboolaView.fetchContent()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        mScrollView.center = CGPoint.init(x: mScrollView.frame.size.width/2, y: mScrollView.contentSize.height - mTaboolaView.frame.size.height/2)
     }
     
     // MARK: Buttons
