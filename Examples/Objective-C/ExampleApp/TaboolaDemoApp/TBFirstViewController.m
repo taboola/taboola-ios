@@ -14,11 +14,11 @@
 	//load tabolaView
 	mTaboolaView.delegate = self;
     mTaboolaView.ownerViewController = self;
-    mTaboolaView.mode = @"thumbnails-sdk1";
-	mTaboolaView.publisher = @"betterbytheminute-app";
+    mTaboolaView.mode = @"thumbnails-h";
+	mTaboolaView.publisher = @"lexpress-network";
     mTaboolaView.pageType = @"article";
-    mTaboolaView.pageUrl = @"http://www.example.com";
-    mTaboolaView.placement = @"Mobile";
+    mTaboolaView.pageUrl = @"www.lexpress.fr";
+    mTaboolaView.placement = @"iOS Below Article Thumbnails";
 	mTaboolaView.autoResizeHeight = YES;
     mTaboolaView.scrollEnable = NO;
     mTaboolaView.enableClickHandler = YES;
@@ -35,7 +35,6 @@
 #pragma mark - Rotation
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
 	[super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
-	[mScrollView setContentSize:CGSizeMake(mScrollView.frame.size.width, CGRectGetMaxY(mTextLabel.frame))];
 }
 
 #pragma mark - TaboolaView delegate
