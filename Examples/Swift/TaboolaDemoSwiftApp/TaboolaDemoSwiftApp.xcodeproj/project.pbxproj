@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8641577D1E962DE700E1D562 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8641577C1E962DE700E1D562 /* MasterViewController.swift */; };
+		8641577F1E96317000E1D562 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8641577E1E96317000E1D562 /* SecondViewController.swift */; };
+		864157821E9677D500E1D562 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864157811E9677D500E1D562 /* EditViewController.swift */; };
+		864157861E9689ED00E1D562 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864157851E9689ED00E1D562 /* UIViewExtension.swift */; };
+		864157881E968A5B00E1D562 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864157871E968A5B00E1D562 /* UIViewControllerExtension.swift */; };
+		867A29051E95441D008D360D /* navigationBar_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 867A29041E95441D008D360D /* navigationBar_iPhone@2x.png */; };
 		A93ED1FD6CBD4777B94EB2E2 /* Pods_TaboolaDemoSwiftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56ED5F543384692C04BB0AE5 /* Pods_TaboolaDemoSwiftApp.framework */; };
 		DC1C9E7C1E3A1F6D0090B20C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C9E7B1E3A1F6D0090B20C /* AppDelegate.swift */; };
-		DC1C9E7E1E3A1F6D0090B20C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C9E7D1E3A1F6D0090B20C /* ViewController.swift */; };
+		DC1C9E7E1E3A1F6D0090B20C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C9E7D1E3A1F6D0090B20C /* FirstViewController.swift */; };
 		DC1C9E811E3A1F6D0090B20C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1C9E7F1E3A1F6D0090B20C /* Main.storyboard */; };
 		DC1C9E831E3A1F6D0090B20C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC1C9E821E3A1F6D0090B20C /* Assets.xcassets */; };
 		DC1C9E861E3A1F6D0090B20C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1C9E841E3A1F6D0090B20C /* LaunchScreen.storyboard */; };
@@ -19,9 +25,15 @@
 		3C12AFD93F156E70F3E626CB /* Pods-TaboolaDemoSwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaboolaDemoSwiftApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaboolaDemoSwiftApp/Pods-TaboolaDemoSwiftApp.release.xcconfig"; sourceTree = "<group>"; };
 		56ED5F543384692C04BB0AE5 /* Pods_TaboolaDemoSwiftApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaboolaDemoSwiftApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BB16DFF068C96F6D9AAB83 /* Pods-TaboolaDemoSwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaboolaDemoSwiftApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaboolaDemoSwiftApp/Pods-TaboolaDemoSwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8641577C1E962DE700E1D562 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		8641577E1E96317000E1D562 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		864157811E9677D500E1D562 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		864157851E9689ED00E1D562 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = Extension/UIViewExtension.swift; sourceTree = "<group>"; };
+		864157871E968A5B00E1D562 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtension.swift; path = Extension/UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		867A29041E95441D008D360D /* navigationBar_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationBar_iPhone@2x.png"; sourceTree = "<group>"; };
 		DC1C9E781E3A1F6D0090B20C /* TaboolaDemoSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaboolaDemoSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1C9E7B1E3A1F6D0090B20C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC1C9E7D1E3A1F6D0090B20C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC1C9E7D1E3A1F6D0090B20C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		DC1C9E801E3A1F6D0090B20C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC1C9E821E3A1F6D0090B20C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC1C9E851E3A1F6D0090B20C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +61,34 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		864157831E9688B100E1D562 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				864157851E9689ED00E1D562 /* UIViewExtension.swift */,
+				864157871E968A5B00E1D562 /* UIViewControllerExtension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		864157841E9688BA00E1D562 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8641577C1E962DE700E1D562 /* MasterViewController.swift */,
+				DC1C9E7D1E3A1F6D0090B20C /* FirstViewController.swift */,
+				8641577E1E96317000E1D562 /* SecondViewController.swift */,
+				864157811E9677D500E1D562 /* EditViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		867A29031E9543DA008D360D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				867A29041E95441D008D360D /* navigationBar_iPhone@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		DC1C9E6F1E3A1F6C0090B20C = {
 			isa = PBXGroup;
 			children = (
@@ -70,12 +110,14 @@
 		DC1C9E7A1E3A1F6D0090B20C /* TaboolaDemoSwiftApp */ = {
 			isa = PBXGroup;
 			children = (
+				864157841E9688BA00E1D562 /* ViewControllers */,
+				864157831E9688B100E1D562 /* Extension */,
 				DC1C9E7B1E3A1F6D0090B20C /* AppDelegate.swift */,
-				DC1C9E7D1E3A1F6D0090B20C /* ViewController.swift */,
 				DC1C9E7F1E3A1F6D0090B20C /* Main.storyboard */,
 				DC1C9E821E3A1F6D0090B20C /* Assets.xcassets */,
 				DC1C9E841E3A1F6D0090B20C /* LaunchScreen.storyboard */,
 				DC1C9E871E3A1F6D0090B20C /* Info.plist */,
+				867A29031E9543DA008D360D /* Supporting Files */,
 			);
 			path = TaboolaDemoSwiftApp;
 			sourceTree = "<group>";
@@ -153,6 +195,7 @@
 				DC1C9E861E3A1F6D0090B20C /* LaunchScreen.storyboard in Resources */,
 				DC1C9E831E3A1F6D0090B20C /* Assets.xcassets in Resources */,
 				DC1C9E811E3A1F6D0090B20C /* Main.storyboard in Resources */,
+				867A29051E95441D008D360D /* navigationBar_iPhone@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,8 +254,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC1C9E7E1E3A1F6D0090B20C /* ViewController.swift in Sources */,
+				864157861E9689ED00E1D562 /* UIViewExtension.swift in Sources */,
+				864157821E9677D500E1D562 /* EditViewController.swift in Sources */,
+				8641577F1E96317000E1D562 /* SecondViewController.swift in Sources */,
+				DC1C9E7E1E3A1F6D0090B20C /* FirstViewController.swift in Sources */,
 				DC1C9E7C1E3A1F6D0090B20C /* AppDelegate.swift in Sources */,
+				864157881E968A5B00E1D562 /* UIViewControllerExtension.swift in Sources */,
+				8641577D1E962DE700E1D562 /* MasterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

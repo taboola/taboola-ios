@@ -6,11 +6,15 @@
 import UIKit
 import TaboolaSDK
 
-class ViewController: UIViewController {
+class FirstViewController: UIViewController {
     // MARK: IBOutlets
     @IBOutlet weak var mTaboolaView: TaboolaView!
     @IBOutlet weak var mTextLabel: UILabel!
     @IBOutlet weak var mScrollView: UIScrollView!
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -18,11 +22,6 @@ class ViewController: UIViewController {
         
         mTaboolaView.delegate = self
         mTaboolaView.ownerViewController = self
-        mTaboolaView.mode = "thumbnails-a"
-        mTaboolaView.publisher = "betterbytheminute"
-        mTaboolaView.pageType = "article"
-        mTaboolaView.pageUrl = "http://www.example.com"
-        mTaboolaView.placement = "Mobile"
         mTaboolaView.autoResizeHeight = true
         mTaboolaView.scrollEnable = false
         mTaboolaView.enableClickHandler = true
@@ -38,29 +37,28 @@ class ViewController: UIViewController {
         
         let lModeDictionary = ["mix":"target_type"]
         mTaboolaView.setOptionalModeCommands(lModeDictionary)
-        
         mTaboolaView.fetchContent()
     }
-    
-    // MARK: Buttons
-    @IBAction func refreshButtonPressed(_ sender: Any) {
-        mTaboolaView.refresh()
-    }
-    
-    @IBAction func resetButtonPressed(_ sender: Any) {
-        mTaboolaView.reset()
-    }
-    
-    @IBAction func fetchButtonPressed(_ sender: Any) {
-        mTaboolaView.fetchContent()
-    }
-    
 }
-// MARK: TaboolaViewDelegate extension
-extension ViewController: TaboolaViewDelegate {
+// MARK: Extensions
+extension FirstViewController: TaboolaViewDelegate {
     func taboolaViewItemClickHandler(_ pURLString: String!, _ isOrganic: Bool) -> Bool {
         return true
     }
+}
+
+extension FirstViewController: ActionAssistantProtocol {
+    func refreshChild() {
+        mTaboolaView.refresh()
+    }
     
+    func editChild(dict: [String : String]) {
+        mTaboolaView.mode = dict[ConstantsProperties.mode]
+        mTaboolaView.publisher = dict[ConstantsProperties.publisher]
+        mTaboolaView.pageType = dict[ConstantsProperties.pageType]
+        mTaboolaView.pageUrl = dict[ConstantsProperties.pageUrl]
+        mTaboolaView.placement = dict[ConstantsProperties.placement]
+        mTaboolaView.fetchContent()
+    }
 }
 
