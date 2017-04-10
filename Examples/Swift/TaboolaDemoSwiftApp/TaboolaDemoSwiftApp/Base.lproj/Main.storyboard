@@ -77,7 +77,9 @@
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svj-4A-6L0">
                                                 <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
-                                                <state key="normal" title="Second"/>
+                                                <state key="normal" title="Second">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="actionSelectTab:" destination="2pA-rI-ZYR" eventType="touchUpInside" id="wCr-1Q-r6x"/>
                                                 </connections>
@@ -121,6 +123,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="containerView" destination="bW0-cJ-9Ok" id="pqu-da-zRY"/>
+                        <outlet property="firstButton" destination="yhf-r5-NhM" id="EJ9-NZ-sUc"/>
+                        <outlet property="secondButton" destination="Svj-4A-6L0" id="CrT-un-TrO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clq-6t-qRL" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -28,6 +28,8 @@ final class MasterViewController: UIViewController {
     
     //MARK: Outlets
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var firstButton: UIButton!
+    @IBOutlet weak var secondButton: UIButton!
     
     //MARK: Properties
     fileprivate let controllersClasses: [UIViewController.Type] = [FirstViewController.self, SecondViewController.self]
@@ -42,6 +44,7 @@ final class MasterViewController: UIViewController {
         super.viewDidLoad()
         
         add(asChildViewController: controllersClasses.first!.instantiate())
+        setButtonState(button: firstButton, isSelected: true)
     }
     
     //MARK: Fileprivate functions
@@ -67,6 +70,22 @@ final class MasterViewController: UIViewController {
             action(child)
         }
     }
+    
+    fileprivate func setButtonState(button:UIButton, isSelected:Bool) {
+        if isSelected {
+            selectedStateButton(button: button)
+        } else {
+            noSelectedStateButton(button: button)
+        }
+    }
+    
+    fileprivate func selectedStateButton(button: UIButton) {
+        button.setTitleColor(.black, for: .normal)
+    }
+    
+    fileprivate func noSelectedStateButton(button: UIButton) {
+        button.setTitleColor(.lightGray, for: .normal)
+    }
 }
 
 //MARK: Extensions
@@ -75,6 +94,8 @@ private extension MasterViewController {
     
     @IBAction func actionSelectTab(_ sender: UIButton) {
         add(asChildViewController: controllersClasses[sender.tag].instantiate())
+        setButtonState(button: firstButton, isSelected:sender === firstButton)
+        setButtonState(button: secondButton, isSelected:sender === secondButton)
     }
     
     @IBAction func refreshPressed(sender: UIButton) {
