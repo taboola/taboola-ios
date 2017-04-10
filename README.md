@@ -342,7 +342,7 @@ super.viewDidLoad()
 ##### 3.3.6 Configure MoPub
 * **Class name**: `MoPubCustomEventBanner`
 * **Parameters**: Parameters for the Taboola SDK can be configured from the MoPub web interface.
-* 	**Configuring from DFP web interface**: The "parameter" field in the MoPub custom event configuration screen, should contain a JSON string with the required properties. Notice that strings should be enclosed within ***escaped double quotes***.
+* 	**Configuring from DFP web interface**: The "parameter" field in the MoPub custom event configuration screen, should contain a JSON string with the required properties. Notice that strings should be enclosed within ***double quotes***.
 
 ```javascript
 {
