@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -31,6 +31,9 @@
                             <state key="normal" title="Refresh">
                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="refreshButtonPressed:" destination="-1" eventType="touchUpInside" id="oFz-Yz-QRl"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Si-Gz-MMD">
                             <rect key="frame" x="158" y="10" width="58" height="30"/>
@@ -38,6 +41,9 @@
                             <state key="normal" title="Reset">
                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="resetButtonPressed:" destination="-1" eventType="touchUpInside" id="BhL-Mw-iNr"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9Y-jQ-oLW">
                             <rect key="frame" x="297" y="10" width="58" height="30"/>
@@ -45,6 +51,9 @@
                             <state key="normal" title="Fetch">
                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="loadAgainButtonPressed:" destination="-1" eventType="touchUpInside" id="cuo-8I-Xuc"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,7 +70,7 @@
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6W-Ww-hCQ">
                                     <rect key="frame" x="8" y="0.0" width="359" height="467"/>
                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <mutableString key="text">Pellentesque habitant morbi tristique \n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla hendrerit magna, eget dignissim tortor condimentum in. Nulla ac est eu nisl ultrices sagittis non quis dui. Nam laoreet tortor id turpis consectetur, vel tristique diam lacinia. Etiam euismod velit eu tortor scelerisque tempus. Morbi viverra tortor eu hendrerit vestibulum. Donec mauris mauris, lobortis ac consequat et, venenatis sit amet arcu. Sed ut sapien ornare, iaculis mi quis, rutrum lorem. Aliquam vel adipiscing nunc. Etiam elementum vitae ante et luctus. Proin tempor arcu urna, vitae dapibus diam tempus vitae. Sed lacinia dignissim neque, a faucibus lacus malesuada quis. Cras tortor risus, egestas vel metus a, pharetra dapibus nunc. \n\nInterdum et malesuada fames ac ante ipsum primis in faucibus. Ut non venenatis ipsum, sit amet vestibulum sem. Curabitur sit amet quam rutrum, condimentum turpis sit amet, pharetra magna. Nullam sodales lectus ut semper imperdiet.</mutableString>
+                                    <string key="text">Pellentesque habitant morbi tristique \n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla hendrerit magna, eget dignissim tortor condimentum in. Nulla ac est eu nisl ultrices sagittis non quis dui. Nam laoreet tortor id turpis consectetur, vel tristique diam lacinia. Etiam euismod velit eu tortor scelerisque tempus. Morbi viverra tortor eu hendrerit vestibulum. Donec mauris mauris, lobortis ac consequat et, venenatis sit amet arcu. Sed ut sapien ornare, iaculis mi quis, rutrum lorem. Aliquam vel adipiscing nunc. Etiam elementum vitae ante et luctus. Proin tempor arcu urna, vitae dapibus diam tempus vitae. Sed lacinia dignissim neque, a faucibus lacus malesuada quis. Cras tortor risus, egestas vel metus a, pharetra dapibus nunc. \n\nInterdum et malesuada fames ac ante ipsum primis in faucibus. Ut non venenatis ipsum, sit amet vestibulum sem. Curabitur sit amet quam rutrum, condimentum turpis sit amet, pharetra magna. Nullam sodales lectus ut semper imperdiet.</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
