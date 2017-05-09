@@ -14,8 +14,8 @@
 	//load tabolaView
 	mTaboolaView.delegate = self;
     mTaboolaView.ownerViewController = self;
-    mTaboolaView.mode = @"thumbnails-h";
-	mTaboolaView.publisher = @"lexpress-network";
+    mTaboolaView.mode = @"thumbnails-sdk3";
+	mTaboolaView.publisher = @"betterbytheminute-app";
     mTaboolaView.pageType = @"article";
     mTaboolaView.pageUrl = @"www.lexpress.fr";
     mTaboolaView.placement = @"iOS Below Article Thumbnails";

@@ -15,7 +15,7 @@
 	mTaboolaView.delegate = self;
     mTaboolaView.ownerViewController = self;
     mTaboolaView.mode = @"thumbnails-sdk2";
-    mTaboolaView.publisher = @"betterbytheminute";
+    mTaboolaView.publisher = @"betterbytheminute-app";
     mTaboolaView.pageType = @"article";
     mTaboolaView.pageUrl = @"http://www.example.com";
     mTaboolaView.placement = @"Mobile second";
