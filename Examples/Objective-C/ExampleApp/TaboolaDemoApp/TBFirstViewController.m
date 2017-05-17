@@ -22,6 +22,7 @@
 	mTaboolaView.autoResizeHeight = YES;
     mTaboolaView.scrollEnable = NO;
     mTaboolaView.enableClickHandler = YES;
+    mTaboolaView.logLevel = LogLevelDebug;
 
 	NSDictionary *lPageDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"http://www.example.com/ref", @"referrer", nil];
     [mTaboolaView setOptionalPageCommands:lPageDictionary];
