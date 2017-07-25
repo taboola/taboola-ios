@@ -417,6 +417,11 @@ super.viewDidLoad()
 @property (nonatomic) NSString* mediation    
 ```
 
+```objc
+// Optional. default: false. When set to true, forces TaboolaView to use UIWebView as the widget container instead of WKWebView even when WKWebView is available (iOS 8 and above). Please consult Taboola support or your Taboola account manager before using this feature.
+@property(nonatomic, readwrite) BOOL forceLegacyWebView
+```
+
 ### 4.2. Public methods
 
 Optional. Allows setting additional page commands to the Taboola widget, as used in the Taboola JavaScript API. @param pCommands list of commands.
