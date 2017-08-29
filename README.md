@@ -454,7 +454,7 @@ Refreshes the recommendations displayed on the TaboolaView.
 - (void)refresh;
 ```
 
-
+>IMPORTANT: **Do not modify** the HTML file (`template.html`) in the `TaboolaVIewResources` bundle.
 ## 5. License
 
 This program is licensed under the Taboola, Inc. SDK License Agreement (the “License Agreement”).  By copying, using or redistributing this program, you agree to the terms of the License Agreement.  The full text of the license agreement can be found at https://github.com/taboola/taboola-ios/blob/master/LICENSE.
