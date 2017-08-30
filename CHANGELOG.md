@@ -1,3 +1,6 @@
+## [1.5.1] - 2017-08-30
+- Internal changes in click handling
+- Internal changes in widget template
 ## [1.4.10] - 2017-07-25
 ### Added
 - `forceLegacyWebView` was added as a workaround to a WKWebView bug. Please consult Taboola support or your Taboola account manager before using this workaround.
