@@ -1,4 +1,6 @@
 ## [1.5.1] - 2017-08-30
+### Changed
+- Notice: As of version 1.5.1 default click handling can be aborted only for organic items. Non-organic item clicks will be always handled by Taboola SDK
 - Internal changes in click handling
 - Internal changes in widget template
 ## [1.4.10] - 2017-07-25
