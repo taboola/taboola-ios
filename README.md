@@ -3,6 +3,8 @@
 [![Version](https://img.shields.io/cocoapods/v/TaboolaSDK.svg?label=Version)](https://github.com/taboola/taboola-ios)
 [![License](https://img.shields.io/badge/License%20-Taboola%20SDK%20License-blue.svg)](https://github.com/taboola/taboola-ios/blob/master/LICENSE)
 
+> **NOTICE**: As of version 1.5.1, clicks on non-organic items will be handled by Taboola SDK and the app will not be allowed to override the default click handler. "No" responses from `taboolaViewItemClickHandler` will only be honored for organic items.
+
 
 ## Table Of Contents
 1. [Getting Started](#1-getting-started)
@@ -123,7 +125,8 @@ Optionally set a TaboolaViewDelegate `TaboolaView.delegate = self` to intercept 
 ```objc
 - (BOOL)taboolaViewItemClickHandler:(NSString *)pURLString :(BOOL)isOrganic;
 ```
-**Return**: `YES` if the view should begin loading content; otherwise, `NO`. Default value is `YES`.
+**Return**: `YES` if the view should begin loading content; otherwise, `NO`. Default value is `YES`. 
+> **NOTICE**: As of version 1.5.1, clicks on non-organic items will be handled by Taboola SDK and the app will not be allowed to override the default click handler. "No" responses from `taboolaViewItemClickHandler` will only be honored for organic items.
 
 ```objc
 // Triggered when the TaboolaView resizes after content render
