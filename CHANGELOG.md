@@ -1,3 +1,6 @@
+## [1.5.2] - 2017-10-22
+### Added
+- Video support
 ## [1.5.1] - 2017-08-30
 ### Changed
 - Notice: As of version 1.5.1 default click handling can be aborted only for organic items. Non-organic item clicks will be always handled by Taboola SDK
