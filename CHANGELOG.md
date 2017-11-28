@@ -1,6 +1,3 @@
-## [1.6.1] - 2017-11-21
-### Added
-- Video support for SDK JS.
 ## [1.5.2] - 2017-10-22
 ### Added
 - Video support
