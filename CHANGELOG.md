@@ -1,3 +1,8 @@
+
+
+## [1.6.4] - 2017-11-22
+### Changed
+- Internal updates to organic click reporting
 ## [1.5.2] - 2017-10-22
 ### Added
 - Video support
