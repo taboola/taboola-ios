@@ -17,7 +17,7 @@
     mTaboolaView.mode = @"thumbnails-sdk3";
 	mTaboolaView.publisher = @"betterbytheminute-app";
     mTaboolaView.pageType = @"article";
-    mTaboolaView.pageUrl = @"www.lexpress.fr";
+    mTaboolaView.pageUrl = @"http://www.example.com";
     mTaboolaView.placement = @"iOS Below Article Thumbnails";
 	mTaboolaView.autoResizeHeight = YES;
     mTaboolaView.scrollEnable = NO;
