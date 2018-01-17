@@ -26,6 +26,12 @@ class FirstViewController: UIViewController {
         mTaboolaView.scrollEnable = false
         mTaboolaView.enableClickHandler = true
         
+        mTaboolaView.mode = "thumbnails-sdk1"
+        mTaboolaView.publisher = "betterbytheminute-app"
+        mTaboolaView.pageType = "article"
+        mTaboolaView.pageUrl = "http://www.example.com"
+        mTaboolaView.placement = "Mobile"
+        
         // Optional - add extra styling rules to the widget, CSS format.
         mTaboolaView.optionalWidgetStyle = "background:linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,linear-gradient(315deg, #ECEDDC 25%, transparent 25%),linear-gradient(45deg, #ECEDDC 25%, transparent 25%)background-size: 100px 100pxbackground-color: #EC173A"
         

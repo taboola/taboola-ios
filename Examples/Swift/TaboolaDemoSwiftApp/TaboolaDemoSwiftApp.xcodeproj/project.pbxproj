@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5461D9EDF118B382D9EDDB84 /* Pods_TaboolaDemoSwiftAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D53BD7A47E2E58D31009915 /* Pods_TaboolaDemoSwiftAppTests.framework */; };
 		8641577D1E962DE700E1D562 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8641577C1E962DE700E1D562 /* MasterViewController.swift */; };
 		8641577F1E96317000E1D562 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8641577E1E96317000E1D562 /* SecondViewController.swift */; };
 		864157821E9677D500E1D562 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864157811E9677D500E1D562 /* EditViewController.swift */; };
@@ -14,6 +15,7 @@
 		864157881E968A5B00E1D562 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864157871E968A5B00E1D562 /* UIViewControllerExtension.swift */; };
 		867A29051E95441D008D360D /* navigationBar_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 867A29041E95441D008D360D /* navigationBar_iPhone@2x.png */; };
 		A93ED1FD6CBD4777B94EB2E2 /* Pods_TaboolaDemoSwiftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56ED5F543384692C04BB0AE5 /* Pods_TaboolaDemoSwiftApp.framework */; };
+		DB609A562004B81F008B4830 /* TaboolaDemoSwiftAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB609A552004B81F008B4830 /* TaboolaDemoSwiftAppTests.swift */; };
 		DC1C9E7C1E3A1F6D0090B20C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C9E7B1E3A1F6D0090B20C /* AppDelegate.swift */; };
 		DC1C9E7E1E3A1F6D0090B20C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C9E7D1E3A1F6D0090B20C /* FirstViewController.swift */; };
 		DC1C9E811E3A1F6D0090B20C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1C9E7F1E3A1F6D0090B20C /* Main.storyboard */; };
@@ -21,8 +23,20 @@
 		DC1C9E861E3A1F6D0090B20C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1C9E841E3A1F6D0090B20C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DB609A582004B81F008B4830 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC1C9E701E3A1F6C0090B20C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC1C9E771E3A1F6D0090B20C;
+			remoteInfo = TaboolaDemoSwiftApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0A5E92485663D39FEBBB8916 /* Pods-TaboolaDemoSwiftAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaboolaDemoSwiftAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaboolaDemoSwiftAppTests/Pods-TaboolaDemoSwiftAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		3C12AFD93F156E70F3E626CB /* Pods-TaboolaDemoSwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaboolaDemoSwiftApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaboolaDemoSwiftApp/Pods-TaboolaDemoSwiftApp.release.xcconfig"; sourceTree = "<group>"; };
+		4D53BD7A47E2E58D31009915 /* Pods_TaboolaDemoSwiftAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaboolaDemoSwiftAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56ED5F543384692C04BB0AE5 /* Pods_TaboolaDemoSwiftApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaboolaDemoSwiftApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BB16DFF068C96F6D9AAB83 /* Pods-TaboolaDemoSwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaboolaDemoSwiftApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaboolaDemoSwiftApp/Pods-TaboolaDemoSwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8641577C1E962DE700E1D562 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +45,9 @@
 		864157851E9689ED00E1D562 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = Extension/UIViewExtension.swift; sourceTree = "<group>"; };
 		864157871E968A5B00E1D562 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtension.swift; path = Extension/UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		867A29041E95441D008D360D /* navigationBar_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationBar_iPhone@2x.png"; sourceTree = "<group>"; };
+		DB609A532004B81F008B4830 /* TaboolaDemoSwiftAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaboolaDemoSwiftAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB609A552004B81F008B4830 /* TaboolaDemoSwiftAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaboolaDemoSwiftAppTests.swift; sourceTree = "<group>"; };
+		DB609A572004B81F008B4830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC1C9E781E3A1F6D0090B20C /* TaboolaDemoSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaboolaDemoSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1C9E7B1E3A1F6D0090B20C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC1C9E7D1E3A1F6D0090B20C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -38,9 +55,18 @@
 		DC1C9E821E3A1F6D0090B20C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC1C9E851E3A1F6D0090B20C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC1C9E871E3A1F6D0090B20C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAD76710D7264DE29C60BB37 /* Pods-TaboolaDemoSwiftAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaboolaDemoSwiftAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaboolaDemoSwiftAppTests/Pods-TaboolaDemoSwiftAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DB609A502004B81F008B4830 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5461D9EDF118B382D9EDDB84 /* Pods_TaboolaDemoSwiftAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DC1C9E751E3A1F6D0090B20C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,6 +83,8 @@
 			children = (
 				83BB16DFF068C96F6D9AAB83 /* Pods-TaboolaDemoSwiftApp.debug.xcconfig */,
 				3C12AFD93F156E70F3E626CB /* Pods-TaboolaDemoSwiftApp.release.xcconfig */,
+				EAD76710D7264DE29C60BB37 /* Pods-TaboolaDemoSwiftAppTests.debug.xcconfig */,
+				0A5E92485663D39FEBBB8916 /* Pods-TaboolaDemoSwiftAppTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -89,10 +117,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DB609A542004B81F008B4830 /* TaboolaDemoSwiftAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB609A552004B81F008B4830 /* TaboolaDemoSwiftAppTests.swift */,
+				DB609A572004B81F008B4830 /* Info.plist */,
+			);
+			path = TaboolaDemoSwiftAppTests;
+			sourceTree = "<group>";
+		};
 		DC1C9E6F1E3A1F6C0090B20C = {
 			isa = PBXGroup;
 			children = (
 				DC1C9E7A1E3A1F6D0090B20C /* TaboolaDemoSwiftApp */,
+				DB609A542004B81F008B4830 /* TaboolaDemoSwiftAppTests */,
 				DC1C9E791E3A1F6D0090B20C /* Products */,
 				54C75C4D246BFBA787904ED7 /* Pods */,
 				F17CE8C2351D52DA961203EB /* Frameworks */,
@@ -103,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				DC1C9E781E3A1F6D0090B20C /* TaboolaDemoSwiftApp.app */,
+				DB609A532004B81F008B4830 /* TaboolaDemoSwiftAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				56ED5F543384692C04BB0AE5 /* Pods_TaboolaDemoSwiftApp.framework */,
+				4D53BD7A47E2E58D31009915 /* Pods_TaboolaDemoSwiftAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,6 +173,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DB609A522004B81F008B4830 /* TaboolaDemoSwiftAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB609A5A2004B81F008B4830 /* Build configuration list for PBXNativeTarget "TaboolaDemoSwiftAppTests" */;
+			buildPhases = (
+				BF283DD6E5DB67CC6D0805A3 /* [CP] Check Pods Manifest.lock */,
+				DB609A4F2004B81F008B4830 /* Sources */,
+				DB609A502004B81F008B4830 /* Frameworks */,
+				DB609A512004B81F008B4830 /* Resources */,
+				091938C0D15290096A9521E2 /* [CP] Embed Pods Frameworks */,
+				C4C09924BA0D963BBF2F2677 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB609A592004B81F008B4830 /* PBXTargetDependency */,
+			);
+			name = TaboolaDemoSwiftAppTests;
+			productName = TaboolaDemoSwiftAppTests;
+			productReference = DB609A532004B81F008B4830 /* TaboolaDemoSwiftAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DC1C9E771E3A1F6D0090B20C /* TaboolaDemoSwiftApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC1C9E8A1E3A1F6D0090B20C /* Build configuration list for PBXNativeTarget "TaboolaDemoSwiftApp" */;
@@ -159,10 +220,15 @@
 		DC1C9E701E3A1F6C0090B20C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Taboola;
 				TargetAttributes = {
+					DB609A522004B81F008B4830 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DC1C9E771E3A1F6D0090B20C;
+					};
 					DC1C9E771E3A1F6D0090B20C = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -183,11 +249,19 @@
 			projectRoot = "";
 			targets = (
 				DC1C9E771E3A1F6D0090B20C /* TaboolaDemoSwiftApp */,
+				DB609A522004B81F008B4830 /* TaboolaDemoSwiftAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DB609A512004B81F008B4830 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DC1C9E761E3A1F6D0090B20C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,19 +276,55 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7077E8010EB30EB4C4C26DB3 /* [CP] Check Pods Manifest.lock */ = {
+		091938C0D15290096A9521E2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaboolaDemoSwiftAppTests/Pods-TaboolaDemoSwiftAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7077E8010EB30EB4C4C26DB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaboolaDemoSwiftApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF283DD6E5DB67CC6D0805A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaboolaDemoSwiftAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C2C8B93A4B183A730C7DAEB9 /* [CP] Embed Pods Frameworks */ = {
@@ -232,15 +342,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaboolaDemoSwiftApp/Pods-TaboolaDemoSwiftApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C4C09924BA0D963BBF2F2677 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TaboolaDemoSwiftAppTests/Pods-TaboolaDemoSwiftAppTests-resources.sh",
+				"${PODS_ROOT}/TaboolaSDK/TaboolaSDK.framework/Versions/A/TaboolaResources/TaboolaVIewResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaboolaDemoSwiftAppTests/Pods-TaboolaDemoSwiftAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E307B648AF855DD35C521CE3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TaboolaDemoSwiftApp/Pods-TaboolaDemoSwiftApp-resources.sh",
+				"${PODS_ROOT}/TaboolaSDK/TaboolaSDK.framework/Versions/A/TaboolaResources/TaboolaVIewResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -250,6 +381,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DB609A4F2004B81F008B4830 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB609A562004B81F008B4830 /* TaboolaDemoSwiftAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DC1C9E741E3A1F6D0090B20C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -265,6 +404,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB609A592004B81F008B4830 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC1C9E771E3A1F6D0090B20C /* TaboolaDemoSwiftApp */;
+			targetProxy = DB609A582004B81F008B4830 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DC1C9E7F1E3A1F6D0090B20C /* Main.storyboard */ = {
@@ -286,6 +433,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DB609A5B2004B81F008B4830 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAD76710D7264DE29C60BB37 /* Pods-TaboolaDemoSwiftAppTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TaboolaDemoSwiftAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taboola.TaboolaDemoSwiftAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaboolaDemoSwiftApp.app/TaboolaDemoSwiftApp";
+			};
+			name = Debug;
+		};
+		DB609A5C2004B81F008B4830 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A5E92485663D39FEBBB8916 /* Pods-TaboolaDemoSwiftAppTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TaboolaDemoSwiftAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taboola.TaboolaDemoSwiftAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaboolaDemoSwiftApp.app/TaboolaDemoSwiftApp";
+			};
+			name = Release;
+		};
 		DC1C9E881E3A1F6D0090B20C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -406,6 +609,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DB609A5A2004B81F008B4830 /* Build configuration list for PBXNativeTarget "TaboolaDemoSwiftAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB609A5B2004B81F008B4830 /* Debug */,
+				DB609A5C2004B81F008B4830 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DC1C9E731E3A1F6C0090B20C /* Build configuration list for PBXProject "TaboolaDemoSwiftApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
