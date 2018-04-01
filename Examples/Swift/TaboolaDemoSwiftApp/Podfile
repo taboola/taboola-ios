@@ -1,5 +1,9 @@
 target 'TaboolaDemoSwiftApp' do
 use_frameworks!
 pod 'TaboolaSDK'
+end
 
+target 'TaboolaDemoSwiftAppTests' do
+use_frameworks!
+pod 'TaboolaSDK'
 end
