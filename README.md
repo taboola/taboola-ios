@@ -11,7 +11,8 @@
 2. [Example App](#2-example-app)
 3. [Mediation](#3-mediation)
 4. [SDK Reference](#4-sdk-reference)
-5. [License](#5-license)
+5. [GDPR](#5-gdpr)
+6. [License](#6-license)
 
 
 ## 1. Getting Started
@@ -456,9 +457,32 @@ Refreshes the recommendations displayed on the TaboolaView.
 ```objc
 - (void)refresh;
 ```
+## 5. GDPR
+
+In order to support the The EU General Data Protection Regulation (GDPR - https://www.eugdpr.org/) in Taboola Mobile SDK,capplication developer should show a pop up asking the user's permission for storing their personal data in the App. In order to control the user's personal data(to store in the App or not) there exists a flag `User_opt_out`. It's mandatory to set this flag when using the Taboola SDK. The way to set this flag depends on the type of SDK you are using. By default we assume no permission from the user on a pop up, so the personal data will not be saved.
 
 
-## 5. License
+### 5.1. How to set the flag in the SDK integration
+
+Below you can find the way how to set the flag on iOS SDK Standard we support.
+It's recommended to put these lines alongside the other settings, such as publisher name, etc
+
+```javascript
+//load taboolaView
+mTaboolaView.delegate = self;
+mTaboolaView.ownerViewController = self;
+mTaboolaView.mode = @"thumbnails-a";
+mTaboolaView.publisher = @"the-publisher-name";
+mTaboolaView.pageType = @"article";
+mTaboolaView.pageUrl = @"http://www.example.com";
+mTaboolaView.placement = @"Mobile second";
+ //mTaboolaView.targetType = @"mix";
+ [mTaboolaView setOptionalPageCommands:@{@"user_opt_out":@"true"}];
+
+ ```
+
+
+## 6. License
 
 This program is licensed under the Taboola, Inc. SDK License Agreement (the “License Agreement”).  By copying, using or redistributing this program, you agree to the terms of the License Agreement.  The full text of the license agreement can be found at https://github.com/taboola/taboola-ios/blob/master/LICENSE.
 Copyright 2017 Taboola, Inc.  All rights reserved.
