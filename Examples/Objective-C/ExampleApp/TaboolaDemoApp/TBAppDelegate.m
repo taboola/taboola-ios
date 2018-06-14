@@ -4,10 +4,10 @@
 
 
 #import "TBAppDelegate.h"
-#import "TBFirstViewController.h"
-#import "TBSecondViewController.h"
+#import "TBWidgetViewController.h"
+#import "TBFeedViewController.h"
 #import "TBTestViewController.h"
-
+#import "TBFeedCollectionView.h"
 
 @implementation TBAppDelegate
 
@@ -16,35 +16,33 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     //load viewcontrollers and tabbar
-    TBFirstViewController *lFirstViewController = [[TBFirstViewController alloc] initWithNibName:@"TBFirstViewController" bundle:nil];
-    UITabBarItem *lFirstTabBarItem = [[UITabBarItem alloc] initWithTitle:@"First" image:nil tag:0];
-    UINavigationController *lFirstNavController = [[UINavigationController alloc] initWithRootViewController:lFirstViewController];
-    lFirstNavController.navigationBarHidden = YES;
-    lFirstNavController.tabBarItem = lFirstTabBarItem;
+    TBWidgetViewController *widgetViewController = [[TBWidgetViewController alloc] initWithNibName:@"TBWidgetViewController" bundle:nil];
+    UITabBarItem *widgetTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Widget" image:nil tag:0];
+    UINavigationController *widgetNavController = [[UINavigationController alloc] initWithRootViewController:widgetViewController];
+    widgetNavController.navigationBarHidden = YES;
+    widgetNavController.tabBarItem = widgetTabBarItem;
     
-    TBSecondViewController *lSecondViewController = [[TBSecondViewController alloc] initWithNibName:@"TBSecondViewController" bundle:nil];
-    UITabBarItem *lSecondTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Second" image:nil tag:1];
+    TBFeedViewController *feedScrollViewController = [[TBFeedViewController alloc] initWithNibName:@"TBFeedViewController" bundle:nil];
+    UITabBarItem *feedScrollTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Feed ScrollView" image:nil tag:1];
+    UINavigationController *feedScrollNavController = [[UINavigationController alloc] initWithRootViewController:feedScrollViewController];
+    feedScrollNavController.navigationBarHidden = YES;
+    feedScrollNavController.tabBarItem = feedScrollTabBarItem;
     
-    TBTestViewController *testViewController = [[TBTestViewController alloc]initWithNibName:@"TBTestViewController" bundle:nil];
-    UITabBarItem *testTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Test" image:nil tag:2];
-    UINavigationController *testNavController = [[UINavigationController alloc] initWithRootViewController:testViewController];
-    testNavController.navigationBarHidden = YES;
-    testNavController.tabBarItem = testTabBarItem;
+    TBFeedCollectionView *feedCollectionView = [[TBFeedCollectionView alloc]initWithNibName:@"TBFeedCollectionView" bundle:nil];
+    UITabBarItem *feedCollectionTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Feed collectionView" image:nil tag:2];
+    UINavigationController *feedCollectionNavController = [[UINavigationController alloc] initWithRootViewController:feedCollectionView];
+    feedCollectionNavController.navigationBarHidden = YES;
+    feedCollectionNavController.tabBarItem = feedCollectionTabBarItem;
     
     // Setting Tab bar font, color and v-alignnment
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"AmericanTypewriter" size:20.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"AmericanTypewriter" size:15.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];
     
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blueColor], NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
     [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0.0, -5.0)];
-  
-    
-    UINavigationController *lSecondNavController = [[UINavigationController alloc] initWithRootViewController:lSecondViewController];
-    lSecondNavController.navigationBarHidden = YES;
-    lSecondNavController.tabBarItem = lSecondTabBarItem;
     
     
     UITabBarController *lTabBarController = [[UITabBarController alloc] init];
-    lTabBarController.viewControllers = [NSArray arrayWithObjects:lFirstNavController, lSecondNavController, testNavController, nil];
+    lTabBarController.viewControllers = [NSArray arrayWithObjects:widgetNavController, feedScrollNavController, feedCollectionNavController, nil];
     lTabBarController.selectedIndex = 0;
     self.window.rootViewController = lTabBarController;
     

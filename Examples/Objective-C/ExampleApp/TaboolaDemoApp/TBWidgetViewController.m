@@ -3,9 +3,9 @@
 //  TaboolaDemoApp
 
 
-#import "TBFirstViewController.h"
+#import "TBWidgetViewController.h"
 
-@implementation TBFirstViewController
+@implementation TBWidgetViewController
 
 #pragma mark - Life cycle
 - (void)viewDidLoad{
@@ -38,23 +38,6 @@
 	[super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
 }
 
-#pragma mark - TaboolaView delegate
-- (BOOL)taboolaViewItemClickHandler:(NSString *)pURLString :(BOOL)isOrganic{
-	NSLog(@"Start load request on first screen: %@ isOrganic? %@", pURLString, isOrganic ? @"YES":@"NO");
-    if (isOrganic) {
-        NSLog(@"organic items should open as native app pages.");
-    }
-	return YES;
-}
-
-- (void)taboolaDidReceiveAd:(UIView *)view{
-    NSLog(@"Delegate: didReceiveAd event");
-}
-
-- (void)taboolaDidFailAd:(NSError *)error  {
-    NSLog(@"Delegate: didFailAd event");
-}
-
 #pragma mark - UI
 - (BOOL)prefersStatusBarHidden{
 	return YES;
@@ -77,6 +60,27 @@
     NSDictionary *lCommandsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"http://www.example.com/2/ref", @"referrer", nil];
     [mTaboolaView setOptionalPageCommands:lCommandsDictionary];
     [mTaboolaView fetchContent];
+}
+
+#pragma mark - TaboolaView delegate
+- (BOOL)onItemClick:(NSString *)placementName withItemId:(NSString *)itemId withClickUrl:(NSString *)clickUrl isOrganic:(BOOL)organic {
+    NSLog(@"Start load request on first screen: %@ isOrganic? %@", clickUrl, organic ? @"YES":@"NO");
+    if (organic) {
+        NSLog(@"organic items should open as native app pages.");
+    }
+    return YES;
+}
+
+- (void)taboolaView:(UIView*)taboolaView didLoadPlacementNamed:(NSString *) placementName withHeight:(CGFloat)height {
+    NSLog(@"Delegate: didReceiveAd event");
+}
+
+- (void)taboolaView:(UIView*) taboolaView didFailToLoadPlacementNamed:(NSString *) placementName withErrorMessage:(NSString *) error {
+    NSLog(@"Delegate: didFailAd event");
+}
+
+- (void)taboolaViewResizedToHeight:(CGFloat)height {
+    
 }
 
 @end

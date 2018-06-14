@@ -12,10 +12,8 @@
 		86ABDEDB1E8010FB00A92819 /* TBTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86ABDED91E8010FB00A92819 /* TBTestViewController.xib */; };
 		86B2B0101E801FF00012A964 /* TBChangeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B2B00E1E801FF00012A964 /* TBChangeInfoViewController.m */; };
 		86B2B0111E801FF00012A964 /* TBChangeInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B2B00F1E801FF00012A964 /* TBChangeInfoViewController.xib */; };
-		BC4C1EC8186D8A0300308460 /* TBFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4C1EC7186D8A0300308460 /* TBFirstViewController.m */; };
-		BC4C1ECA186D8A1D00308460 /* TBFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4C1EC9186D8A1D00308460 /* TBFirstViewController.xib */; };
-		BC4C1ED0186D8C8800308460 /* TBSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4C1ECF186D8C8800308460 /* TBSecondViewController.m */; };
-		BC4C1ED4186D8CA400308460 /* TBSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4C1ED3186D8CA400308460 /* TBSecondViewController.xib */; };
+		BC4C1EC8186D8A0300308460 /* TBWidgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4C1EC7186D8A0300308460 /* TBWidgetViewController.m */; };
+		BC4C1ECA186D8A1D00308460 /* TBWidgetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4C1EC9186D8A1D00308460 /* TBWidgetViewController.xib */; };
 		BC9158B9186C7C0600141537 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9158B8186C7C0600141537 /* Foundation.framework */; };
 		BC9158BB186C7C0600141537 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9158BA186C7C0600141537 /* CoreGraphics.framework */; };
 		BC9158BD186C7C0600141537 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9158BC186C7C0600141537 /* UIKit.framework */; };
@@ -34,6 +32,14 @@
 		BCF891F9186DC363003F45C4 /* ic_launcher_144.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF891F2186DC363003F45C4 /* ic_launcher_144.png */; };
 		BCF891FA186DC363003F45C4 /* ic_launcher_152.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF891F3186DC363003F45C4 /* ic_launcher_152.png */; };
 		BCF891FE186DC47C003F45C4 /* navigationBar_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF891FC186DC47C003F45C4 /* navigationBar_iPhone@2x.png */; };
+		DBFF220320D26558008DD3CB /* TBFeedCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFF21F920D26557008DD3CB /* TBFeedCollectionView.m */; };
+		DBFF220420D26558008DD3CB /* TBFeedCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBFF21FA20D26557008DD3CB /* TBFeedCollectionView.xib */; };
+		DBFF221B20D266A2008DD3CB /* randomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFF221620D266A2008DD3CB /* randomCell.m */; };
+		DBFF221C20D266A2008DD3CB /* randomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBFF221720D266A2008DD3CB /* randomCell.xib */; };
+		DBFF221D20D266A2008DD3CB /* TaboolaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFF221920D266A2008DD3CB /* TaboolaCollectionViewCell.m */; };
+		DBFF221E20D266A2008DD3CB /* TaboolaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBFF221A20D266A2008DD3CB /* TaboolaCollectionViewCell.xib */; };
+		DBFF222220D267EF008DD3CB /* TBFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFF221F20D267EE008DD3CB /* TBFeedViewController.m */; };
+		DBFF222320D267EF008DD3CB /* TBFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBFF222120D267EF008DD3CB /* TBFeedViewController.xib */; };
 		DC1F26E51DCB3FED007328B0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1F26E41DCB3FED007328B0 /* WebKit.framework */; };
 		DCF042ED1DCCADFA00198A08 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF042EC1DCCADFA00198A08 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
@@ -66,12 +72,9 @@
 		86B2B00E1E801FF00012A964 /* TBChangeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBChangeInfoViewController.m; sourceTree = "<group>"; };
 		86B2B00F1E801FF00012A964 /* TBChangeInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBChangeInfoViewController.xib; sourceTree = "<group>"; };
 		BA12290580686AD6DB0E2DF7 /* libPods-TaboolaDemoAppUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaboolaDemoAppUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC4C1EC6186D8A0300308460 /* TBFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBFirstViewController.h; sourceTree = "<group>"; };
-		BC4C1EC7186D8A0300308460 /* TBFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBFirstViewController.m; sourceTree = "<group>"; };
-		BC4C1EC9186D8A1D00308460 /* TBFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBFirstViewController.xib; sourceTree = "<group>"; };
-		BC4C1ECE186D8C8800308460 /* TBSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBSecondViewController.h; sourceTree = "<group>"; };
-		BC4C1ECF186D8C8800308460 /* TBSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBSecondViewController.m; sourceTree = "<group>"; };
-		BC4C1ED3186D8CA400308460 /* TBSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBSecondViewController.xib; sourceTree = "<group>"; };
+		BC4C1EC6186D8A0300308460 /* TBWidgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWidgetViewController.h; sourceTree = "<group>"; };
+		BC4C1EC7186D8A0300308460 /* TBWidgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWidgetViewController.m; sourceTree = "<group>"; };
+		BC4C1EC9186D8A1D00308460 /* TBWidgetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWidgetViewController.xib; sourceTree = "<group>"; };
 		BC9158B5186C7C0600141537 /* TaboolaDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaboolaDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9158B8186C7C0600141537 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BC9158BA186C7C0600141537 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,6 +96,18 @@
 		BCF891F2186DC363003F45C4 /* ic_launcher_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher_144.png; sourceTree = "<group>"; };
 		BCF891F3186DC363003F45C4 /* ic_launcher_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher_152.png; sourceTree = "<group>"; };
 		BCF891FC186DC47C003F45C4 /* navigationBar_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationBar_iPhone@2x.png"; sourceTree = "<group>"; };
+		DBFF21F920D26557008DD3CB /* TBFeedCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBFeedCollectionView.m; sourceTree = "<group>"; };
+		DBFF21FA20D26557008DD3CB /* TBFeedCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBFeedCollectionView.xib; sourceTree = "<group>"; };
+		DBFF21FB20D26558008DD3CB /* TBFeedCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBFeedCollectionView.h; sourceTree = "<group>"; };
+		DBFF221520D266A2008DD3CB /* randomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randomCell.h; sourceTree = "<group>"; };
+		DBFF221620D266A2008DD3CB /* randomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = randomCell.m; sourceTree = "<group>"; };
+		DBFF221720D266A2008DD3CB /* randomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = randomCell.xib; sourceTree = "<group>"; };
+		DBFF221820D266A2008DD3CB /* TaboolaCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaboolaCollectionViewCell.h; sourceTree = "<group>"; };
+		DBFF221920D266A2008DD3CB /* TaboolaCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaboolaCollectionViewCell.m; sourceTree = "<group>"; };
+		DBFF221A20D266A2008DD3CB /* TaboolaCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaboolaCollectionViewCell.xib; sourceTree = "<group>"; };
+		DBFF221F20D267EE008DD3CB /* TBFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBFeedViewController.m; sourceTree = "<group>"; };
+		DBFF222020D267EF008DD3CB /* TBFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBFeedViewController.h; sourceTree = "<group>"; };
+		DBFF222120D267EF008DD3CB /* TBFeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBFeedViewController.xib; sourceTree = "<group>"; };
 		DC1F26E41DCB3FED007328B0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		DC481AD91D01C032000426FD /* TaboolaDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaboolaDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF042EC1DCCADFA00198A08 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -162,24 +177,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		BC4C1EC5186D89E400308460 /* TBFirstViewController */ = {
+		BC4C1EC5186D89E400308460 /* TBWidgetViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BC4C1EC6186D8A0300308460 /* TBFirstViewController.h */,
-				BC4C1EC7186D8A0300308460 /* TBFirstViewController.m */,
-				BC4C1EC9186D8A1D00308460 /* TBFirstViewController.xib */,
+				BC4C1EC6186D8A0300308460 /* TBWidgetViewController.h */,
+				BC4C1EC7186D8A0300308460 /* TBWidgetViewController.m */,
+				BC4C1EC9186D8A1D00308460 /* TBWidgetViewController.xib */,
 			);
-			name = TBFirstViewController;
+			name = TBWidgetViewController;
 			sourceTree = "<group>";
 		};
-		BC4C1ECD186D8C6A00308460 /* TBSecondViewController */ = {
+		BC4C1ECD186D8C6A00308460 /* TBFeedViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BC4C1ECE186D8C8800308460 /* TBSecondViewController.h */,
-				BC4C1ECF186D8C8800308460 /* TBSecondViewController.m */,
-				BC4C1ED3186D8CA400308460 /* TBSecondViewController.xib */,
+				DBFF222020D267EF008DD3CB /* TBFeedViewController.h */,
+				DBFF221F20D267EE008DD3CB /* TBFeedViewController.m */,
+				DBFF222120D267EF008DD3CB /* TBFeedViewController.xib */,
 			);
-			name = TBSecondViewController;
+			name = TBFeedViewController;
 			sourceTree = "<group>";
 		};
 		BC9158AC186C7C0600141537 = {
@@ -246,8 +261,9 @@
 		BC9158E7186C7D8500141537 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BC4C1EC5186D89E400308460 /* TBFirstViewController */,
-				BC4C1ECD186D8C6A00308460 /* TBSecondViewController */,
+				BC4C1EC5186D89E400308460 /* TBWidgetViewController */,
+				BC4C1ECD186D8C6A00308460 /* TBFeedViewController */,
+				DBB1F72920D1138300D6E9E6 /* TBFeedCollectionView */,
 				86ABDED61E8010AC00A92819 /* TBTestViewController */,
 			);
 			name = ViewControllers;
@@ -265,6 +281,30 @@
 				BCF891F3186DC363003F45C4 /* ic_launcher_152.png */,
 			);
 			name = icons;
+			sourceTree = "<group>";
+		};
+		DBB1F72920D1138300D6E9E6 /* TBFeedCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				DBFF21FB20D26558008DD3CB /* TBFeedCollectionView.h */,
+				DBFF21F920D26557008DD3CB /* TBFeedCollectionView.m */,
+				DBFF21FA20D26557008DD3CB /* TBFeedCollectionView.xib */,
+				DBFF221420D266A2008DD3CB /* TaboolaCollectionViewCell */,
+			);
+			name = TBFeedCollectionView;
+			sourceTree = "<group>";
+		};
+		DBFF221420D266A2008DD3CB /* TaboolaCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DBFF221520D266A2008DD3CB /* randomCell.h */,
+				DBFF221620D266A2008DD3CB /* randomCell.m */,
+				DBFF221720D266A2008DD3CB /* randomCell.xib */,
+				DBFF221820D266A2008DD3CB /* TaboolaCollectionViewCell.h */,
+				DBFF221920D266A2008DD3CB /* TaboolaCollectionViewCell.m */,
+				DBFF221A20D266A2008DD3CB /* TaboolaCollectionViewCell.xib */,
+			);
+			path = TaboolaCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,7 +377,7 @@
 				ORGANIZATIONNAME = Taboola;
 				TargetAttributes = {
 					BC9158B4186C7C0600141537 = {
-						DevelopmentTeam = QMJ5T4LTHY;
+						DevelopmentTeam = P4YBSJEM3U;
 					};
 					BC9158CF186C7C0600141537 = {
 						TestTargetID = BC9158B4186C7C0600141537;
@@ -381,12 +421,15 @@
 				BCF891FA186DC363003F45C4 /* ic_launcher_152.png in Resources */,
 				BCF891F8186DC363003F45C4 /* ic_launcher_120.png in Resources */,
 				BCF891F9186DC363003F45C4 /* ic_launcher_144.png in Resources */,
-				BC4C1ED4186D8CA400308460 /* TBSecondViewController.xib in Resources */,
 				86ABDEDB1E8010FB00A92819 /* TBTestViewController.xib in Resources */,
+				DBFF221C20D266A2008DD3CB /* randomCell.xib in Resources */,
 				BC9158C3186C7C0600141537 /* InfoPlist.strings in Resources */,
-				BC4C1ECA186D8A1D00308460 /* TBFirstViewController.xib in Resources */,
+				DBFF221E20D266A2008DD3CB /* TaboolaCollectionViewCell.xib in Resources */,
+				BC4C1ECA186D8A1D00308460 /* TBWidgetViewController.xib in Resources */,
 				86B2B0111E801FF00012A964 /* TBChangeInfoViewController.xib in Resources */,
 				BC9158CB186C7C0600141537 /* Images.xcassets in Resources */,
+				DBFF222320D267EF008DD3CB /* TBFeedViewController.xib in Resources */,
+				DBFF220420D26558008DD3CB /* TBFeedCollectionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,9 +456,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TaboolaDemoApp/Pods-TaboolaDemoApp-resources.sh",
+				"${PODS_ROOT}/TaboolaSDK/TaboolaSDK.framework/Versions/A/TaboolaResources/TaboolaVIewResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TaboolaVIewResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -443,13 +489,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaboolaDemoApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -459,12 +508,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBFF221B20D266A2008DD3CB /* randomCell.m in Sources */,
+				DBFF221D20D266A2008DD3CB /* TaboolaCollectionViewCell.m in Sources */,
 				86B2B0101E801FF00012A964 /* TBChangeInfoViewController.m in Sources */,
 				BC9158C9186C7C0600141537 /* TBAppDelegate.m in Sources */,
+				DBFF222220D267EF008DD3CB /* TBFeedViewController.m in Sources */,
 				BC9158C5186C7C0600141537 /* main.m in Sources */,
 				86ABDEDA1E8010FB00A92819 /* TBTestViewController.m in Sources */,
-				BC4C1EC8186D8A0300308460 /* TBFirstViewController.m in Sources */,
-				BC4C1ED0186D8C8800308460 /* TBSecondViewController.m in Sources */,
+				BC4C1EC8186D8A0300308460 /* TBWidgetViewController.m in Sources */,
+				DBFF220320D26558008DD3CB /* TBFeedCollectionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,7 +645,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = QMJ5T4LTHY;
+				DEVELOPMENT_TEAM = P4YBSJEM3U;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TaboolaDemoApp/TaboolaDemoApp-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -603,7 +655,7 @@
 					"$(BUILT_PRODUCTS_DIR)",
 				);
 				INFOPLIST_FILE = "TaboolaDemoApp/TaboolaDemoApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -634,7 +686,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = QMJ5T4LTHY;
+				DEVELOPMENT_TEAM = P4YBSJEM3U;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TaboolaDemoApp/TaboolaDemoApp-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -644,7 +696,7 @@
 					"$(BUILT_PRODUCTS_DIR)",
 				);
 				INFOPLIST_FILE = "TaboolaDemoApp/TaboolaDemoApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

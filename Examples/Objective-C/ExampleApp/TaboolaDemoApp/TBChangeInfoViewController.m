@@ -31,7 +31,7 @@
     [self.view addGestureRecognizer:tapGesture];
     
     self.arrayOfKeys = @[@"mode", @"publisher", @"pageType", @"pageURL", @"placement"];
-    self.defaultValues = @[@"thumbnails-sdk3", @"betterbytheminute-app", @"article", @"http://www.example.com", @"Mobile"];
+    self.defaultValues = @[@"thumbnails-sdk1", @"betterbytheminute-app", @"article", @"http://www.example.com", @"Mobile"];
     
     [self getDataFromTextFileds];
     [self updateButtonEnabled];

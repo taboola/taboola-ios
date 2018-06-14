@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TaboolaCell" id="dis-no-IDT" customClass="TaboolaCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="1334"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="1334"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5c-so-sZE" customClass="TaboolaView">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="1334"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1334" id="mey-GB-LDv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="E5c-so-sZE" firstAttribute="top" secondItem="dis-no-IDT" secondAttribute="top" id="2cu-kV-nww"/>
+                <constraint firstAttribute="bottom" secondItem="E5c-so-sZE" secondAttribute="bottom" id="6wS-p6-A8M"/>
+                <constraint firstItem="E5c-so-sZE" firstAttribute="leading" secondItem="dis-no-IDT" secondAttribute="leading" id="7fN-ps-LLf"/>
+                <constraint firstAttribute="trailing" secondItem="E5c-so-sZE" secondAttribute="trailing" id="Aih-o5-zdI"/>
+            </constraints>
+            <size key="customSize" width="486" height="102"/>
+            <connections>
+                <outlet property="taboolaView" destination="E5c-so-sZE" id="fWn-4B-O59"/>
+            </connections>
+            <point key="canvasLocation" x="-360" y="130"/>
+        </collectionViewCell>
+    </objects>
+</document>
