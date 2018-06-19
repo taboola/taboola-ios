@@ -222,7 +222,7 @@ If the user chose to allow IDFA sharing with the host app, the IDFA is sent to t
 
 ### 1.8 NSNotificationCenter notifications
 
-The taboolaView widget also reports his status to the host app via `NSNotificationCenter` notifications (in addition to calling the TaboolaViewDelegate methods). This allows the host app to be more loosely coupled with the taboolaView. All notifications include a reference to the taboolaView itself. Here’s the list of notifications sent: 
+The taboolaView widget also reports its status to the host app via `NSNotificationCenter` notifications (in addition to calling the TaboolaViewDelegate methods). This allows the host app to be more loosely coupled with the taboolaView. All notifications include a reference to the taboolaView itself. Here’s the list of notifications sent:
 * taboolaDidReceiveAd - When the widget successfully loads its content.
 * taboolaViewResized - When the taboolaView changes its height to adapt to its content. The notification data includes the new height. 
 * taboolaItemDidClick - When the user clicks an item on the taboolaView.
@@ -231,7 +231,7 @@ The taboolaView widget also reports his status to the host app via `NSNotificati
 ## 2. Example App
 This repository includes an example iOS app which uses the Taboola SDK, [here](https://github.com/taboola/taboola-ios/tree/master/Examples) . To use it, just clone this repository and open the project wih Xcode.
 
-In case you encounter some issues when integrating the SDK into your app, try recreating the scenario within the example app. This might help isolate the problem, and in case you weren't able to solve it, you'll be able to send the example app with your recreated issue to Taboola's support for more help.
+In case you encounter some issues when integrating the SDK into your app, try to recreate the scenario within the example app. This might help to isolate the problem, and in case you weren't able to solve it, you'll be able to send the example app with your recreated issue to Taboola's support for more help.
 
 ## 3. Mediation
 
@@ -484,5 +484,5 @@ mTaboolaView.placement = @"Mobile second";
 
 ## 6. License
 
-This program is licensed under the Taboola, Inc. SDK License Agreement (the “License Agreement”).  By copying, using or redistributing this program, you agree to the terms of the License Agreement.  The full text of the license agreement can be found at https://github.com/taboola/taboola-ios/blob/master/LICENSE.
+This program is licensed under the Taboola, Inc. SDK License Agreement (the “License Agreement”).  By copying, using or redistributing this program, you agree with the terms of the License Agreement.  The full text of the license agreement can be found at https://github.com/taboola/taboola-ios/blob/master/LICENSE.
 Copyright 2017 Taboola, Inc.  All rights reserved.
