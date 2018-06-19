@@ -18,14 +18,14 @@
     mTaboolaView.publisher = @"betterbytheminute-app";
     mTaboolaView.pageType = @"article";
     mTaboolaView.pageUrl = @"http://www.example.com";
-    mTaboolaView.placement = @"feed";
+    mTaboolaView.placement = @"feed-sample-app";
     //mTaboolaView.targetType = @"mix";
 	NSDictionary *lPageDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"http://www.example.com/2/ref", @"referrer", nil];
     [mTaboolaView setOptionalPageCommands:lPageDictionary];
     NSDictionary *lModeDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"mix", @"target_type", nil];
     [mTaboolaView setOptionalModeCommands:lModeDictionary];
     mTaboolaView.autoResizeHeight = YES;
-
+    [mTaboolaView setInterceptScroll:YES];
 	[mTaboolaView fetchContent];
 	
 	//show page content

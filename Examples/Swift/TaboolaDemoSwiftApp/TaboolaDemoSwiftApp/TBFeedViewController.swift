@@ -6,7 +6,7 @@
 import UIKit
 import TaboolaSDK
 
-class SecondViewController: UIViewController {
+class TBFeedViewController: UIViewController {
     
     //MARK: IBOutlets
     @IBOutlet weak var taboolaView: TaboolaView!
@@ -23,12 +23,13 @@ class SecondViewController: UIViewController {
         taboolaView.scrollEnable = false
         taboolaView.enableClickHandler = true
         
-        taboolaView.mode = "thumbnails-sdk1"
+        taboolaView.mode = "thumbnails-feed"
         taboolaView.publisher = "betterbytheminute-app"
         taboolaView.pageType = "article"
         taboolaView.pageUrl = "http://www.example.com"
-        taboolaView.placement = "Mobile"
+        taboolaView.placement = "feed-sample-app"
         taboolaView.targetType = "mix"
+        taboolaView.setInterceptScroll(true)
         
         // Optional - add extra styling rules to the widget, CSS format.
         taboolaView.optionalWidgetStyle = "background:linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,linear-gradient(315deg, #ECEDDC 25%, transparent 25%),linear-gradient(45deg, #ECEDDC 25%, transparent 25%)background-size: 100px 100pxbackground-color: #EC173A"
@@ -42,8 +43,21 @@ class SecondViewController: UIViewController {
 }
 
 // MARK: Extensions
-extension SecondViewController: TaboolaViewDelegate {
-    func taboolaViewItemClickHandler(_ pURLString: String!, _ isOrganic: Bool) -> Bool {
+extension TBFeedViewController: TaboolaViewDelegate {
+    func onItemClick(_ placementName: String!, withItemId itemId: String!, withClickUrl clickUrl: String!, isOrganic organic: Bool) -> Bool {
+        if organic {
+            print("itemId: \(itemId)")
+        } else {
+            print("clickUrl: \(clickUrl)")
+        }
         return true
+    }
+    
+    func taboolaView(_ taboolaView: UIView!, didLoadPlacementNamed placementName: String!, withHeight height: CGFloat) {
+        print("Placement \(placementName) loaded successfully. height \(height)");
+    }
+    
+    func taboolaView(_ taboolaView: UIView!, didFailToLoadPlacementNamed placementName: String!, withErrorMessage error: String!) {
+        print("Placement \(placementName) failed to load because: %@ \(error)");
     }
 }

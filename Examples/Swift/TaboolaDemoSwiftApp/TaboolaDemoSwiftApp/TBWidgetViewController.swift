@@ -6,7 +6,7 @@
 import UIKit
 import TaboolaSDK
 
-class FirstViewController: UIViewController {
+class TBWidgetViewController: UIViewController {
     // MARK: IBOutlets
     @IBOutlet weak var mTaboolaView: TaboolaView!
     @IBOutlet weak var mTextLabel: UILabel!
@@ -26,7 +26,7 @@ class FirstViewController: UIViewController {
         mTaboolaView.scrollEnable = false
         mTaboolaView.enableClickHandler = true
         
-        mTaboolaView.mode = "thumbnails-sdk1"
+        mTaboolaView.mode = "thumbnails-sdk3"
         mTaboolaView.publisher = "betterbytheminute-app"
         mTaboolaView.pageType = "article"
         mTaboolaView.pageUrl = "http://www.example.com"
@@ -46,15 +46,28 @@ class FirstViewController: UIViewController {
     }
 }
 // MARK: Extensions
-extension FirstViewController: TaboolaViewDelegate {
-    func taboolaViewItemClickHandler(_ pURLString: String!, _ isOrganic: Bool) -> Bool {
+extension TBWidgetViewController: TaboolaViewDelegate {
+    func onItemClick(_ placementName: String!, withItemId itemId: String!, withClickUrl clickUrl: String!, isOrganic organic: Bool) -> Bool {
+        if organic {
+            print("itemId: \(itemId)")
+        } else {
+            print("clickUrl: \(clickUrl)")
+        }
         return true
+    }
+    
+    func taboolaView(_ taboolaView: UIView!, didLoadPlacementNamed placementName: String!, withHeight height: CGFloat) {
+        print("Placement \(placementName) loaded successfully. height \(height)");
+    }
+    
+    func taboolaView(_ taboolaView: UIView!, didFailToLoadPlacementNamed placementName: String!, withErrorMessage error: String!) {
+        print("Placement \(placementName) failed to load because: %@ \(error)");
     }
 }
 
-extension FirstViewController: ActionAssistantProtocol {
+extension TBWidgetViewController: ActionAssistantProtocol {
     func refreshChild() {
-        mTaboolaView.refresh()
+//        mTaboolaView.refresh()
     }
     
     func editChild(dict: [String : String]) {

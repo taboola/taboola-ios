@@ -14,7 +14,7 @@
 	//load tabolaView
 	mTaboolaView.delegate = self;
     mTaboolaView.ownerViewController = self;
-    mTaboolaView.mode = @"thumbnails-sdk3";
+    mTaboolaView.mode = @"thumbnails-sdk1";
 	mTaboolaView.publisher = @"betterbytheminute-app";
     mTaboolaView.pageType = @"article";
     mTaboolaView.pageUrl = @"http://www.example.com";

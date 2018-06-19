@@ -32,7 +32,7 @@ final class MasterViewController: UIViewController {
     @IBOutlet weak var secondButton: UIButton!
     
     //MARK: Properties
-    fileprivate let controllersClasses: [UIViewController.Type] = [FirstViewController.self, SecondViewController.self]
+    fileprivate let controllersClasses: [UIViewController.Type] = [TBWidgetViewController.self, TBFeedViewController.self,TBFeedCollectionView.self]
     fileprivate weak var currentChild: UIViewController?
     
     //MARK: Life cycle

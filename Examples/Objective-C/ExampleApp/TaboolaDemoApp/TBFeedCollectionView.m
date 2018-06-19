@@ -64,6 +64,7 @@
             self.taboolaCell.taboolaView.targetType = @"mix";
             self.taboolaCell.taboolaView.enableClickHandler = YES;
             self.taboolaCell.taboolaView.logLevel = LogLevelDebug;
+            [self.taboolaCell.taboolaView setInterceptScroll:YES];
             [self.taboolaCell.taboolaView fetchContent];
         }
         return self.taboolaCell;
