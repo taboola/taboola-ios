@@ -23,16 +23,16 @@ class TBFeedViewController: UIViewController {
         taboolaView.scrollEnable = false
         taboolaView.enableClickHandler = true
         
-        taboolaView.mode = "thumbnails-feed"
-        taboolaView.publisher = "betterbytheminute-app"
+        taboolaView.mode = "thumbnails-a"
+        taboolaView.publisher = "eonline-iosapp"
         taboolaView.pageType = "article"
         taboolaView.pageUrl = "http://www.example.com"
-        taboolaView.placement = "feed-sample-app"
+        taboolaView.placement = "App Below Article Thumbnails"
         taboolaView.targetType = "mix"
         taboolaView.setInterceptScroll(true)
         
         // Optional - add extra styling rules to the widget, CSS format.
-        taboolaView.optionalWidgetStyle = "background:linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,linear-gradient(315deg, #ECEDDC 25%, transparent 25%),linear-gradient(45deg, #ECEDDC 25%, transparent 25%)background-size: 100px 100pxbackground-color: #EC173A"
+//        taboolaView.optionalWidgetStyle = "background:linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,linear-gradient(315deg, #ECEDDC 25%, transparent 25%),linear-gradient(45deg, #ECEDDC 25%, transparent 25%)background-size: 100px 100pxbackground-color: #EC173A"
         
         
         let pageDict = ["referrer": "http://www.example.com/ref"]
@@ -59,5 +59,20 @@ extension TBFeedViewController: TaboolaViewDelegate {
     
     func taboolaView(_ taboolaView: UIView!, didFailToLoadPlacementNamed placementName: String!, withErrorMessage error: String!) {
         print("Placement \(placementName) failed to load because: %@ \(error)");
+    }
+}
+
+extension TBFeedViewController: ActionAssistantProtocol {
+    func refreshChild() {
+        //        mTaboolaView.refresh()
+    }
+    
+    func editChild(dict: [String : String]) {
+        taboolaView.mode = dict[ConstantsProperties.mode]
+        taboolaView.publisher = dict[ConstantsProperties.publisher]
+        taboolaView.pageType = dict[ConstantsProperties.pageType]
+        taboolaView.pageUrl = dict[ConstantsProperties.pageUrl]
+        taboolaView.placement = dict[ConstantsProperties.placement]
+        taboolaView.fetchContent()
     }
 }

@@ -84,35 +84,20 @@ class TBFeedCollectionView: UICollectionViewController , TaboolaViewDelegate {
         }
     }
 
-    // MARK: UICollectionViewDelegate
+}
 
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
+extension TBFeedCollectionView: ActionAssistantProtocol {
+    func refreshChild() {
+        //        mTaboolaView.refresh()
     }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    func editChild(dict: [String : String]) {
+        taboolaCell!.taboolaView.mode = dict[ConstantsProperties.mode]
+        taboolaCell!.taboolaView.publisher = dict[ConstantsProperties.publisher]
+        taboolaCell!.taboolaView.pageType = dict[ConstantsProperties.pageType]
+        taboolaCell!.taboolaView.pageUrl = dict[ConstantsProperties.pageUrl]
+        taboolaCell!.taboolaView.placement = dict[ConstantsProperties.placement]
+        taboolaCell!.taboolaView.fetchContent()
+        self.collectionView?.reloadData()
     }
-    */
-
 }
