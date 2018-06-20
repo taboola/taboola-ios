@@ -23,11 +23,11 @@ class TBFeedViewController: UIViewController {
         taboolaView.scrollEnable = false
         taboolaView.enableClickHandler = true
         
-        taboolaView.mode = "thumbnails-a"
-        taboolaView.publisher = "eonline-iosapp"
+        taboolaView.mode = "thumbnails-sdk3"
+        taboolaView.publisher = "betterbytheminute-app"
         taboolaView.pageType = "article"
         taboolaView.pageUrl = "http://www.example.com"
-        taboolaView.placement = "App Below Article Thumbnails"
+        taboolaView.placement = "Mobile"
         taboolaView.targetType = "mix"
         taboolaView.setInterceptScroll(true)
         
