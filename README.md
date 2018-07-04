@@ -203,8 +203,55 @@ NSLog(@"organic items should open as native app pages.");
 return YES;
 }
 ```
+### 1.5. How to set TaboolaView height and scroll:
+#### 1. For widget:
+Publisher set Fixed height:
+ * Set the TaboolaView frame (  The most important is the height)
+Use:
+```
+taboolaView.autoResizeHeight = NO;
+```
+##### For scroll inside the widget set:
+```bash
+taboolaView.scrollEnable = YES;
+```
+### How to set Automatic height :
+ * The SDK will automatically decide the height, so you don’t need to give it.
+```bash
+taboolaView.autoResizeHeight = YES; // This is the default, no need to add this code
+```
+##### For scroll inside the widget:
+```bash
+taboolaView.scrollEnable = NO;//This is the default, no need to add this code
+```
+#### 2. For Feed:
+Our widget is a custom webview. The feed is endless and it has a scroll functionality. So when implementing feed, the view has a fixed size (height of the screen), usually in the bottom of the screen. When the app is scrolled and the view is taking up all the screen, the app scroll should hand over the scroll to our view (inner scroll of the webview).
+The publisher should implement a callback called `ScrollToTopListener` and the interface will be called when the scroll should go back to the app.
+ Use:
+```
+[taboolaView setInterceptScroll:YES];
+```
+* in ScrollView:
+```
+taboolaView.autoResizeHeight = YES; //This is the default, no need to add this code
+```
+* For scroll inside the widget
+```
+taboolaView.scrollEnable = NO; //This is the default, no need to add this code)
+```
+##### In collectionView or tableView:
+There are 2 options here:
+###### 1. Set the height of the cell to:
+```
+TaboolaView.widgetHeight
+taboolaView.autoResizeHeight = YES; // This is the default, no need to add this code
+```
+###### 2. Give the cell a height you decide, use:
+```
+taboolaView.autoResizeHeight = NO;
+```
 
-### 1.5 Automatic height resize 
+### 1.6. Automatic height resize
 
 By default, TaboolaView automatically adjusts its own height in run time to show the entire widget. 
 
@@ -212,15 +259,15 @@ By default, TaboolaView automatically adjusts its own height in run time to show
 
 After resize, `TaboolaView` will call `taboolaViewResizeHandler` method of the `@protocol TaboolaViewDelegate`, to allow the host app to adjust its layout to the changes. (This behavior may be disabled by setting the property `autoResizeHeight` to `false`.)
 
-### 1.6 Replacing the default in-app browser icons
+### 1.7. Replacing the default in-app browser icons
 The file TaboolaViewResources.bundle includes the default icons for the TaboolaView in-app browser. These icons can be replaced by providing an alternative TaboolaViewResources.bundle file which contains the following files: 
 * back_icon.png
 * forward_icon.png
 
-### 1.7 IDFA Reporting
+### 1.8. IDFA Reporting
 If the user chose to allow IDFA sharing with the host app, the IDFA is sent to the Taboola server as a page command with the key “device”
 
-### 1.8 NSNotificationCenter notifications
+### 1.9. NSNotificationCenter notifications
 
 The taboolaView widget also reports its status to the host app via `NSNotificationCenter` notifications (in addition to calling the TaboolaViewDelegate methods). This allows the host app to be more loosely coupled with the taboolaView. All notifications include a reference to the taboolaView itself. Here’s the list of notifications sent:
 * taboolaDidReceiveAd - When the widget successfully loads its content.
