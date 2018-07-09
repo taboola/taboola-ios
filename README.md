@@ -112,152 +112,163 @@ taboolaView.pageUrl = @"my-page-url";
 // An identification of a specific placement in the app (you might place Taboola recommendation units in multiple placements in the app, in which case you should get applicable placement ids for each such placement) 
 taboolaView.placement = @"my-placement";
 ```
-
-After setting all properties, call `fetchContent` to load the TaboolaView content:
 ```objc
 // After initializing the TaboolaView, this method should be called to actually fetch the recommendations
 [taboolaView fetchContent];
 ```
 
-#### 1.3.5 TaboolaViewDelegate
+#### 1.3.5 Code example 
+A code similar to this should be added to your ViewController viewDidLoad method:
 
-Optionally set a TaboolaViewDelegate `TaboolaView.delegate = self` to intercept recommendation clicks. If recommendation clicks are not intercepted, they will be presented by a Taboola powered in-app browser. Also important to note that TaboolaView also fires notifications that can be caught by any object inside the app, in case you want to react to these notifications elsewhere in your code. 
-
-```objc
-- (BOOL)taboolaViewItemClickHandler:(NSString *)pURLString :(BOOL)isOrganic;
-```
-**Return**: `YES` if the view should begin loading content; otherwise, `NO`. Default value is `YES`. 
-> **NOTICE**: As of version 1.5.1, clicks on non-organic items will be handled by Taboola SDK and the app will not be allowed to override the default click handler. "No" responses from `taboolaViewItemClickHandler` will only be honored for organic items.
-
-```objc
-// Triggered when the TaboolaView resizes after content render
-- (void)taboolaViewResizeHandler;
-
-// Triggered after the TaboolaView is succesfully rendered
-- (void)taboolaDidReceiveAd:(UIView *)view;
-
-// Triggered after the TaboolaView fails to render
-- (void)taboolaDidFailAd:(NSError *)error;
-``` 
-
-#### 1.3.6 Code example 
-A code similar to this should be added to your ViewController viewDidLoad method: 
 ```objc
 - (void)viewDidLoad{
-[super viewDidLoad];
+	[super viewDidLoad];
 
-// Load taboolaView
-taboolaView.delegate = self;
-taboolaView.ownerViewController = self;
-taboolaView.mode = @"my-mode";
-taboolaView.publisher = @"my-publisher";
-taboolaView.pageType = @"article";
-taboolaView.pageUrl = @"http://www.example.com";
-taboolaView.placement = @"Mobile";
-taboolaView.autoResizeHeight = YES;
-taboolaView.enableClickHandler = YES;
-taboolaView.logLevel = LogLevelDebug;
+	// Load taboolaView
+	taboolaView.delegate = self;
+	taboolaView.ownerViewController = self;
+	taboolaView.mode = @"my-mode";
+	taboolaView.publisher = @"my-publisher";
+	taboolaView.pageType = @"article";
+	taboolaView.pageUrl = @"http://www.example.com";
+	taboolaView.placement = @"Mobile";
+	taboolaView.targetType = @"mix";
 
-// Optional - add more page commands if needed 
-NSDictionary *lPageDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"http://www.example.com/ref", @"referrer", nil];
-[taboolaView setOptionalPageCommands:lPageDictionary];
+	// Optional - add more page commands if needed 
+	NSDictionary *lPageDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"http://www.example.com/ref", 	@"referrer", nil];
+	[taboolaView setOptionalPageCommands:lPageDictionary];
 
-// target_type should be "mix", unless specified otherwise by your Taboola account manager
-NSDictionary *lModeDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"mix", @"target_type", nil];
-[taboolaView setOptionalModeCommands:lModeDictionary];
-
-// Fill taboolaView with recommendations 
-[mTaboolaView fetchContent];
+	// Fill taboolaView with recommendations 
+	[taboolaView fetchContent];
 }
+
 ```
 
-### 1.4 Intercepting recommendation clicks
-
-TaboolaView allows app developers to intercept recommendation clicks in order to create a click-through or to override the default way of opening the recommended article in the device built-in browser outside of the app.
-Please note that TaboolaView also fires notifications that can be caught by any object inside the app, in case you want to react to these notifications elsewhere in your code
-
-In order to intercept clicks, you should implement the `protocol TaboolaViewDelegate` and connect TaboolaView to your delegate. The ViewController in which TaboolaView is displayed might be a good candidate to implement TaboolaViewDelegate.
-
-TaboolaViewDelegate includes the method:
+### 1.4 TaboolaViewDelegate
 
 ```objc
-- (BOOL)taboolaViewItemClickHandler:(NSString *)pURLString:(BOOL)isOrganic;
+// Optionally set the TaboolaViewDelegate, to listen to taboolaView events and clicks
+taboolaView.delegate = self;
 ```
 
-#### 1.4.1 taboolaViewItemClickHandler
+#### 1.4.1 Intercepting recommendation clicks
 
-This method will be called every time a user clicks a recommendation, right before triggering the default behavior. The app can intercept the click there, and should return a boolean value:
+```objc
+// To intercept recommendation clicks
+- (BOOL)onItemClick:(NSString *)placementName withItemId:(NSString *)itemId withClickUrl:(NSString *)clickUrl isOrganic:(BOOL)organic
+```
+
+**Return**: `YES` if the taboolaView should handle the click; otherwise, `NO`. Default value is `YES`. 
+> **NOTICE**: As of version 1.5.1, clicks on non-organic items will be handled by Taboola SDK and the app will not be allowed to override the default click handler. "No" responses from `taboolaViewItemClickHandler` will only be honored for organic items.
+
+This method will be called every time a user clicks a recommendation, right before triggering the default behavior.
+If recommendation clicks are not intercepted, they will be presented by a Taboola powered in-app browser. Also important to note that TaboolaView also fires notifications that can be caught by any object inside the app, in case you want to react to these notifications elsewhere in your code. 
+
+The app can intercept the click there, and should return a boolean value:
+
 * Returns NO - abort the default behavior (in which case the app should display the recommendation content on its own - e.g. using a custom in-app browser). 
 * Returns YES - this will allow the app to implement a click-through and continue with the default click handling behavior (which will display the clicked content with an in-app browser). 
 
-`isOrganic` indicates whether the item clicked was an organic content recommendation or not.
+`organic ` indicates whether the item clicked was an organic content recommendation or not.
 **Best practice would be to suppress the default behavior for organic items, and instead open the relevant screen in your app which shows that piece of content.**
+
+Use `itemId` in organic clicks for deeplink.
+
+`clickUrl` is the url with the redirect.
 
 #### 1.4.2 Example:
 ```objc
-- (BOOL)taboolaViewItemClickHandler:(NSString *)pURLString:(BOOL)isOrganic{
-NSLog(@"Start load request on first screen: %@ isOrganic? %@", pURLString, isOrganic ? @"YES":@"NO");
-if (isOrganic){
-NSLog(@"organic items should open as native app pages.");
-}
-return YES;
+- (BOOL)onItemClick:(NSString *)placementName withItemId:(NSString *)itemId withClickUrl:(NSString *)clickUrl isOrganic:(BOOL)organic {
+	NSLog(@"Start load request on first screen: %@ isOrganic? %@", clickUrl, organic ? @"YES":@"NO");
+    if (organic) {
+        NSLog(@"organic items should open as native app pages.");
+    }
+    return YES;
 }
 ```
+#### 1.4.3 Loading delegate fuctions:
+
+```objc
+// Triggered after the TaboolaView is succesfully rendered
+- (void)taboolaView:(UIView *)taboolaView didLoadPlacementNamed:(NSString *)placementName withHeight:(CGFloat)height;
+```
+```objc
+// Triggered after the TaboolaView fails to render
+- (void)taboolaView:(UIView *)taboolaView didFailToLoadPlacementNamed:(NSString *)placementName withErrorMessage:(NSString *)error;
+```
+```objc
+// Triggered when the TaboolaView resizes after content render or orientation change.
+- (void)taboolaViewResizedToHeight:(CGFloat)height;
+```
+
 ### 1.5. How to set TaboolaView height and scroll:
-#### 1. For widget:
-Publisher set Fixed height:
- * Set the TaboolaView frame (  The most important is the height)
-Use:
-```
-taboolaView.autoResizeHeight = NO;
-```
-##### For scroll inside the widget set:
-```bash
-taboolaView.scrollEnable = YES;
-```
-### How to set Automatic height :
- * The SDK will automatically decide the height, so you don’t need to give it.
-```bash
-taboolaView.autoResizeHeight = YES; // This is the default, no need to add this code
-```
-##### For scroll inside the widget:
-```bash
-taboolaView.scrollEnable = NO;//This is the default, no need to add this code
-```
-#### 2. For Feed:
-Our widget is a custom webview. The feed is endless and it has a scroll functionality. So when implementing feed, the view has a fixed size (height of the screen), usually in the bottom of the screen. When the app is scrolled and the view is taking up all the screen, the app scroll should hand over the scroll to our view (inner scroll of the webview).
-The publisher should implement a callback called `ScrollToTopListener` and the interface will be called when the scroll should go back to the app.
- Use:
-```
-[taboolaView setInterceptScroll:YES];
-```
-* in ScrollView:
-```
-taboolaView.autoResizeHeight = YES; //This is the default, no need to add this code
-```
-* For scroll inside the widget
-```
-taboolaView.scrollEnable = NO; //This is the default, no need to add this code)
-```
-##### In collectionView or tableView:
-There are 2 options here:
-###### 1. Set the height of the cell to:
-```
-TaboolaView.widgetHeight
-taboolaView.autoResizeHeight = YES; // This is the default, no need to add this code
-```
-###### 2. Give the cell a height you decide, use:
-```
-taboolaView.autoResizeHeight = NO;
-```
+#### 1.5.1 For widget:
+* Choose between fixed or automatic height
 
-### 1.6. Automatic height resize
-
+#### Automatic height resize
 By default, TaboolaView automatically adjusts its own height in run time to show the entire widget. 
 
-`TaboolaView` may resize its height after loading recommendations, to make sure that the full content is displayed (based on the actual widget `mode` loaded).
+The SDK will automatically decide the height, so you don’t need to give it.
 
-After resize, `TaboolaView` will call `taboolaViewResizeHandler` method of the `@protocol TaboolaViewDelegate`, to allow the host app to adjust its layout to the changes. (This behavior may be disabled by setting the property `autoResizeHeight` to `false`.)
+```objc
+taboolaView.autoResizeHeight = YES; // This is the default, no need to add this code
+```
+
+```objc
+//Disable scroll inside the widget
+taboolaView.scrollEnable = NO;//This is the default, no need to add this code
+```
+
+####  Fixed height:
+
+```objc
+Set the TaboolaView frame (The most important is the height).
+```
+```objc
+taboolaView.autoResizeHeight = NO;
+```
+```objc
+//Enable scroll inside the widget
+taboolaView.scrollEnable = YES;
+```
+
+#### 1.5.2 For Feed:
+Our widget is a custom webview. The feed is endless and it has a scroll functionality. So when implementing feed, the view has a fixed size, usually in the bottom of the screen. When the app is scrolled and the view is taking up all the screen, the app scroll should hand over the scroll to our view (inner scroll of the webview).
+
+```objc
+// To enable scroll switch between the scrollView and taboolaView
+[taboolaView setInterceptScroll:YES];
+```
+#### Automatic height
+By default, TaboolaView automatically adjusts its own height in run time to show the entire widget. 
+
+```objc
+//To get the automatic height
+taboolaView.widgetHeight;
+```
+In collectionView or tabolaView, set your cell height with ```taboolaView.widgetHeight;```
+
+```objc
+taboolaView.autoResizeHeight = YES; // This is the default, no need to add this code
+```
+
+```objc
+//Disable scroll inside the widget
+taboolaView.scrollEnable = NO;//This is the default, no need to add this code
+```
+####  Fixed height:
+
+```objc
+Set the TaboolaView frame (The most important is the height).
+In CollectionView or tableView, set the cell height the same to tabolaView.
+```
+```objc
+taboolaView.autoResizeHeight = NO;
+```
+```objc
+//Enable scroll inside the widget
+taboolaView.scrollEnable = YES;
+```
 
 ### 1.7. Replacing the default in-app browser icons
 The file TaboolaViewResources.bundle includes the default icons for the TaboolaView in-app browser. These icons can be replaced by providing an alternative TaboolaViewResources.bundle file which contains the following files: 
