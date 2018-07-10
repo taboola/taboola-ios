@@ -234,9 +234,10 @@ taboolaView.scrollEnable = YES;
 
 #### 1.5.2 For Feed:
 Our widget is a custom webview. The feed is endless and it has a scroll functionality.
- There are 2 options to handle feed:
+There are 2 options to handle feed:
 1) Automatic (less code and work for the publisher);
 2) Fixed (if the publisher has code that conflicts with ours, they will know how to implement it).
+
 So when implementing feed, the view has a fixed size, usually in the bottom of the screen. When the app is scrolled and the view is taking up all the screen, the app scroll should hand over the scroll to our view (inner scroll of the webview).
 
 
