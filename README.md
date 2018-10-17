@@ -24,9 +24,9 @@
 
 ### 1.2 Incorporating the SDK
 
-## Installation with CocoaPods
+## Installation
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like Taboola in your projects.
+[Installation with CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like Taboola in your projects.
 
 You can install it with the following command:
 
@@ -53,8 +53,7 @@ Then, run the following command:
 ```bash
 $ pod install
 ``` 
-#### Installation with Carthage
-**[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks thus requires deployment target of minimum iOS 8.0**
+[Installation with Carthage]**[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks thus requires deployment target of minimum iOS 8.0**
 
 You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
 
