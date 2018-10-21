@@ -54,23 +54,40 @@ Then, run the following command:
 ```bash
 $ pod install
 ``` 
-### Installation with Carthage
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks thus requires deployment target of minimum iOS 8.0**
+#### Installation with Carthage
+**[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks thus requires deployment target of minimum iOS 8.0**
 
-You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+1. You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
 
 ```bash
 $ brew update
 $ brew install carthage
 ```
 
-To integrate Taboola into your Xcode project using Carthage, specify it in your `Cartfile`:
+2. To integrate Taboola into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
 binary "https://cdn.taboola.com/taboola-mobile-sdk/ios/carthage/Carthage.json" ~> 2.0.30
 ```
 
-Run `carthage update` to build the framework and drag the built `TaboolaFramework.framework` into your Xcode project.
+3. Run `carthage update` to build the framework and drag the built `TaboolaFramework.framework` into your Xcode project.
+
+4. On your application targets’ Build Phases settings tab, click the + icon and choose New Run Script Phase. Create a Run Script in which you specify your shell (ex: /bin/sh), add the following contents to the script area below the shell:
+
+```ogdl
+/usr/local/bin/carthage copy-frameworks
+```
+
+Add the paths to the frameworks you want to use under “Input Files". For example:
+
+```ogdl
+$(SRCROOT)/Carthage/Build/iOS/TaboolaFramework.framework
+```
+Add the paths to the copied frameworks to the “Output Files”. For example:
+
+```ogdl
+$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/TaboolaFramework.framework
+```
 
 ### 1.3 Including Taboola recommendations in your app
 
