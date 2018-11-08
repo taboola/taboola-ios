@@ -67,7 +67,7 @@ $ brew install carthage
 2. To integrate Taboola into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-binary "https://cdn.taboola.com/taboola-mobile-sdk/ios/carthage/Carthage.json" ~> 2.0.30
+binary "https://cdn.taboola.com/taboola-mobile-sdk/ios/carthage/Carthage.json" == 2.0.30
 ```
 
 3. Run `carthage update` to build the framework and drag the built `TaboolaFramework.framework` into your Xcode project.
