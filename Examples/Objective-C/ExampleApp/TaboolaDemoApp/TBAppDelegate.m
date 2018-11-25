@@ -8,6 +8,7 @@
 #import "TBFeedViewController.h"
 #import "TBTestViewController.h"
 #import "TBFeedCollectionView.h"
+#import "TBWidgetCollectionView.h"
 
 @implementation TBAppDelegate
 
@@ -34,15 +35,21 @@
     feedCollectionNavController.navigationBarHidden = YES;
     feedCollectionNavController.tabBarItem = feedCollectionTabBarItem;
     
-    // Setting Tab bar font, color and v-alignnment
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"AmericanTypewriter" size:15.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];
+    TBWidgetCollectionView *widgetCollectionView = [[TBWidgetCollectionView alloc]initWithNibName:@"TBWidgetCollectionView" bundle:nil];
+    UITabBarItem *widgetCollectionTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Widget collectionView" image:nil tag:2];
+    UINavigationController *widgetCollectionNavController = [[UINavigationController alloc] initWithRootViewController:widgetCollectionView];
+    widgetCollectionNavController.navigationBarHidden = YES;
+    widgetCollectionNavController.tabBarItem = widgetCollectionTabBarItem;
     
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blueColor], NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
-    [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0.0, -5.0)];
+//    // Setting Tab bar font, color and v-alignnment
+//    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"AmericanTypewriter" size:15.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];
+//    
+//    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blueColor], NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
+//    [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0.0, -5.0)];
     
     
     UITabBarController *lTabBarController = [[UITabBarController alloc] init];
-    lTabBarController.viewControllers = [NSArray arrayWithObjects:widgetNavController, feedScrollNavController, feedCollectionNavController, nil];
+    lTabBarController.viewControllers = [NSArray arrayWithObjects:widgetNavController, feedScrollNavController, feedCollectionNavController, widgetCollectionNavController, nil];
     lTabBarController.selectedIndex = 0;
     self.window.rootViewController = lTabBarController;
     
