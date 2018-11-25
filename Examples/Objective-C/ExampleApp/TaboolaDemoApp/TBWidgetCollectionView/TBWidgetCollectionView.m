@@ -60,11 +60,11 @@
         if (!self.taboolaCell) {
             self.taboolaCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TaboolaCell" forIndexPath:indexPath];
             self.taboolaCell.taboolaView.delegate = self;
-            self.taboolaCell.taboolaView.mode = @"thumbnails-b";
-            self.taboolaCell.taboolaView.publisher = @"bildappios";
+            self.taboolaCell.taboolaView.mode = @"thumbnails-sdk1";
+            self.taboolaCell.taboolaView.publisher = @"betterbytheminute-app";
             self.taboolaCell.taboolaView.pageType = @"article";
             self.taboolaCell.taboolaView.pageUrl = @"https://www.weatherbug.com";
-            self.taboolaCell.taboolaView.placement = @"Below article thumbnails";
+            self.taboolaCell.taboolaView.placement = @"iOS Below Article Thumbnails";
             self.taboolaCell.taboolaView.targetType = @"mix";
             self.taboolaCell.taboolaView.logLevel = LogLevelDebug;
             [self.taboolaCell.taboolaView fetchContent];
