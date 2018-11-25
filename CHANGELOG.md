@@ -1,5 +1,7 @@
-
-
+## [2.0.30] - 2018-09-16
+### Fixed
+- Loading few widgets in the same page.
+- Prefetching few widgets in different pages.
 ## [1.6.4] - 2017-11-22
 ### Changed
 - Internal updates to organic click reporting
