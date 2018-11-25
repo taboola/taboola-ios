@@ -32,6 +32,8 @@
 		BCF891F9186DC363003F45C4 /* ic_launcher_144.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF891F2186DC363003F45C4 /* ic_launcher_144.png */; };
 		BCF891FA186DC363003F45C4 /* ic_launcher_152.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF891F3186DC363003F45C4 /* ic_launcher_152.png */; };
 		BCF891FE186DC47C003F45C4 /* navigationBar_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF891FC186DC47C003F45C4 /* navigationBar_iPhone@2x.png */; };
+		DB4107DC21AAF9FC006CA18D /* TBWidgetCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4107DA21AAF9FC006CA18D /* TBWidgetCollectionView.m */; };
+		DB4107DD21AAF9FC006CA18D /* TBWidgetCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB4107DB21AAF9FC006CA18D /* TBWidgetCollectionView.xib */; };
 		DBFF220320D26558008DD3CB /* TBFeedCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFF21F920D26557008DD3CB /* TBFeedCollectionView.m */; };
 		DBFF220420D26558008DD3CB /* TBFeedCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBFF21FA20D26557008DD3CB /* TBFeedCollectionView.xib */; };
 		DBFF221B20D266A2008DD3CB /* randomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFF221620D266A2008DD3CB /* randomCell.m */; };
@@ -96,6 +98,9 @@
 		BCF891F2186DC363003F45C4 /* ic_launcher_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher_144.png; sourceTree = "<group>"; };
 		BCF891F3186DC363003F45C4 /* ic_launcher_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher_152.png; sourceTree = "<group>"; };
 		BCF891FC186DC47C003F45C4 /* navigationBar_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationBar_iPhone@2x.png"; sourceTree = "<group>"; };
+		DB4107D921AAF9FC006CA18D /* TBWidgetCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWidgetCollectionView.h; sourceTree = "<group>"; };
+		DB4107DA21AAF9FC006CA18D /* TBWidgetCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWidgetCollectionView.m; sourceTree = "<group>"; };
+		DB4107DB21AAF9FC006CA18D /* TBWidgetCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBWidgetCollectionView.xib; sourceTree = "<group>"; };
 		DBFF21F920D26557008DD3CB /* TBFeedCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBFeedCollectionView.m; sourceTree = "<group>"; };
 		DBFF21FA20D26557008DD3CB /* TBFeedCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBFeedCollectionView.xib; sourceTree = "<group>"; };
 		DBFF21FB20D26558008DD3CB /* TBFeedCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBFeedCollectionView.h; sourceTree = "<group>"; };
@@ -264,6 +269,7 @@
 				BC4C1EC5186D89E400308460 /* TBWidgetViewController */,
 				BC4C1ECD186D8C6A00308460 /* TBFeedViewController */,
 				DBB1F72920D1138300D6E9E6 /* TBFeedCollectionView */,
+				DB4107D821AAF9FC006CA18D /* TBWidgetCollectionView */,
 				86ABDED61E8010AC00A92819 /* TBTestViewController */,
 			);
 			name = ViewControllers;
@@ -281,6 +287,16 @@
 				BCF891F3186DC363003F45C4 /* ic_launcher_152.png */,
 			);
 			name = icons;
+			sourceTree = "<group>";
+		};
+		DB4107D821AAF9FC006CA18D /* TBWidgetCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				DB4107D921AAF9FC006CA18D /* TBWidgetCollectionView.h */,
+				DB4107DA21AAF9FC006CA18D /* TBWidgetCollectionView.m */,
+				DB4107DB21AAF9FC006CA18D /* TBWidgetCollectionView.xib */,
+			);
+			path = TBWidgetCollectionView;
 			sourceTree = "<group>";
 		};
 		DBB1F72920D1138300D6E9E6 /* TBFeedCollectionView */ = {
@@ -415,6 +431,7 @@
 				BCF891F7186DC363003F45C4 /* ic_launcher_114.png in Resources */,
 				BCF891F4186DC363003F45C4 /* ic_launcher_57.png in Resources */,
 				BCF891F5186DC363003F45C4 /* ic_launcher_72.png in Resources */,
+				DB4107DD21AAF9FC006CA18D /* TBWidgetCollectionView.xib in Resources */,
 				DCF042ED1DCCADFA00198A08 /* Launch Screen.storyboard in Resources */,
 				BCF891F6186DC363003F45C4 /* ic_launcher_76.png in Resources */,
 				BCF891FE186DC47C003F45C4 /* navigationBar_iPhone@2x.png in Resources */,
@@ -514,6 +531,7 @@
 				BC9158C9186C7C0600141537 /* TBAppDelegate.m in Sources */,
 				DBFF222220D267EF008DD3CB /* TBFeedViewController.m in Sources */,
 				BC9158C5186C7C0600141537 /* main.m in Sources */,
+				DB4107DC21AAF9FC006CA18D /* TBWidgetCollectionView.m in Sources */,
 				86ABDEDA1E8010FB00A92819 /* TBTestViewController.m in Sources */,
 				BC4C1EC8186D8A0300308460 /* TBWidgetViewController.m in Sources */,
 				DBFF220320D26558008DD3CB /* TBFeedCollectionView.m in Sources */,
