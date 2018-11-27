@@ -334,7 +334,6 @@
 				BC9158B1186C7C0600141537 /* Sources */,
 				BC9158B2186C7C0600141537 /* Frameworks */,
 				BC9158B3186C7C0600141537 /* Resources */,
-				E49357CB662AEE7A609F1294 /* [CP] Embed Pods Frameworks */,
 				BDF1D88F9B21EF376D2A5FC3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -473,7 +472,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TaboolaDemoApp/Pods-TaboolaDemoApp-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TaboolaDemoApp/Pods-TaboolaDemoApp-resources.sh",
 				"${PODS_ROOT}/TaboolaSDK/TaboolaSDK.framework/Versions/A/TaboolaResources/TaboolaVIewResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -482,22 +481,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaboolaDemoApp/Pods-TaboolaDemoApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E49357CB662AEE7A609F1294 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaboolaDemoApp/Pods-TaboolaDemoApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaboolaDemoApp/Pods-TaboolaDemoApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FE24D85FF27E5D5CBD93FBA2 /* [CP] Check Pods Manifest.lock */ = {

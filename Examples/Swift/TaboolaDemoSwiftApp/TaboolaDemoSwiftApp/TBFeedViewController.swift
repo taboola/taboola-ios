@@ -19,16 +19,12 @@ class TBFeedViewController: UIViewController {
         
         taboolaView.delegate = self
         taboolaView.ownerViewController = self
-        taboolaView.autoResizeHeight = true
-        taboolaView.scrollEnable = false
-        taboolaView.enableClickHandler = true
-        
-        taboolaView.mode = "thumbnails-sdk3"
-        taboolaView.publisher = "betterbytheminute-app"
-        taboolaView.pageType = "article"
-        taboolaView.pageUrl = "http://www.example.com"
-        taboolaView.placement = "Mobile"
-        taboolaView.targetType = "mix"
+        taboolaView.mode = "thumbnails-feed";
+        taboolaView.publisher = "betterbytheminute-app";
+        taboolaView.pageType = "article";
+        taboolaView.pageUrl = "http://www.example.com";
+        taboolaView.placement = "feed-sample-app";
+        taboolaView.targetType = "mix";
         taboolaView.setInterceptScroll(true)
         
         // Optional - add extra styling rules to the widget, CSS format.
@@ -46,33 +42,20 @@ class TBFeedViewController: UIViewController {
 extension TBFeedViewController: TaboolaViewDelegate {
     func onItemClick(_ placementName: String!, withItemId itemId: String!, withClickUrl clickUrl: String!, isOrganic organic: Bool) -> Bool {
         if organic {
-            print("itemId: \(itemId)")
+            print("itemId: \(String(describing: itemId))")
         } else {
-            print("clickUrl: \(clickUrl)")
+            print("clickUrl: \(String(describing: clickUrl))")
         }
         return true
     }
     
     func taboolaView(_ taboolaView: UIView!, didLoadPlacementNamed placementName: String!, withHeight height: CGFloat) {
-        print("Placement \(placementName) loaded successfully. height \(height)");
+        print("Placement \(String(describing: placementName)) loaded successfully. height \(height)");
     }
     
     func taboolaView(_ taboolaView: UIView!, didFailToLoadPlacementNamed placementName: String!, withErrorMessage error: String!) {
-        print("Placement \(placementName) failed to load because: %@ \(error)");
+        print("Placement \(String(describing: placementName)) failed to load because: %@ \(String(describing: error))");
     }
 }
 
-extension TBFeedViewController: ActionAssistantProtocol {
-    func refreshChild() {
-        //        mTaboolaView.refresh()
-    }
-    
-    func editChild(dict: [String : String]) {
-        taboolaView.mode = dict[ConstantsProperties.mode]
-        taboolaView.publisher = dict[ConstantsProperties.publisher]
-        taboolaView.pageType = dict[ConstantsProperties.pageType]
-        taboolaView.pageUrl = dict[ConstantsProperties.pageUrl]
-        taboolaView.placement = dict[ConstantsProperties.placement]
-        taboolaView.fetchContent()
-    }
-}
+

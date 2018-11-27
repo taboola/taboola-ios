@@ -8,18 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		5461D9EDF118B382D9EDDB84 /* Pods_TaboolaDemoSwiftAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D53BD7A47E2E58D31009915 /* Pods_TaboolaDemoSwiftAppTests.framework */; };
-		8641577D1E962DE700E1D562 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8641577C1E962DE700E1D562 /* MasterViewController.swift */; };
 		8641577F1E96317000E1D562 /* TBFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8641577E1E96317000E1D562 /* TBFeedViewController.swift */; };
-		864157821E9677D500E1D562 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864157811E9677D500E1D562 /* EditViewController.swift */; };
-		864157861E9689ED00E1D562 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864157851E9689ED00E1D562 /* UIViewExtension.swift */; };
-		864157881E968A5B00E1D562 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864157871E968A5B00E1D562 /* UIViewControllerExtension.swift */; };
 		867A29051E95441D008D360D /* navigationBar_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 867A29041E95441D008D360D /* navigationBar_iPhone@2x.png */; };
 		A93ED1FD6CBD4777B94EB2E2 /* Pods_TaboolaDemoSwiftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56ED5F543384692C04BB0AE5 /* Pods_TaboolaDemoSwiftApp.framework */; };
-		DB0B3C1A20D8F976002FD719 /* TBFeedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B3C1920D8F976002FD719 /* TBFeedCollectionView.swift */; };
+		DB3A190521AD7E2F00F06792 /* TBWidgetCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A190321AD7E2F00F06792 /* TBWidgetCollectionViewController.swift */; };
+		DB3A190621AD7E2F00F06792 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3A190421AD7E2F00F06792 /* Main.storyboard */; };
+		DB3A190921AD7E9000F06792 /* TBFeedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A190821AD7E9000F06792 /* TBFeedCollectionViewController.swift */; };
 		DB609A562004B81F008B4830 /* TaboolaDemoSwiftAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB609A552004B81F008B4830 /* TaboolaDemoSwiftAppTests.swift */; };
 		DC1C9E7C1E3A1F6D0090B20C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C9E7B1E3A1F6D0090B20C /* AppDelegate.swift */; };
 		DC1C9E7E1E3A1F6D0090B20C /* TBWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C9E7D1E3A1F6D0090B20C /* TBWidgetViewController.swift */; };
-		DC1C9E811E3A1F6D0090B20C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1C9E7F1E3A1F6D0090B20C /* Main.storyboard */; };
 		DC1C9E831E3A1F6D0090B20C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC1C9E821E3A1F6D0090B20C /* Assets.xcassets */; };
 		DC1C9E861E3A1F6D0090B20C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1C9E841E3A1F6D0090B20C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -40,20 +37,17 @@
 		4D53BD7A47E2E58D31009915 /* Pods_TaboolaDemoSwiftAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaboolaDemoSwiftAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56ED5F543384692C04BB0AE5 /* Pods_TaboolaDemoSwiftApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaboolaDemoSwiftApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BB16DFF068C96F6D9AAB83 /* Pods-TaboolaDemoSwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaboolaDemoSwiftApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaboolaDemoSwiftApp/Pods-TaboolaDemoSwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
-		8641577C1E962DE700E1D562 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		8641577E1E96317000E1D562 /* TBFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBFeedViewController.swift; sourceTree = "<group>"; };
-		864157811E9677D500E1D562 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
-		864157851E9689ED00E1D562 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = Extension/UIViewExtension.swift; sourceTree = "<group>"; };
-		864157871E968A5B00E1D562 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtension.swift; path = Extension/UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		867A29041E95441D008D360D /* navigationBar_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationBar_iPhone@2x.png"; sourceTree = "<group>"; };
-		DB0B3C1920D8F976002FD719 /* TBFeedCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBFeedCollectionView.swift; sourceTree = "<group>"; };
+		DB3A190321AD7E2F00F06792 /* TBWidgetCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBWidgetCollectionViewController.swift; sourceTree = "<group>"; };
+		DB3A190421AD7E2F00F06792 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DB3A190821AD7E9000F06792 /* TBFeedCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TBFeedCollectionViewController.swift; path = ../../../../../../../../Downloads/TaboolaDemoSwiftApp/TaboolaDemoSwiftApp/TBFeedCollectionViewController.swift; sourceTree = "<group>"; };
 		DB609A532004B81F008B4830 /* TaboolaDemoSwiftAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaboolaDemoSwiftAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB609A552004B81F008B4830 /* TaboolaDemoSwiftAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaboolaDemoSwiftAppTests.swift; sourceTree = "<group>"; };
 		DB609A572004B81F008B4830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC1C9E781E3A1F6D0090B20C /* TaboolaDemoSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaboolaDemoSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1C9E7B1E3A1F6D0090B20C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC1C9E7D1E3A1F6D0090B20C /* TBWidgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBWidgetViewController.swift; sourceTree = "<group>"; };
-		DC1C9E801E3A1F6D0090B20C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC1C9E821E3A1F6D0090B20C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC1C9E851E3A1F6D0090B20C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC1C9E871E3A1F6D0090B20C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,23 +85,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		864157831E9688B100E1D562 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				864157851E9689ED00E1D562 /* UIViewExtension.swift */,
-				864157871E968A5B00E1D562 /* UIViewControllerExtension.swift */,
-			);
-			name = Extension;
-			sourceTree = "<group>";
-		};
 		864157841E9688BA00E1D562 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8641577C1E962DE700E1D562 /* MasterViewController.swift */,
 				DC1C9E7D1E3A1F6D0090B20C /* TBWidgetViewController.swift */,
 				8641577E1E96317000E1D562 /* TBFeedViewController.swift */,
-				DB0B3C1920D8F976002FD719 /* TBFeedCollectionView.swift */,
-				864157811E9677D500E1D562 /* EditViewController.swift */,
+				DB3A190321AD7E2F00F06792 /* TBWidgetCollectionViewController.swift */,
+				DB3A190821AD7E9000F06792 /* TBFeedCollectionViewController.swift */,
+				DB3A190421AD7E2F00F06792 /* Main.storyboard */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -153,9 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				864157841E9688BA00E1D562 /* ViewControllers */,
-				864157831E9688B100E1D562 /* Extension */,
 				DC1C9E7B1E3A1F6D0090B20C /* AppDelegate.swift */,
-				DC1C9E7F1E3A1F6D0090B20C /* Main.storyboard */,
 				DC1C9E821E3A1F6D0090B20C /* Assets.xcassets */,
 				DC1C9E841E3A1F6D0090B20C /* LaunchScreen.storyboard */,
 				DC1C9E871E3A1F6D0090B20C /* Info.plist */,
@@ -184,7 +167,6 @@
 				DB609A4F2004B81F008B4830 /* Sources */,
 				DB609A502004B81F008B4830 /* Frameworks */,
 				DB609A512004B81F008B4830 /* Resources */,
-				091938C0D15290096A9521E2 /* [CP] Embed Pods Frameworks */,
 				C4C09924BA0D963BBF2F2677 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -205,7 +187,6 @@
 				DC1C9E741E3A1F6D0090B20C /* Sources */,
 				DC1C9E751E3A1F6D0090B20C /* Frameworks */,
 				DC1C9E761E3A1F6D0090B20C /* Resources */,
-				C2C8B93A4B183A730C7DAEB9 /* [CP] Embed Pods Frameworks */,
 				E307B648AF855DD35C521CE3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -271,29 +252,14 @@
 			files = (
 				DC1C9E861E3A1F6D0090B20C /* LaunchScreen.storyboard in Resources */,
 				DC1C9E831E3A1F6D0090B20C /* Assets.xcassets in Resources */,
-				DC1C9E811E3A1F6D0090B20C /* Main.storyboard in Resources */,
 				867A29051E95441D008D360D /* navigationBar_iPhone@2x.png in Resources */,
+				DB3A190621AD7E2F00F06792 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		091938C0D15290096A9521E2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaboolaDemoSwiftAppTests/Pods-TaboolaDemoSwiftAppTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7077E8010EB30EB4C4C26DB3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -330,28 +296,13 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C2C8B93A4B183A730C7DAEB9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaboolaDemoSwiftApp/Pods-TaboolaDemoSwiftApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C4C09924BA0D963BBF2F2677 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TaboolaDemoSwiftAppTests/Pods-TaboolaDemoSwiftAppTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TaboolaDemoSwiftAppTests/Pods-TaboolaDemoSwiftAppTests-resources.sh",
 				"${PODS_ROOT}/TaboolaSDK/TaboolaSDK.framework/Versions/A/TaboolaResources/TaboolaVIewResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -360,7 +311,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaboolaDemoSwiftAppTests/Pods-TaboolaDemoSwiftAppTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaboolaDemoSwiftAppTests/Pods-TaboolaDemoSwiftAppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E307B648AF855DD35C521CE3 /* [CP] Copy Pods Resources */ = {
@@ -369,7 +320,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TaboolaDemoSwiftApp/Pods-TaboolaDemoSwiftApp-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TaboolaDemoSwiftApp/Pods-TaboolaDemoSwiftApp-resources.sh",
 				"${PODS_ROOT}/TaboolaSDK/TaboolaSDK.framework/Versions/A/TaboolaResources/TaboolaVIewResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -378,7 +329,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaboolaDemoSwiftApp/Pods-TaboolaDemoSwiftApp-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaboolaDemoSwiftApp/Pods-TaboolaDemoSwiftApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -396,14 +347,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				864157861E9689ED00E1D562 /* UIViewExtension.swift in Sources */,
-				864157821E9677D500E1D562 /* EditViewController.swift in Sources */,
+				DB3A190521AD7E2F00F06792 /* TBWidgetCollectionViewController.swift in Sources */,
 				8641577F1E96317000E1D562 /* TBFeedViewController.swift in Sources */,
 				DC1C9E7E1E3A1F6D0090B20C /* TBWidgetViewController.swift in Sources */,
 				DC1C9E7C1E3A1F6D0090B20C /* AppDelegate.swift in Sources */,
-				864157881E968A5B00E1D562 /* UIViewControllerExtension.swift in Sources */,
-				DB0B3C1A20D8F976002FD719 /* TBFeedCollectionView.swift in Sources */,
-				8641577D1E962DE700E1D562 /* MasterViewController.swift in Sources */,
+				DB3A190921AD7E9000F06792 /* TBFeedCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,14 +366,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DC1C9E7F1E3A1F6D0090B20C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DC1C9E801E3A1F6D0090B20C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DC1C9E841E3A1F6D0090B20C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

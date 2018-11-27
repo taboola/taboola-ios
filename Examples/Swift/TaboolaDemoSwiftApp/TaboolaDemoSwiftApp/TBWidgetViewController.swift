@@ -8,7 +8,8 @@ import TaboolaSDK
 
 class TBWidgetViewController: UIViewController {
     // MARK: IBOutlets
-    @IBOutlet weak var mTaboolaView: TaboolaView!
+    @IBOutlet weak var topTaboolaView: TaboolaView!
+    @IBOutlet weak var bottomTaboolaView: TaboolaView!
     @IBOutlet weak var mTextLabel: UILabel!
     @IBOutlet weak var mScrollView: UIScrollView!
     
@@ -20,28 +21,23 @@ class TBWidgetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mTaboolaView.delegate = self
-        mTaboolaView.ownerViewController = self
-        mTaboolaView.autoResizeHeight = true
-        mTaboolaView.scrollEnable = false
-        mTaboolaView.enableClickHandler = true
+        topTaboolaView.delegate = self
+        topTaboolaView.ownerViewController = self
+        topTaboolaView.mode = "thumbnails-sdk3"
+        topTaboolaView.publisher = "betterbytheminute-app"
+        topTaboolaView.pageType = "article"
+        topTaboolaView.pageUrl = "http://www.example.com"
+        topTaboolaView.placement = "Mobile top"
+        topTaboolaView.fetchContent()
         
-        mTaboolaView.mode = "thumbnails-sdk3"
-        mTaboolaView.publisher = "betterbytheminute-app"
-        mTaboolaView.pageType = "article"
-        mTaboolaView.pageUrl = "http://www.example.com"
-        mTaboolaView.placement = "Mobile"
-
-        // Optional - add extra styling rules to the widget, CSS format.
-        mTaboolaView.optionalWidgetStyle = "background:linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,linear-gradient(315deg, #ECEDDC 25%, transparent 25%),linear-gradient(45deg, #ECEDDC 25%, transparent 25%)background-size: 100px 100pxbackground-color: #EC173A"
- 
-        
-        let pageDict = ["referrer": "http://www.example.com/ref"]
-        mTaboolaView.setOptionalPageCommands(pageDict)
-        
-        let lModeDictionary = ["mix":"target_type"]
-        mTaboolaView.setOptionalModeCommands(lModeDictionary)
-        mTaboolaView.fetchContent()
+        bottomTaboolaView.delegate = self
+        bottomTaboolaView.ownerViewController = self
+        bottomTaboolaView.mode = "thumbnails-sdk1"
+        bottomTaboolaView.publisher = "betterbytheminute-app"
+        bottomTaboolaView.pageType = "article"
+        bottomTaboolaView.pageUrl = "http://www.example.com"
+        bottomTaboolaView.placement = "Mobile"
+        bottomTaboolaView.fetchContent()
 
     }
 }
@@ -49,34 +45,19 @@ class TBWidgetViewController: UIViewController {
 extension TBWidgetViewController: TaboolaViewDelegate {
     func onItemClick(_ placementName: String!, withItemId itemId: String!, withClickUrl clickUrl: String!, isOrganic organic: Bool) -> Bool {
         if organic {
-            print("itemId: \(itemId)")
+            print("itemId: \(String(describing: itemId))")
         } else {
-            print("clickUrl: \(clickUrl)")
+            print("clickUrl: \(String(describing: clickUrl))")
         }
         return true
     }
     
     func taboolaView(_ taboolaView: UIView!, didLoadPlacementNamed placementName: String!, withHeight height: CGFloat) {
-        print("Placement \(placementName) loaded successfully. height \(height)");
+        print("Placement \(String(describing: placementName)) loaded successfully. height \(height)");
     }
     
     func taboolaView(_ taboolaView: UIView!, didFailToLoadPlacementNamed placementName: String!, withErrorMessage error: String!) {
-        print("Placement \(placementName) failed to load because: %@ \(error)");
-    }
-}
-
-extension TBWidgetViewController: ActionAssistantProtocol {
-    func refreshChild() {
-//        mTaboolaView.refresh()
-    }
-    
-    func editChild(dict: [String : String]) {
-        mTaboolaView.mode = dict[ConstantsProperties.mode]
-        mTaboolaView.publisher = dict[ConstantsProperties.publisher]
-        mTaboolaView.pageType = dict[ConstantsProperties.pageType]
-        mTaboolaView.pageUrl = dict[ConstantsProperties.pageUrl]
-        mTaboolaView.placement = dict[ConstantsProperties.placement]
-        mTaboolaView.fetchContent()
+        print("Placement \(String(describing: placementName)) failed to load because: %@ \(String(describing: error))");
     }
 }
 

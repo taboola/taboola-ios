@@ -13,7 +13,6 @@
 
 #pragma mark - Properties
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *flowLayout;
 @property (nonatomic) TaboolaCollectionViewCell* taboolaCell;
 @end
 
