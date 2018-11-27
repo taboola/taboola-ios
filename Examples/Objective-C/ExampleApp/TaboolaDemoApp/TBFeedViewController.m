@@ -19,47 +19,10 @@
     mTaboolaView.pageType = @"article";
     mTaboolaView.pageUrl = @"http://www.example.com";
     mTaboolaView.placement = @"feed-sample-app";
-    //mTaboolaView.targetType = @"mix";
-	NSDictionary *lPageDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"http://www.example.com/2/ref", @"referrer", nil];
-    [mTaboolaView setOptionalPageCommands:lPageDictionary];
-    NSDictionary *lModeDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"mix", @"target_type", nil];
-    [mTaboolaView setOptionalModeCommands:lModeDictionary];
-    mTaboolaView.autoResizeHeight = YES;
+    mTaboolaView.targetType = @"mix";
     [mTaboolaView setInterceptScroll:YES];
 	[mTaboolaView fetchContent];
-	
-	//show page content
-	NSString *lPath = [[NSBundle mainBundle] bundlePath];
-    NSString *lHTMLString = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"page_2" ofType:@"html"] encoding:NSStringEncodingConversionAllowLossy error:nil];
-    [mWebView loadHTMLString:lHTMLString baseURL:[NSURL fileURLWithPath:lPath]];
-}
 
-#pragma mark - Rotation
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
-	[super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
-}
-
-#pragma mark - UI
-- (BOOL)prefersStatusBarHidden{
-	return YES;
-}
-
-#pragma mark - Buttons methods
-- (IBAction)refreshButtonPressed:(id)sender{
-	[mTaboolaView refresh];
-}
-
-- (IBAction)resetButtonPressed:(id)sender{
-	[mTaboolaView reset];
-}
-
-- (IBAction)loadAgainButtonPressed:(id)sender{
-    mTaboolaView.pageType = @"article";
-    mTaboolaView.pageUrl = @"http://www.example.com";
-    mTaboolaView.placement = @"feed";
-    NSDictionary *lCommandsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"http://www.example.com/2/ref", @"referrer", nil];
-    [mTaboolaView setOptionalPageCommands:lCommandsDictionary];
-    [mTaboolaView fetchContent];
 }
 
 #pragma mark - TaboolaView delegate
@@ -79,8 +42,9 @@
     NSLog(@"Delegate: didFailAd event");
 }
 
-- (void)taboolaViewResizedToHeight:(CGFloat)height {
+-(void)taboolaView:(UIView *)taboolaView placementNamed:(NSString *)placementName resizedToHeight:(CGFloat)height {
     
 }
+
 
 @end

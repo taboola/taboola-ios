@@ -4,57 +4,10 @@
 
 
 #import "TBAppDelegate.h"
-#import "TBWidgetViewController.h"
-#import "TBFeedViewController.h"
-#import "TBTestViewController.h"
-#import "TBFeedCollectionView.h"
-#import "TBWidgetCollectionView.h"
 
 @implementation TBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    
-    //load viewcontrollers and tabbar
-    TBWidgetViewController *widgetViewController = [[TBWidgetViewController alloc] initWithNibName:@"TBWidgetViewController" bundle:nil];
-    UITabBarItem *widgetTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Widget" image:nil tag:0];
-    UINavigationController *widgetNavController = [[UINavigationController alloc] initWithRootViewController:widgetViewController];
-    widgetNavController.navigationBarHidden = YES;
-    widgetNavController.tabBarItem = widgetTabBarItem;
-    
-    TBFeedViewController *feedScrollViewController = [[TBFeedViewController alloc] initWithNibName:@"TBFeedViewController" bundle:nil];
-    UITabBarItem *feedScrollTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Feed ScrollView" image:nil tag:1];
-    UINavigationController *feedScrollNavController = [[UINavigationController alloc] initWithRootViewController:feedScrollViewController];
-    feedScrollNavController.navigationBarHidden = YES;
-    feedScrollNavController.tabBarItem = feedScrollTabBarItem;
-    
-    TBFeedCollectionView *feedCollectionView = [[TBFeedCollectionView alloc]initWithNibName:@"TBFeedCollectionView" bundle:nil];
-    UITabBarItem *feedCollectionTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Feed collectionView" image:nil tag:2];
-    UINavigationController *feedCollectionNavController = [[UINavigationController alloc] initWithRootViewController:feedCollectionView];
-    feedCollectionNavController.navigationBarHidden = YES;
-    feedCollectionNavController.tabBarItem = feedCollectionTabBarItem;
-    
-    TBWidgetCollectionView *widgetCollectionView = [[TBWidgetCollectionView alloc]initWithNibName:@"TBWidgetCollectionView" bundle:nil];
-    UITabBarItem *widgetCollectionTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Widget collectionView" image:nil tag:2];
-    UINavigationController *widgetCollectionNavController = [[UINavigationController alloc] initWithRootViewController:widgetCollectionView];
-    widgetCollectionNavController.navigationBarHidden = YES;
-    widgetCollectionNavController.tabBarItem = widgetCollectionTabBarItem;
-    
-//    // Setting Tab bar font, color and v-alignnment
-//    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"AmericanTypewriter" size:15.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];
-//    
-//    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blueColor], NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
-//    [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0.0, -5.0)];
-    
-    
-    UITabBarController *lTabBarController = [[UITabBarController alloc] init];
-    lTabBarController.viewControllers = [NSArray arrayWithObjects:widgetNavController, feedScrollNavController, feedCollectionNavController, widgetCollectionNavController, nil];
-    lTabBarController.selectedIndex = 0;
-    self.window.rootViewController = lTabBarController;
-    
-    
-    [self.window makeKeyAndVisible];
     return YES;
 }
 

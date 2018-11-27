@@ -12,54 +12,27 @@
     [super viewDidLoad];
 
 	//load tabolaView
-	mTaboolaView.delegate = self;
-    mTaboolaView.ownerViewController = self;
-    mTaboolaView.mode = @"thumbnails-sdk1";
-	mTaboolaView.publisher = @"betterbytheminute-app";
-    mTaboolaView.pageType = @"article";
-    mTaboolaView.pageUrl = @"http://www.example.com";
-    mTaboolaView.placement = @"iOS Below Article Thumbnails";
-	mTaboolaView.autoResizeHeight = YES;
-    mTaboolaView.scrollEnable = NO;
-    mTaboolaView.enableClickHandler = YES;
-    mTaboolaView.logLevel = LogLevelDebug;
-
-	NSDictionary *lPageDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"http://www.example.com/ref", @"referrer", nil];
-    [mTaboolaView setOptionalPageCommands:lPageDictionary];
-
-    NSDictionary *lModeDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"mix", @"target_type", nil];
-    [mTaboolaView setOptionalModeCommands:lModeDictionary];
+	topTaboolaView.delegate = self;
+    topTaboolaView.ownerViewController = self;
+    topTaboolaView.mode = @"thumbnails-sdk1";
+	topTaboolaView.publisher = @"betterbytheminute-app";
+    topTaboolaView.pageType = @"article";
+    topTaboolaView.pageUrl = @"http://www.example.com";
+    topTaboolaView.placement = @"iOS Below Article Thumbnails";
+    topTaboolaView.logLevel = LogLevelDebug;
 	
-    [mTaboolaView fetchContent];
-}
-
-#pragma mark - Rotation
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
-	[super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
-}
-
-#pragma mark - UI
-- (BOOL)prefersStatusBarHidden{
-	return YES;
-}
-
-#pragma mark - Buttons methods
-- (IBAction)refreshButtonPressed:(id)sender{
-	[mTaboolaView refresh];
-}
-
-- (IBAction)resetButtonPressed:(id)sender{
-	[mTaboolaView reset];
-}
-
-- (IBAction)loadAgainButtonPressed:(id)sender{
-    mTaboolaView.pageType = @"article";
-    mTaboolaView.pageUrl = @"www.lexpress.fr";
-    mTaboolaView.placement = @"iOS Below Article Thumbnails";
-    mTaboolaView.scrollEnable = NO;
-    NSDictionary *lCommandsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"http://www.example.com/2/ref", @"referrer", nil];
-    [mTaboolaView setOptionalPageCommands:lCommandsDictionary];
-    [mTaboolaView fetchContent];
+    [topTaboolaView fetchContent];
+    
+    bottomTaboolaView.delegate = self;
+    bottomTaboolaView.ownerViewController = self;
+    bottomTaboolaView.mode = @"thumbnails-sdk3";
+    bottomTaboolaView.publisher = @"betterbytheminute-app";
+    bottomTaboolaView.pageType = @"article";
+    bottomTaboolaView.pageUrl = @"http://www.example.com";
+    bottomTaboolaView.placement = @"bottom";
+    bottomTaboolaView.logLevel = LogLevelDebug;
+    
+    [bottomTaboolaView fetchContent];
 }
 
 #pragma mark - TaboolaView delegate
@@ -79,7 +52,7 @@
     NSLog(@"Delegate: didFailAd event");
 }
 
-- (void)taboolaViewResizedToHeight:(CGFloat)height {
+-(void)taboolaView:(UIView *)taboolaView placementNamed:(NSString *)placementName resizedToHeight:(CGFloat)height {
     
 }
 

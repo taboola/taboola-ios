@@ -12,47 +12,38 @@
 @interface TBFeedCollectionView () <TaboolaViewDelegate>
 
 #pragma mark - Properties
-@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *flowLayout;
+
 @property (nonatomic) TaboolaCollectionViewCell* taboolaCell;
 @end
 
 @implementation TBFeedCollectionView {
-    NSUInteger taboolaSection;
+    NSUInteger taboolaCellIndex;
 }
 
 
 #pragma mark - ViewController lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    taboolaSection = 1;
-    [self setupCollectionView];
+    taboolaCellIndex = 1;
 }
 
-
-#pragma mark - Supporting functions
-- (void)setupCollectionView {
-    [self.collectionView registerNib:[UINib nibWithNibName:@"TaboolaCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"TaboolaCell"];
-    [self.collectionView registerNib:[UINib nibWithNibName:@"randomCell" bundle:nil] forCellWithReuseIdentifier:@"randomCell"];
-    self.flowLayout.estimatedItemSize = CGSizeMake(200, 200);
-}
 
 #pragma mark - UICollectionViewDatasource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return section == taboolaSection ? 1 : 1;
-}
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 2;
 }
 
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return indexPath.section == taboolaSection ? CGSizeMake(self.view.frame.size.width, TaboolaView.widgetHeight) : CGSizeMake(self.view.frame.size.width, 200);
+    return indexPath.item == taboolaCellIndex ? CGSizeMake(self.view.frame.size.width, TaboolaView.widgetHeight) : CGSizeMake(self.view.frame.size.width, 200);
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    if ([indexPath section] == taboolaSection) {
+    if ([indexPath item] == taboolaCellIndex) {
         if (!self.taboolaCell) {
             self.taboolaCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TaboolaCell" forIndexPath:indexPath];
             self.taboolaCell.taboolaView.delegate = self;
@@ -62,7 +53,6 @@
             self.taboolaCell.taboolaView.pageUrl = @"http://www.example.com";
             self.taboolaCell.taboolaView.placement = @"feed-sample-app";
             self.taboolaCell.taboolaView.targetType = @"mix";
-            self.taboolaCell.taboolaView.enableClickHandler = YES;
             self.taboolaCell.taboolaView.logLevel = LogLevelDebug;
             [self.taboolaCell.taboolaView setInterceptScroll:YES];
             [self.taboolaCell.taboolaView fetchContent];
@@ -75,24 +65,20 @@
 }
 
 #pragma mark - TaboolaView delegate
-- (BOOL)taboolaViewItemClickHandler:(NSString *)pURLString :(BOOL)isOrganic{
-    NSLog(@"Start load request on first screen: %@ isOrganic? %@", pURLString, isOrganic ? @"YES":@"NO");
-    if (isOrganic) {
-        NSLog(@"organic items should open as native app pages.");
-    }
+-(void)taboolaView:(UIView *)taboolaView didLoadPlacementNamed:(NSString *)placementName withHeight:(CGFloat)height {
+    
+}
+
+-(void)taboolaView:(UIView *)taboolaView placementNamed:(NSString *)placementName resizedToHeight:(CGFloat)height {
+
+}
+
+- (void)taboolaView:(UIView *)taboolaView didFailToLoadPlacementNamed:(NSString *)placementName withErrorMessage:(NSString *)error {
+    
+}
+
+- (BOOL)onItemClick:(NSString *)placementName withItemId:(NSString *)itemId withClickUrl:(NSString *)clickUrl isOrganic:(BOOL)organic {
     return YES;
-}
-
-- (void)taboolaDidReceiveAd:(UIView *)view{
-    NSLog(@"Delegate: didReceiveAd event");
-}
-
-- (void)taboolaDidFailAd:(NSError *)error  {
-    NSLog(@"Delegate: didFailAd event");
-}
-
-- (void)taboolaViewResizedToHeight:(CGFloat)height {
-
 }
 
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TBFeedCollectionView : UIViewController <UICollectionViewDelegate,UICollectionViewDataSource>
+@interface TBFeedCollectionView : UICollectionViewController
 
 @end

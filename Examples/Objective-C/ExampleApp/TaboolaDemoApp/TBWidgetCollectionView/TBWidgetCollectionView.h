@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TBWidgetCollectionView : UIViewController <UICollectionViewDelegate,UICollectionViewDataSource>
+@interface TBWidgetCollectionView : UICollectionViewController
 
 @end

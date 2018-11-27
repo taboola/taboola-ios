@@ -12,41 +12,36 @@
 @interface TBWidgetCollectionView () <TaboolaViewDelegate>
 
 #pragma mark - Properties
-@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic) TaboolaCollectionViewCell* taboolaCell;
 @end
 
 @implementation TBWidgetCollectionView {
-    NSUInteger taboolaSection;
+    NSUInteger taboolaCellIndex;
 }
 
 
 #pragma mark - ViewController lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    taboolaSection = 1;
-    [self setupCollectionView];
+    taboolaCellIndex = 1;
 }
 
 
 #pragma mark - Supporting functions
-- (void)setupCollectionView {
-    [self.collectionView registerNib:[UINib nibWithNibName:@"TaboolaCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"TaboolaCell"];
-    [self.collectionView registerNib:[UINib nibWithNibName:@"randomCell" bundle:nil] forCellWithReuseIdentifier:@"randomCell"];
-}
+
 
 #pragma mark - UICollectionViewDatasource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return section == taboolaSection ? 1 : 1;
+    return 3;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 2;
+    return 1;
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGSize size = CGSizeMake(self.view.frame.size.width, self.taboolaCell.taboolaView.frame.size.height > 0 ? self.taboolaCell.taboolaView.frame.size.height : 200);
-    if (indexPath.section == taboolaSection) {
+    if (indexPath.item == taboolaCellIndex) {
         return size;
     } else {
         return CGSizeMake(self.view.frame.size.width, 200);
@@ -55,7 +50,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    if ([indexPath section] == taboolaSection) {
+    if ([indexPath item] == taboolaCellIndex) {
         if (!self.taboolaCell) {
             self.taboolaCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TaboolaCell" forIndexPath:indexPath];
             self.taboolaCell.taboolaView.delegate = self;
@@ -75,19 +70,13 @@
     }
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    [self.collectionView.collectionViewLayout invalidateLayout];
-}
-
 #pragma mark - TaboolaView delegate
 -(void)taboolaView:(UIView *)taboolaView didLoadPlacementNamed:(NSString *)placementName withHeight:(CGFloat)height {
     
 }
 
 -(void)taboolaView:(UIView *)taboolaView placementNamed:(NSString *)placementName resizedToHeight:(CGFloat)height {
-    NSIndexSet *set = [[NSIndexSet alloc]initWithIndex:taboolaSection];
-    [self.collectionView reloadSections:set];
+    [self.collectionView reloadItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:taboolaCellIndex inSection:0]]];
 }
 
 - (void)taboolaView:(UIView *)taboolaView didFailToLoadPlacementNamed:(NSString *)placementName withErrorMessage:(NSString *)error {
