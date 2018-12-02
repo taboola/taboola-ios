@@ -160,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				BC9158BE186C7C0600141537 /* TaboolaDemoApp */,
+				DBAF48ED21B3CDB7005F6EA5 /* TaboolaDemoAppUITests */,
 				BC9158B7186C7C0600141537 /* Frameworks */,
 				BC9158B6186C7C0600141537 /* Products */,
 				97AAE3EC87C656A1ABFB1B56 /* Pods */,
@@ -250,6 +251,14 @@
 				DB4107DA21AAF9FC006CA18D /* TBWidgetCollectionView.m */,
 			);
 			path = TBWidgetCollectionView;
+			sourceTree = "<group>";
+		};
+		DBAF48ED21B3CDB7005F6EA5 /* TaboolaDemoAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TaboolaDemoAppUITests;
+			path = TaboolaDemoApp;
 			sourceTree = "<group>";
 		};
 		DBB1F72920D1138300D6E9E6 /* TBFeedCollectionView */ = {
