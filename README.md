@@ -237,7 +237,7 @@ Use `itemId` in organic clicks for deeplink.
 ```
 ```objc
 // Triggered when the TaboolaView resizes after content render or orientation change.
-- (void)taboolaViewResizedToHeight:(CGFloat)height;
+- (void)taboolaView:(UIView *)taboolaView placementNamed:(NSString *)placementName resizedToHeight:(CGFloat)height;
 ```
 
 ### 1.5. How to set TaboolaView height and scroll:
