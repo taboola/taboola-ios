@@ -12,9 +12,9 @@
 		867A29051E95441D008D360D /* navigationBar_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 867A29041E95441D008D360D /* navigationBar_iPhone@2x.png */; };
 		A93ED1FD6CBD4777B94EB2E2 /* Pods_TaboolaDemoSwiftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56ED5F543384692C04BB0AE5 /* Pods_TaboolaDemoSwiftApp.framework */; };
 		DB3A190521AD7E2F00F06792 /* TBWidgetCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A190321AD7E2F00F06792 /* TBWidgetCollectionViewController.swift */; };
-		DB3A190921AD7E9000F06792 /* TBFeedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A190821AD7E9000F06792 /* TBFeedCollectionViewController.swift */; };
 		DB3A191121AD8D2000F06792 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3A191021AD8D2000F06792 /* Main.storyboard */; };
 		DB609A562004B81F008B4830 /* TaboolaDemoSwiftAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB609A552004B81F008B4830 /* TaboolaDemoSwiftAppTests.swift */; };
+		DBEF65CA21C7985F005ED811 /* TBFeedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEF65C921C7985F005ED811 /* TBFeedCollectionViewController.swift */; };
 		DC1C9E7C1E3A1F6D0090B20C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C9E7B1E3A1F6D0090B20C /* AppDelegate.swift */; };
 		DC1C9E7E1E3A1F6D0090B20C /* TBWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C9E7D1E3A1F6D0090B20C /* TBWidgetViewController.swift */; };
 		DC1C9E831E3A1F6D0090B20C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC1C9E821E3A1F6D0090B20C /* Assets.xcassets */; };
@@ -40,11 +40,11 @@
 		8641577E1E96317000E1D562 /* TBFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBFeedViewController.swift; sourceTree = "<group>"; };
 		867A29041E95441D008D360D /* navigationBar_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationBar_iPhone@2x.png"; sourceTree = "<group>"; };
 		DB3A190321AD7E2F00F06792 /* TBWidgetCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBWidgetCollectionViewController.swift; sourceTree = "<group>"; };
-		DB3A190821AD7E9000F06792 /* TBFeedCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TBFeedCollectionViewController.swift; path = ../../../../../../../../Downloads/TaboolaDemoSwiftApp/TaboolaDemoSwiftApp/TBFeedCollectionViewController.swift; sourceTree = "<group>"; };
 		DB3A191021AD8D2000F06792 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DB609A532004B81F008B4830 /* TaboolaDemoSwiftAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaboolaDemoSwiftAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB609A552004B81F008B4830 /* TaboolaDemoSwiftAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaboolaDemoSwiftAppTests.swift; sourceTree = "<group>"; };
 		DB609A572004B81F008B4830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBEF65C921C7985F005ED811 /* TBFeedCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBFeedCollectionViewController.swift; sourceTree = "<group>"; };
 		DC1C9E781E3A1F6D0090B20C /* TaboolaDemoSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaboolaDemoSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1C9E7B1E3A1F6D0090B20C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC1C9E7D1E3A1F6D0090B20C /* TBWidgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBWidgetViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 				DC1C9E7D1E3A1F6D0090B20C /* TBWidgetViewController.swift */,
 				8641577E1E96317000E1D562 /* TBFeedViewController.swift */,
 				DB3A190321AD7E2F00F06792 /* TBWidgetCollectionViewController.swift */,
-				DB3A190821AD7E9000F06792 /* TBFeedCollectionViewController.swift */,
+				DBEF65C921C7985F005ED811 /* TBFeedCollectionViewController.swift */,
 				DB3A191021AD8D2000F06792 /* Main.storyboard */,
 			);
 			name = ViewControllers;
@@ -352,7 +352,7 @@
 				8641577F1E96317000E1D562 /* TBFeedViewController.swift in Sources */,
 				DC1C9E7E1E3A1F6D0090B20C /* TBWidgetViewController.swift in Sources */,
 				DC1C9E7C1E3A1F6D0090B20C /* AppDelegate.swift in Sources */,
-				DB3A190921AD7E9000F06792 /* TBFeedCollectionViewController.swift in Sources */,
+				DBEF65CA21C7985F005ED811 /* TBFeedCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
