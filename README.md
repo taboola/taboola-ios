@@ -40,13 +40,13 @@ $ gem install cocoapods
 To integrate Taboola into your Xcode project using CocoaPods, specify it in your `Podfile`:
 * Objective-C
 ```ruby
-pod 'TaboolaSDK', '2.0.34'
+pod 'TaboolaSDK', '2.1.0'
 ```
 
 * Swift
 ```ruby
 use_frameworks!
-pod 'TaboolaSDK', '2.0.34'
+pod 'TaboolaSDK', '2.1.0'
 ```
 
 Then, run the following command:
