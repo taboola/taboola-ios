@@ -311,6 +311,36 @@ taboolaView.autoResizeHeight = NO;
 taboolaView.scrollEnable = YES;
 ```
 
+### 1.6 Resetting Taboola when closing the screen
+
+You should not forget to reset (deint) Taboola when leaving the current screen.
+
+```objc
+- (void)dealloc
+{
+    NSLog(@"Dealloc");
+    for(UITableViewCell* cell in self.tableView.visibleCells) {
+        if([cell isKindOfClass:[TaboolaTableViewCell class]]) {
+            [((TaboolaTableViewCell*)cell).taboolaView reset];
+        }
+    }
+}
+
+```
+
+When working with more than one cell:
+```objc
+//You need to set a member of the cell:
+@property (nonatomic,weak) TaboolaCollectionViewCell* taboolaCell;
+
+//And then call:
+      - (void)dealloc
+{
+    NSLog(@"Dealloc");
+    [_taboolaCell.taboolaView reset];
+}
+```
+
 ### 1.7. Replacing the default in-app browser icons
 The file TaboolaViewResources.bundle includes the default icons for the TaboolaView in-app browser. These icons can be replaced by providing an alternative TaboolaViewResources.bundle file which contains the following files: 
 * back_icon.png
