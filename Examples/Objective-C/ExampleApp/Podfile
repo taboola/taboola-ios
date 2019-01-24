@@ -1,4 +1,0 @@
-target 'TaboolaDemoApp' do
-  # Pods for TaboolaDemoApp
-  pod 'TaboolaSDK'
-end
