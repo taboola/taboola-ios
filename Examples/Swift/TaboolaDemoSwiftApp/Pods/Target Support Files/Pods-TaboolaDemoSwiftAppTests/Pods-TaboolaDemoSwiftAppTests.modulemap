@@ -1,6 +1,0 @@
-framework module Pods_TaboolaDemoSwiftAppTests {
-  umbrella header "Pods-TaboolaDemoSwiftAppTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
